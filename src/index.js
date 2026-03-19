@@ -1,0 +1,49 @@
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+
+const taskRoutes = require('./api/tasks');
+const agentRoutes = require('./api/agents');
+const collaborationRoutes = require('./api/collaboration');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// 中间件
+app.use(helmet());
+app.use(cors());
+app.use(morgan('combined'));
+app.use(express.json());
+
+// 路由
+app.use('/api/tasks', taskRoutes);
+app.use('/api/agents', agentRoutes);
+app.use('/api/collaboration', collaborationRoutes);
+
+// 健康检查
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', service: 'BCE', timestamp: new Date().toISOString() });
+});
+
+// 根路径
+app.get('/', (req, res) => {
+  res.json({
+    name: 'OpenClaw Control Center',
+    description: '北斗协同引擎 (BCE)',
+    version: '1.0.0'
+  });
+});
+
+// 错误处理
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: '内部服务器错误' });
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 BCE 服务已启动：http://localhost:${PORT}`);
+});
+
+module.exports = app;
