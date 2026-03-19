@@ -345,25 +345,31 @@
 
         // 页面加载
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('BCE 看板加载开始...');
             loadOrCreateBoard();
         });
 
         // 加载或创建任务板
         async function loadOrCreateBoard() {
             try {
+                console.log('正在获取任务板列表...');
                 // 尝试获取现有任务板
                 const res = await fetch(`${API_BASE}/api/board`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 const data = await res.json();
+                console.log('任务板列表:', data);
                 
                 if (data.data && data.data.length > 0) {
                     currentBoardId = data.data[0].id;
+                    console.log('使用现有任务板:', currentBoardId);
                     loadBoard(currentBoardId);
                 } else {
+                    console.log('无现有任务板，创建新的...');
                     await createBoard();
                 }
             } catch (error) {
                 console.error('加载任务板失败:', error);
-                document.getElementById('board').innerHTML = '<div class="loading">加载失败，请刷新重试</div>';
+                document.getElementById('board').innerHTML = `<div class="loading">加载失败：${error.message}<br><button class="btn btn-primary" onclick="location.reload()" style="margin-top:12px">🔄 刷新重试</button></div>`;
             }
         }
 

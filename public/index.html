@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCE - 北斗协同引擎</title>
+    <title>BCE + Control Center - 统一入口</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -12,166 +12,102 @@
             min-height: 100vh;
             padding: 40px 20px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        .header p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-        .status-card {
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 40px; }
+        .header h1 { font-size: 48px; margin-bottom: 10px; }
+        .header p { font-size: 20px; opacity: 0.9; }
+        .card {
             background: white;
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .status-card h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        .api-list {
-            list-style: none;
-        }
-        .api-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .api-list li:last-child {
-            border-bottom: none;
-        }
-        .api-endpoint {
-            font-family: "Monaco", "Consolas", monospace;
-            background: #f5f5f5;
-            padding: 8px 12px;
-            border-radius: 6px;
-            color: #667eea;
-            font-weight: bold;
-        }
-        .api-desc {
-            color: #666;
-            margin-top: 6px;
-            font-size: 14px;
-        }
-        .badge {
+        .card h2 { color: #333; margin-bottom: 20px; font-size: 24px; }
+        .btn {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        .badge-success {
-            background: #48bb78;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            margin: 8px 0;
+            transition: transform 0.2s;
         }
-        .footer {
-            text-align: center;
-            color: white;
-            margin-top: 40px;
-            opacity: 0.8;
+        .btn:hover { transform: translateY(-2px); }
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
         }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .status { display:inline-block; padding:4px 12px; border-radius:20px; font-size:12px; margin-left:10px; }
+        .status-ok { background:#48bb78; color:white; }
+        .status-warn { background:#f59e0b; color:white; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 BCE</h1>
-            <p>北斗协同引擎 (Beidou Collaboration Engine)</p>
+            <h1>🚀 BCE + Control Center</h1>
+            <p>北斗协同引擎 + OpenClaw 控制中心 - 统一入口</p>
         </div>
 
-        <div class="status-card">
-            <h2>✅ 服务状态：运行中</h2>
-            <p style="color: #666; margin-top: 10px;">
-                服务地址：<span class="api-endpoint">http://localhost:3000</span>
-            </p>
-            <p style="color: #666; margin-top: 6px;">
-                版本：v1.0.0 | 更新时间：2026-03-19
-            </p>
-        </div>
-
-        <div class="status-card">
-            <h2>📡 可用 API 端点</h2>
-            <ul class="api-list">
-                <li>
-                    <span class="api-endpoint">GET /health</span>
-                    <span class="badge badge-success">健康检查</span>
-                    <div class="api-desc">检查服务运行状态</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">GET /</span>
-                    <span class="badge badge-success">根路径</span>
-                    <div class="api-desc">获取服务信息</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">POST /api/board</span>
-                    <span class="badge badge-success">任务板</span>
-                    <div class="api-desc">创建/查询统一任务板（所有 Agent 共享）</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">POST /api/broadcast</span>
-                    <span class="badge badge-success">消息广播</span>
-                    <div class="api-desc">发送全员广播消息，支持强制确认</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">POST /api/confirmation</span>
-                    <span class="badge badge-success">强制确认</span>
-                    <div class="api-desc">创建消息确认请求，超时自动提醒</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">POST /api/memory</span>
-                    <span class="badge badge-success">记忆桥接</span>
-                    <div class="api-desc">双写同步记忆（本地 + 中央库）</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">POST /api/feishu/webhook</span>
-                    <span class="badge badge-success">飞书集成</span>
-                    <div class="api-desc">接收飞书群聊消息，自动转发到 BCE</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">GET /api/tasks</span>
-                    <span class="badge badge-success">任务管理</span>
-                    <div class="api-desc">任务 CRUD 操作</div>
-                </li>
-                <li>
-                    <span class="api-endpoint">GET /api/agents</span>
-                    <span class="badge badge-success">Agent 管理</span>
-                    <div class="api-desc">Agent 注册和状态查询</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="status-card">
-            <h2>📖 快速开始</h2>
-            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 14px; overflow-x: auto;">
-                <div style="margin-bottom: 10px; color: #666;"># 创建任务板</div>
-                <div style="color: #667eea;">curl -X POST http://localhost:3000/api/board \<br/>
-                &nbsp;&nbsp;-H "Content-Type: application/json" \<br/>
-                &nbsp;&nbsp;-d '{"name": "测试任务板", "members": ["天枢", "匠心"]}'</div>
-                
-                <div style="margin-top: 20px; margin-bottom: 10px; color: #666;"># 发送广播</div>
-                <div style="color: #667eea;">curl -X POST http://localhost:3000/api/broadcast \<br/>
-                &nbsp;&nbsp;-H "Content-Type: application/json" \<br/>
-                &nbsp;&nbsp;-d '{"title": "通知", "content": "明日 9:00 例会", "sender": "天枢", "recipients": ["匠心", "司库"], "requireConfirm": true}'</div>
+        <div class="card">
+            <h2>📊 系统入口</h2>
+            <div class="grid">
+                <div>
+                    <h3>OpenClaw Control Center <span class="status status-ok">运行中</span></h3>
+                    <p style="color:#666;margin:10px 0">系统监控、用量统计、Agent 状态、任务管理</p>
+                    <p style="color:#999;font-size:14px">端口：4310</p>
+                    <a href="http://192.168.31.187:4310/?section=overview&lang=zh" class="btn">进入 Control Center</a>
+                </div>
+                <div>
+                    <h3>BCE 任务看板 <span class="status status-ok">运行中</span></h3>
+                    <p style="color:#666;margin:10px 0">可视化任务板、消息广播、强制确认</p>
+                    <p style="color:#999;font-size:14px">端口：3000</p>
+                    <a href="http://192.168.31.187:3000/board.html" class="btn btn-secondary">进入 BCE 看板</a>
+                </div>
             </div>
         </div>
 
-        <div class="footer">
-            <p>BCE v1.0.0 | 北斗协同引擎 | 2026-03-19</p>
-            <p style="margin-top: 10px; font-size: 14px;">
-                开发：匠心 (CTO) | 审核：执矩 (CLO) | 批准：磊哥 (CEO)
-            </p>
+        <div class="card">
+            <h2>🔧 BCE API 端点</h2>
+            <div style="background:#f5f5f5;padding:15px;border-radius:8px;font-family:monospace;font-size:13px;overflow-x:auto">
+                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/board</code> - 创建任务板</div>
+                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/broadcast</code> - 发送广播消息</div>
+                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/confirmation</code> - 创建确认请求</div>
+                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/memory</code> - 记忆同步</div>
+                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/feishu/webhook</code> - 飞书消息接收</div>
+                <div><span style="color:#667eea;font-weight:bold">GET</span> <code>/health</code> - 健康检查</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📖 快速开始</h2>
+            <ol style="line-height:2;color:#666;margin-left:20px">
+                <li><strong>访问 Control Center</strong> - 查看系统状态、用量统计、Agent 状态</li>
+                <li><strong>使用 BCE 看板</strong> - 创建和管理任务，分配负责人</li>
+                <li><strong>发送广播</strong> - 通过 BCE 发送全员通知，支持强制确认</li>
+                <li><strong>配置飞书</strong> - 配置 Webhook 实现飞书消息互通</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>👥 团队成员</h2>
+            <div style="display:flex;gap:20px;flex-wrap:wrap">
+                <div><strong>天枢</strong> - CEO</div>
+                <div><strong>匠心</strong> - CTO</div>
+                <div><strong>司库</strong> - CFO</div>
+                <div><strong>执矩</strong> - CLO</div>
+                <div><strong>磐石</strong> - SRE</div>
+                <div><strong>灵犀</strong> - Designer</div>
+            </div>
         </div>
     </div>
 </body>
