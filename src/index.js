@@ -11,6 +11,7 @@ const memoryRoutes = require('./api/memory');
 const confirmationRoutes = require('./api/confirmation');
 const boardRoutes = require('./api/board');
 const broadcastRoutes = require('./api/broadcast');
+const feishuRoutes = require('./api/feishu');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,6 +30,7 @@ app.use('/api/memory', memoryRoutes);
 app.use('/api/confirmation', confirmationRoutes);
 app.use('/api/board', boardRoutes);
 app.use('/api/broadcast', broadcastRoutes);
+app.use('/api/feishu', feishuRoutes);
 
 // 健康检查
 app.get('/health', (req, res) => {
