@@ -10,6 +10,7 @@ const collaborationRoutes = require('./api/collaboration');
 const memoryRoutes = require('./api/memory');
 const confirmationRoutes = require('./api/confirmation');
 const boardRoutes = require('./api/board');
+const broadcastRoutes = require('./api/broadcast');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,6 +28,7 @@ app.use('/api/collaboration', collaborationRoutes);
 app.use('/api/memory', memoryRoutes);
 app.use('/api/confirmation', confirmationRoutes);
 app.use('/api/board', boardRoutes);
+app.use('/api/broadcast', broadcastRoutes);
 
 // 健康检查
 app.get('/health', (req, res) => {
