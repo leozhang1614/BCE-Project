@@ -21,6 +21,7 @@ app.use(helmet());
 app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json());
+app.use(express.static('public'));
 
 // 路由
 app.use('/api/tasks', taskRoutes);
