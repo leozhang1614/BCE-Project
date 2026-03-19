@@ -7,6 +7,8 @@ const morgan = require('morgan');
 const taskRoutes = require('./api/tasks');
 const agentRoutes = require('./api/agents');
 const collaborationRoutes = require('./api/collaboration');
+const memoryRoutes = require('./api/memory');
+const confirmationRoutes = require('./api/confirmation');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +23,8 @@ app.use(express.json());
 app.use('/api/tasks', taskRoutes);
 app.use('/api/agents', agentRoutes);
 app.use('/api/collaboration', collaborationRoutes);
+app.use('/api/memory', memoryRoutes);
+app.use('/api/confirmation', confirmationRoutes);
 
 // 健康检查
 app.get('/health', (req, res) => {
