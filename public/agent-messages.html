@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent 消息中心 - BCE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h1 { font-size: 24px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+        
+        /* Agent 状态 */
+        .agent-status {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .agent-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .agent-badge.online { background: #d1fae5; color: #059669; }
+        .agent-badge.offline { background: #f3f4f6; color: #9ca3af; }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .status-dot.online { background: #10b981; }
+        .status-dot.offline { background: #d1d5db; }
+        
+        /* 消息列表 */
+        .messages {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            min-height: 400px;
+        }
+        .message {
+            padding: 16px;
+            border-left: 4px solid #667eea;
+            background: #f9fafb;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .message.unread { background: #eff6ff; border-left-color: #3b82f6; }
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+        .message-from { font-weight: 600; color: #333; }
+        .message-content { font-size: 15px; color: #333; line-height: 1.6; }
+        .message-actions {
+            margin-top: 12px;
+            display: flex;
+            gap: 8px;
+        }
+        
+        /* 发送消息 */
+        .compose-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>💬 Agent 消息中心</h1>
+        <div>
+            <button class="btn" style="background:white;color:#667eea" onclick="refreshMessages()">🔄 刷新</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Agent 状态 -->
+        <div class="agent-status" id="agentStatus"></div>
+
+        <!-- 发送消息 -->
+        <div class="compose-box">
+            <h2 style="margin-bottom:16px;font-size:18px">📤 发送消息</h2>
+            <div class="form-group">
+                <label>我的身份</label>
+                <select id="fromAgent">
+                    <option value="匠心">匠心 (CTO)</option>
+                    <option value="天枢">天枢 (CEO)</option>
+                    <option value="司库">司库 (CFO)</option>
+                    <option value="执矩">执矩 (CLO)</option>
+                    <option value="磐石">磐石 (SRE)</option>
+                    <option value="灵犀">灵犀 (Designer)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>发送给</label>
+                <select id="toAgent">
+                    <option value="all">📢 所有人（广播）</option>
+                    <option value="天枢">天枢 (CEO)</option>
+                    <option value="匠心">匠心 (CTO)</option>
+                    <option value="司库">司库 (CFO)</option>
+                    <option value="执矩">执矩 (CLO)</option>
+                    <option value="磐石">磐石 (SRE)</option>
+                    <option value="灵犀">灵犀 (Designer)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>消息内容</label>
+                <textarea id="messageContent" rows="4" placeholder="输入消息内容..."></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="sendMessage()">发送消息</button>
+        </div>
+
+        <!-- 消息列表 -->
+        <div class="messages" id="messages">
+            <div class="empty-state">正在加载消息...</div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let currentAgent = '匠心';
+
+        // 页面加载
+        document.addEventListener('DOMContentLoaded', () => {
+            // 自动上线
+            goOnline('匠心');
+            loadAgentStatus();
+            loadMessages('匠心');
+            
+            // 每 10 秒刷新
+            setInterval(() => {
+                loadAgentStatus();
+                loadMessages('匠心');
+            }, 10000);
+        });
+
+        // Agent 上线
+        async function goOnline(agentId) {
+            try {
+                await fetch(`${API_BASE}/api/agent-message/online`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ agentId })
+                });
+            } catch (error) {
+                console.error('上线失败:', error);
+            }
+        }
+
+        // 加载 Agent 状态
+        async function loadAgentStatus() {
+            try {
+                const res = await fetch(`${API_BASE}/api/agent-message/status`);
+                const data = await res.json();
+                
+                let html = '';
+                data.data.forEach(agent => {
+                    const statusClass = agent.online ? 'online' : 'offline';
+                    const statusText = agent.online ? '在线' : '离线';
+                    const unread = agent.unreadCount > 0 ? ` (${agent.unreadCount}未读)` : '';
+                    html += `
+                        <div class="agent-badge ${statusClass}">
+                            <span class="status-dot ${statusClass}"></span>
+                            ${agent.id}${unread}
+                        </div>
+                    `;
+                });
+                document.getElementById('agentStatus').innerHTML = html;
+            } catch (error) {
+                console.error('加载状态失败:', error);
+            }
+        }
+
+        // 加载消息
+        async function loadMessages(agentId) {
+            try {
+                const res = await fetch(`${API_BASE}/api/agent-message/message/my?agentId=${encodeURIComponent(agentId)}&status=all`);
+                const data = await res.json();
+                
+                if (data.count === 0) {
+                    document.getElementById('messages').innerHTML = '<div class="empty-state">暂无消息</div>';
+                    return;
+                }
+                
+                let html = '';
+                data.data.forEach(msg => {
+                    const unreadClass = !msg.readAt ? 'unread' : '';
+                    const replyBadge = msg.repliedAt ? '💬 ' : '';
+                    const requireReplyBadge = msg.requireReply && !msg.repliedAt ? '🔴 待回复 ' : '';
+                    const typeBadge = msg.type === 'broadcast' ? '📢 ' : '💬 ';
+                    
+                    html += `
+                        <div class="message ${unreadClass}">
+                            <div class="message-header">
+                                <span class="message-from">${typeBadge}${replyBadge}${requireReplyBadge}来自：${msg.from}</span>
+                                <span>${new Date(msg.createdAt).toLocaleString('zh-CN')}</span>
+                            </div>
+                            <div class="message-content">${escapeHtml(msg.content)}</div>
+                            ${!msg.readAt ? `
+                                <div class="message-actions">
+                                    <button class="btn btn-primary" style="padding:8px 16px;font-size:13px" onclick="markAsRead('${msg.id}')">标记已读</button>
+                                    <button class="btn" style="padding:8px 16px;font-size:13px;background:#f3f4f6" onclick="replyToMessage('${msg.id}', '${msg.from}')">回复</button>
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                });
+                document.getElementById('messages').innerHTML = html;
+            } catch (error) {
+                console.error('加载消息失败:', error);
+                document.getElementById('messages').innerHTML = '<div class="empty-state">加载失败</div>';
+            }
+        }
+
+        // 发送消息
+        async function sendMessage() {
+            const from = document.getElementById('fromAgent').value;
+            const to = document.getElementById('toAgent').value;
+            const content = document.getElementById('messageContent').value.trim();
+            
+            if (!content) {
+                alert('请输入消息内容');
+                return;
+            }
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/agent-message/message`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        from,
+                        to,
+                        content,
+                        type: to === 'all' ? 'broadcast' : 'direct',
+                        requireReply: to === 'all'
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('消息发送成功！');
+                    document.getElementById('messageContent').value = '';
+                    loadMessages(from);
+                } else {
+                    alert('发送失败：' + data.message);
+                }
+            } catch (error) {
+                alert('发送失败：' + error.message);
+            }
+        }
+
+        // 标记已读
+        async function markAsRead(messageId) {
+            try {
+                await fetch(`${API_BASE}/api/agent-message/message/${messageId}/read`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ agentId: '匠心' })
+                });
+                loadMessages('匠心');
+            } catch (error) {
+                console.error('标记已读失败:', error);
+            }
+        }
+
+        // 回复消息
+        async function replyToMessage(messageId, originalFrom) {
+            const reply = prompt('回复内容:');
+            if (!reply) return;
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/agent-message/message/${messageId}/reply`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        from: '匠心',
+                        content: reply
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('回复已发送！');
+                    loadMessages('匠心');
+                }
+            } catch (error) {
+                alert('回复失败：' + error.message);
+            }
+        }
+
+        // 刷新消息
+        function refreshMessages() {
+            loadAgentStatus();
+            loadMessages('匠心');
+        }
+
+        // HTML 转义
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

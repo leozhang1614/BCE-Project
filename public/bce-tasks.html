@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCE 任务管理 - 完整流转</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h1 { font-size: 24px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+        
+        /* 统计卡片 */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .stat-card .number { font-size: 32px; font-weight: bold; color: #667eea; }
+        .stat-card .label { font-size: 14px; color: #666; margin-top: 8px; }
+        
+        /* 操作栏 */
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-secondary { background: white; color: #667eea; border: 2px solid #667eea; }
+        
+        /* 任务列表 */
+        .task-list {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .task-item {
+            padding: 16px;
+            border-left: 4px solid #667eea;
+            background: #f9fafb;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .task-item.pending { border-left-color: #6b7280; }
+        .task-item.assigned { border-left-color: #3b82f6; }
+        .task-item.executing { border-left-color: #f59e0b; }
+        .task-item.reviewing { border-left-color: #8b5cf6; }
+        .task-item.accepted { border-left-color: #10b981; }
+        .task-item.cancelled { border-left-color: #ef4444; opacity: 0.6; }
+        
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .task-title { font-size: 16px; font-weight: 600; color: #333; }
+        .task-status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-pending { background: #f3f4f6; color: #6b7280; }
+        .status-assigned { background: #dbeafe; color: #2563eb; }
+        .status-executing { background: #fef3c7; color: #d97706; }
+        .status-reviewing { background: #ede9fe; color: #7c3aed; }
+        .status-accepted { background: #d1fae5; color: #059669; }
+        .status-cancelled { background: #fee2e2; color: #dc2626; }
+        
+        .task-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .task-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .task-actions button {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+        
+        /* 模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.show { display: flex; }
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .modal-header h2 { font-size: 20px; }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        
+        /* 评论区域 */
+        .comments {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .comment {
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .comment-author { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+        .comment-content { font-size: 14px; color: #333; }
+        .comment-time { font-size: 12px; color: #9ca3af; margin-top: 4px; }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>📋 BCE 任务管理</h1>
+        <div>
+            <button class="btn btn-secondary" onclick="refreshTasks()">🔄 刷新</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 统计 -->
+        <div class="stats" id="stats"></div>
+
+        <!-- 操作栏 -->
+        <div class="actions">
+            <button class="btn btn-primary" onclick="openModal('createTaskModal')">➕ 创建任务</button>
+            <button class="btn btn-secondary" onclick="location.href='/agent-messages.html'">💬 Agent 消息</button>
+            <button class="btn btn-secondary" onclick="location.href='/board.html'">📊 任务看板</button>
+        </div>
+
+        <!-- 任务列表 -->
+        <div class="task-list" id="taskList">
+            <div class="empty-state">正在加载任务...</div>
+        </div>
+    </div>
+
+    <!-- 创建任务模态框 -->
+    <div class="modal" id="createTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>➕ 创建任务</h2>
+                <button class="modal-close" onclick="closeModal('createTaskModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>任务标题 *</label>
+                <input type="text" id="taskTitle" placeholder="输入任务标题">
+            </div>
+            <div class="form-group">
+                <label>任务描述</label>
+                <textarea id="taskDesc" placeholder="详细描述任务内容"></textarea>
+            </div>
+            <div class="form-group">
+                <label>创建人 *</label>
+                <select id="taskCreator">
+                    <option value="天枢">天枢 (CEO)</option>
+                    <option value="匠心">匠心 (CTO)</option>
+                    <option value="司库">司库 (CFO)</option>
+                    <option value="执矩">执矩 (CLO)</option>
+                    <option value="磐石">磐石 (SRE)</option>
+                    <option value="灵犀">灵犀 (Designer)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>优先级</label>
+                <select id="taskPriority">
+                    <option value="P0">🔴 P0 - 紧急</option>
+                    <option value="P1" selected>🟡 P1 - 重要</option>
+                    <option value="P2">🔵 P2 - 普通</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>计划完成时间</label>
+                <input type="datetime-local" id="taskDueDate" placeholder="选择计划完成时间">
+            </div>
+            <button class="btn btn-primary" style="width: 100%" onclick="createTask()">创建任务</button>
+        </div>
+    </div>
+
+    <!-- 任务详情模态框 -->
+    <div class="modal" id="taskDetailModal">
+        <div class="modal-content" style="max-width: 700px">
+            <div class="modal-header">
+                <h2>📋 任务详情</h2>
+                <button class="modal-close" onclick="closeModal('taskDetailModal')">&times;</button>
+            </div>
+            <div id="taskDetailContent"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let currentTaskId = null;
+
+        // 页面加载
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStats();
+            loadTasks();
+            setInterval(() => {
+                loadStats();
+                loadTasks();
+            }, 30000); // 30 秒刷新
+        });
+
+        // 加载统计
+        async function loadStats() {
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/stats`);
+                const data = await res.json();
+                
+                const stats = data.data.byStatus;
+                document.getElementById('stats').innerHTML = `
+                    <div class="stat-card">
+                        <div class="number">${stats.pending}</div>
+                        <div class="label">待分配</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${stats.assigned}</div>
+                        <div class="label">已分配</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${stats.executing}</div>
+                        <div class="label">执行中</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${stats.reviewing}</div>
+                        <div class="label">待验收</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${stats.accepted}</div>
+                        <div class="label">已完成</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${data.data.total}</div>
+                        <div class="label">总计</div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('加载统计失败:', error);
+            }
+        }
+
+        // 加载任务列表
+        async function loadTasks() {
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks`);
+                const data = await res.json();
+                
+                if (data.count === 0) {
+                    document.getElementById('taskList').innerHTML = '<div class="empty-state">暂无任务</div>';
+                    return;
+                }
+                
+                let html = '';
+                data.data.forEach(task => {
+                    html += renderTaskItem(task);
+                });
+                document.getElementById('taskList').innerHTML = html;
+            } catch (error) {
+                console.error('加载任务失败:', error);
+                document.getElementById('taskList').innerHTML = '<div class="empty-state">加载失败</div>';
+            }
+        }
+
+        // 渲染任务卡片
+        function renderTaskItem(task) {
+            const statusLabels = {
+                pending: '待分配',
+                assigned: '已分配',
+                executing: '执行中',
+                reviewing: '待验收',
+                accepted: '已完成',
+                cancelled: '已取消'
+            };
+            
+            return `
+                <div class="task-item ${task.status}">
+                    <div class="task-header">
+                        <div class="task-title">${escapeHtml(task.title)}</div>
+                        <span class="task-status status-${task.status}">${statusLabels[task.status]}</span>
+                    </div>
+                    <div class="task-meta">
+                        <span>👤 创建人：${escapeHtml(task.creator)}</span>
+                        ${task.assignee ? `<span>👤 负责人：${escapeHtml(task.assignee)}</span>` : ''}
+                        <span>📊 优先级：${task.priority}</span>
+                        <span>🕐 ${new Date(task.createdAt).toLocaleString('zh-CN')}</span>
+                    </div>
+                    <div class="task-actions">
+                        ${task.status === 'pending' ? `<button class="btn btn-primary" onclick="assignTask('${task.id}')">分配</button>` : ''}
+                        ${task.status === 'assigned' && !task.confirmedBy ? `<button class="btn btn-success" onclick="confirmTask('${task.id}')">✅ 确认收到</button>` : ''}
+                        ${task.status === 'assigned' && task.confirmedBy ? `<span style="color:#10b981;font-size:13px">✅ 已确认 (${task.confirmedBy})</span>` : ''}
+                        ${task.status === 'assigned' && task.requireConfirmation ? `<button class="btn btn-primary" onclick="startTask('${task.id}')">开始执行</button>` : ''}
+                        ${task.status === 'executing' ? `<button class="btn btn-primary" onclick="submitTask('${task.id}')">提交验收</button>` : ''}
+                        ${task.status === 'reviewing' ? `<button class="btn btn-primary" onclick="acceptTask('${task.id}')">验收通过</button>` : ''}
+                        <button class="btn btn-secondary" onclick="viewTaskDetail('${task.id}')">查看详情</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 创建任务
+        async function createTask() {
+            const title = document.getElementById('taskTitle').value.trim();
+            const description = document.getElementById('taskDesc').value.trim();
+            const creator = document.getElementById('taskCreator').value;
+            const priority = document.getElementById('taskPriority').value;
+            const dueDate = document.getElementById('taskDueDate').value;
+
+            if (!title) {
+                alert('请输入任务标题');
+                return;
+            }
+
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        title, 
+                        description, 
+                        creator, 
+                        priority,
+                        dueDate: dueDate ? new Date(dueDate).toISOString() : null
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('任务创建成功！');
+                    closeModal('createTaskModal');
+                    document.getElementById('taskTitle').value = '';
+                    document.getElementById('taskDesc').value = '';
+                    document.getElementById('taskDueDate').value = '';
+                    loadTasks();
+                    loadStats();
+                } else {
+                    alert('创建失败：' + data.error);
+                }
+            } catch (error) {
+                alert('创建失败：' + error.message);
+            }
+        }
+
+        // 确认收到任务
+        async function confirmTask(taskId) {
+            const currentUser = document.getElementById('taskCreator').value;
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}/confirm`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        userId: 'current-user-id',
+                        userName: currentUser
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('✅ 任务已确认收到！');
+                    loadTasks();
+                } else {
+                    alert('确认失败：' + data.error);
+                }
+            } catch (error) {
+                alert('确认失败：' + error.message);
+            }
+        }
+
+        // 分配任务
+        async function assignTask(taskId) {
+            const assignee = prompt('请输入负责人姓名（匠心/司库/执矩/磐石/灵犀）:');
+            if (!assignee) return;
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}/assign`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ assignee, operator: '天枢' })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('任务分配成功！');
+                    loadTasks();
+                } else {
+                    alert('分配失败：' + data.error);
+                }
+            } catch (error) {
+                alert('分配失败：' + error.message);
+            }
+        }
+
+        // 开始执行
+        async function startTask(taskId) {
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}/start`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ operator: '匠心' })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('任务已开始执行！');
+                    loadTasks();
+                } else {
+                    alert('操作失败：' + data.error);
+                }
+            } catch (error) {
+                alert('操作失败：' + error.message);
+            }
+        }
+
+        // 提交验收
+        async function submitTask(taskId) {
+            const deliverables = prompt('交付物（逗号分隔）:', '代码完成，测试通过');
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}/submit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        operator: '匠心',
+                        deliverables: deliverables ? deliverables.split(',').map(s => s.trim()) : []
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('已提交验收！');
+                    loadTasks();
+                } else {
+                    alert('操作失败：' + data.error);
+                }
+            } catch (error) {
+                alert('操作失败：' + error.message);
+            }
+        }
+
+        // 验收通过
+        async function acceptTask(taskId) {
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}/accept`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ acceptor: '天枢', comment: '验收通过' })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    alert('任务验收通过！');
+                    loadTasks();
+                } else {
+                    alert('操作失败：' + data.error);
+                }
+            } catch (error) {
+                alert('操作失败：' + error.message);
+            }
+        }
+
+        // 查看详情
+        async function viewTaskDetail(taskId) {
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}`);
+                const data = await res.json();
+                
+                if (!data.success) {
+                    alert('加载失败');
+                    return;
+                }
+                
+                const task = data.data;
+                const statusLabels = {
+                    pending: '待分配',
+                    assigned: '已分配',
+                    executing: '执行中',
+                    reviewing: '待验收',
+                    accepted: '已完成',
+                    cancelled: '已取消'
+                };
+                
+                let html = `
+                    <div style="margin-bottom: 20px">
+                        <h3 style="margin-bottom: 12px">${escapeHtml(task.title)}</h3>
+                        <p style="color: #666; margin-bottom: 12px">${escapeHtml(task.description)}</p>
+                        <div style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px">
+                            <span>📊 状态：<strong>${statusLabels[task.status]}</strong></span>
+                            <span>👤 创建人：${escapeHtml(task.creator)}</span>
+                            ${task.assignee ? `<span>👤 负责人：${escapeHtml(task.assignee)}</span>` : ''}
+                            <span>📊 优先级：${task.priority}</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px">
+                        <h4 style="margin-bottom: 12px">📜 状态历史</h4>
+                        <div style="max-height: 200px; overflow-y: auto">
+                            ${task.stateHistory.map(h => `
+                                <div style="padding: 8px; background: #f9fafb; border-radius: 8px; margin-bottom: 8px; font-size: 13px">
+                                    <div><strong>${h.from || '创建'} → ${h.to}</strong></div>
+                                    <div style="color: #666">操作人：${h.operator} | ${new Date(h.timestamp).toLocaleString('zh-CN')}</div>
+                                    <div style="color: #999">${h.comment}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px">
+                        <h4 style="margin-bottom: 12px">📝 子任务 (${task.subTasks ? task.subTasks.length : 0})</h4>
+                        ${task.subTasks && task.subTasks.length > 0 ? task.subTasks.map(st => `
+                            <div style="padding: 8px; background: #f9fafb; border-radius: 8px; margin-bottom: 8px; font-size: 13px">
+                                <strong>${escapeHtml(st.title)}</strong>
+                                <div style="color: #666">${escapeHtml(st.description)}</div>
+                                ${st.assignee ? `<div style="color: #999">负责人：${st.assignee}</div>` : ''}
+                            </div>
+                        `).join('') : '<div style="color: #999">暂无子任务</div>'}
+                    </div>
+                    
+                    <div>
+                        <h4 style="margin-bottom: 12px">💬 评论 (${task.comments ? task.comments.length : 0})</h4>
+                        ${task.comments && task.comments.length > 0 ? task.comments.map(c => `
+                            <div class="comment">
+                                <div class="comment-author">${escapeHtml(c.author)}</div>
+                                <div class="comment-content">${escapeHtml(c.content)}</div>
+                                <div class="comment-time">${new Date(c.createdAt).toLocaleString('zh-CN')}</div>
+                            </div>
+                        `).join('') : '<div style="color: #999">暂无评论</div>'}
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #e5e7eb">
+                        <h4 style="margin-bottom: 12px">💬 添加评论</h4>
+                        <div style="display: flex; gap: 8px">
+                            <input type="text" id="newComment" placeholder="输入评论内容" style="flex: 1; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px">
+                            <button class="btn btn-primary" onclick="addComment('${task.id}')">发送</button>
+                        </div>
+                    </div>
+                `;
+                
+                document.getElementById('taskDetailContent').innerHTML = html;
+                currentTaskId = taskId;
+                openModal('taskDetailModal');
+            } catch (error) {
+                alert('加载失败：' + error.message);
+            }
+        }
+
+        // 添加评论
+        async function addComment(taskId) {
+            const content = document.getElementById('newComment').value.trim();
+            if (!content) {
+                alert('请输入评论内容');
+                return;
+            }
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/bce/tasks/${taskId}/comments`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ author: '匠心', content })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    document.getElementById('newComment').value = '';
+                    viewTaskDetail(taskId); // 刷新详情
+                } else {
+                    alert('评论失败：' + data.error);
+                }
+            } catch (error) {
+                alert('评论失败：' + error.message);
+            }
+        }
+
+        // 刷新
+        function refreshTasks() {
+            loadStats();
+            loadTasks();
+        }
+
+        // 模态框控制
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+        // HTML 转义
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

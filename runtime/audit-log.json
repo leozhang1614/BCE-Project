@@ -1,0 +1,2577 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-20T08:05:00.073Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "93b0d275-6e55-4b08-9383-814037a362e7",
+    "details": {
+      "title": "TASK-003 权限测试",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-20T08:06:36.372Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "f6084cae-7ae7-46f0-8cac-8951748e5685",
+    "details": {
+      "title": "BCE 系统验收测试",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-20T08:26:58.139Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "cd1c1796-c3e3-4d5f-a90e-6125bd543c2f",
+    "details": {
+      "title": "🧪 完整流程测试 - 飞书通知验证",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-20T09:12:44.307Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "abb5d623-f90f-449c-b6c3-c01cd9d19c1e",
+    "details": {
+      "title": "🔧 飞书通知修复验证",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-20T09:20:39.930Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "3b734cde-aa0a-4484-b693-6985946295ef",
+    "details": {
+      "title": "✅ 完整信息测试",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-03-20T09:23:38.637Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "b5798f65-ad25-4562-a5fb-6ac412d760d1",
+    "details": {
+      "title": "📢 新模板测试",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-03-20T09:36:08.031Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "bdd79547-2152-4e55-aba4-ca8c076c9938",
+    "details": {
+      "title": "🔔 @功能测试",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-03-20T09:49:09.783Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "f74f7f33-1958-43b9-b419-cb7ed5b4f5c4",
+    "details": {
+      "title": "🧪@人功能 + 计划时间测试",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-03-20T10:15:04.802Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "ffb13cc2-f349-4010-9706-96224e4087e1",
+    "details": {
+      "title": "✅ 修复验证测试",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-03-20T10:29:56.457Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "e17b7817-6e31-47ca-b243-c906d107febc",
+    "details": {
+      "title": "【实战验收】BCE 系统完整功能测试",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-03-20T10:35:08.385Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "f9c8a873-973c-4b85-83b9-d5ad23d8352e",
+    "details": {
+      "title": "🔴@功能验证测试",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-03-20T10:39:42.282Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "cbbbedec-8c6a-48d6-a36e-d024ef1c2745",
+    "details": {
+      "title": "🔔 飞书@功能修复测试",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-03-20T10:42:18.900Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "478f4b2b-2114-4be3-9c47-9c0331593d03",
+    "details": {
+      "title": "✅ 完整功能验证",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-03-20T10:54:45.830Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "b85dae3b-02a9-43ec-8c07-beaf0380e838",
+    "details": {
+      "title": "📚 BCE 产品说明书全员学习",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-03-20T11:03:21.611Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "0d7cb961-f666-48ea-b282-00e84f7c1040",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-03-20T11:03:21.647Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "3344171d-ad54-4d27-8f9d-0d82dd2aa85f",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-03-20T11:03:21.670Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "de2003ba-9b4e-46bc-80a1-d49552f3c8bd",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-03-20T11:03:21.693Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "64890fe9-e2ff-419f-9d18-141e20f477cb",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-03-20T11:03:21.715Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "da3c58d1-3001-4d57-b822-41dee27559cd",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-03-20T11:03:21.738Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "9747c503-7dc4-42ea-82c4-78867ba2300b",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-03-20T11:19:07.893Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "cf614c6a-dec0-417d-948b-b92b347671b1",
+    "details": {
+      "title": "🔔 最终测试通知",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-03-20T11:25:06.701Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "122e09a8-37b4-4149-be85-801227084d85",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-03-20T11:25:06.738Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "d78f8b12-1fdd-4352-b250-d8f72189623f",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-03-20T11:25:06.761Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "56afead1-f0eb-43e8-be71-7901ebdee032",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-03-20T11:25:06.787Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "dc6a3343-7c49-4bfb-b709-a4b0e2a99108",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-03-20T11:25:06.813Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "9a5ac446-dff3-4d77-b5ad-01326ce7b66d",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-03-20T11:25:06.837Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "315250a7-79da-4191-9739-2bceea0771d2",
+    "details": {
+      "title": "📚 BCE 产品说明书培训 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-03-20T11:51:38.946Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "8f0c3a55-462e-459c-85ad-c8d9407c57a2",
+    "details": {
+      "title": "🔧 BCE 任务看板加载问题修复",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-03-20T12:14:35.548Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "8f2c16f0-737a-45ef-9885-b4a634a88f43",
+    "details": {
+      "title": "🔔 测试任务确认功能",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-03-20T12:38:30.033Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "5c8e8913-2fd5-48f5-89c5-368f1ef9730c",
+    "details": {
+      "title": "🧪 BCE 协作功能测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-03-20T12:38:30.068Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "87ba214c-cfda-47be-a80e-b61f3dfc7719",
+    "details": {
+      "title": "🧪 BCE 协作功能测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-03-20T12:38:30.090Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "2b9cd308-24cc-4c2e-989c-9af9cf843f89",
+    "details": {
+      "title": "🧪 BCE 协作功能测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 33,
+    "timestamp": "2026-03-20T12:38:30.113Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "664203ef-4a24-4437-8aa1-9188df955308",
+    "details": {
+      "title": "🧪 BCE 协作功能测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 34,
+    "timestamp": "2026-03-20T12:38:30.136Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "66e93621-0c31-4515-ab49-547e6ff089aa",
+    "details": {
+      "title": "🧪 BCE 协作功能测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 35,
+    "timestamp": "2026-03-20T12:38:30.158Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "691c1f4a-eb7f-4d9b-b99c-2266d8daa0bf",
+    "details": {
+      "title": "🧪 BCE 协作功能测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 36,
+    "timestamp": "2026-03-20T12:56:52.711Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "6bac430f-e6c3-4ea6-8b0b-0490b54f5d36",
+    "details": {
+      "title": "🔔 飞书通知修复验证",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 37,
+    "timestamp": "2026-03-20T12:57:24.508Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "edc75161-9544-4573-8b38-5edc20538456",
+    "details": {
+      "title": "🧪 BCE 任务分配测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 38,
+    "timestamp": "2026-03-20T12:57:24.529Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "ab0cb302-2059-47af-8223-ebab42b098a5",
+    "details": {
+      "title": "🧪 BCE 任务分配测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 39,
+    "timestamp": "2026-03-20T12:57:24.550Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "7381798b-3b74-4734-8514-4033a86330a4",
+    "details": {
+      "title": "🧪 BCE 任务分配测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 40,
+    "timestamp": "2026-03-20T12:57:24.570Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "ac9fef93-8789-47df-a6e6-e5f81cc2081a",
+    "details": {
+      "title": "🧪 BCE 任务分配测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 41,
+    "timestamp": "2026-03-20T12:57:24.591Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "2ac8aa62-8dd4-44cd-9028-51a7016d8406",
+    "details": {
+      "title": "🧪 BCE 任务分配测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 42,
+    "timestamp": "2026-03-20T12:57:24.612Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "251d0ff6-645a-4724-a79a-4798d4326f00",
+    "details": {
+      "title": "🧪 BCE 任务分配测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 43,
+    "timestamp": "2026-03-20T13:12:49.178Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "73c30eab-e7f5-4a4f-acf8-6c28bfa10ded",
+    "details": {
+      "title": "🔔 测试@灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 44,
+    "timestamp": "2026-03-20T13:12:49.222Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "71843a31-ecfc-4fc7-b56a-cf8d7526bb89",
+    "details": {
+      "title": "🔔 测试@执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 45,
+    "timestamp": "2026-03-20T13:14:50.067Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "77460868-5629-498d-aab3-04ad2e46e289",
+    "details": {
+      "title": "✅ @功能修复测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 46,
+    "timestamp": "2026-03-20T13:14:50.090Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "80523776-d991-4320-9279-9f508dc04fe9",
+    "details": {
+      "title": "✅ @功能修复测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 47,
+    "timestamp": "2026-03-20T13:14:50.112Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "51b7927a-07c3-46d4-9996-5fbeb3360402",
+    "details": {
+      "title": "✅ @功能修复测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 48,
+    "timestamp": "2026-03-20T13:14:50.135Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "28599d9d-ac1d-462e-a508-009cfeda245d",
+    "details": {
+      "title": "✅ @功能修复测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 49,
+    "timestamp": "2026-03-20T13:14:50.157Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "e352f96d-7aaf-406d-9452-8da9ebf57a60",
+    "details": {
+      "title": "✅ @功能修复测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 50,
+    "timestamp": "2026-03-20T13:14:50.180Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "b17a52f8-7fed-4018-929b-ce8161c9bb6c",
+    "details": {
+      "title": "✅ @功能修复测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 51,
+    "timestamp": "2026-03-20T13:23:48.305Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "c657d6e0-5363-4824-8744-8b5289dbc148",
+    "details": {
+      "title": "📋 任务分配流程测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 52,
+    "timestamp": "2026-03-20T13:23:48.345Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "5e4831e1-c0eb-4092-b11a-7ac073bfcccf",
+    "details": {
+      "title": "📋 任务分配流程测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 53,
+    "timestamp": "2026-03-20T13:23:48.367Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "f739cdbb-4614-4e6b-9b89-7131da03d5ce",
+    "details": {
+      "title": "📋 任务分配流程测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 54,
+    "timestamp": "2026-03-20T13:23:48.387Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "0f86408d-0924-4f4e-b7eb-ebf3579001a3",
+    "details": {
+      "title": "📋 任务分配流程测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 55,
+    "timestamp": "2026-03-20T13:23:48.407Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "d2942cee-8b92-4ba4-8461-a18593b55f03",
+    "details": {
+      "title": "📋 任务分配流程测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 56,
+    "timestamp": "2026-03-20T13:23:48.428Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "d44e0bea-63bd-4cd7-823f-b7f35bbb31c5",
+    "details": {
+      "title": "📋 任务分配流程测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 57,
+    "timestamp": "2026-03-20T13:33:14.752Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "648ffc65-7e48-408b-9971-ee4a809b965c",
+    "details": {
+      "title": "✅ @功能验证测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 58,
+    "timestamp": "2026-03-20T13:33:14.789Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "d1273c62-f2c8-495b-8af0-ec4048132b49",
+    "details": {
+      "title": "✅ @功能验证测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 59,
+    "timestamp": "2026-03-20T13:33:14.811Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "76f2f112-2c04-4059-bc2f-7a1aa0a5e2c0",
+    "details": {
+      "title": "✅ @功能验证测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 60,
+    "timestamp": "2026-03-20T13:33:14.830Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "d2735e1d-bd6b-43c3-af16-08b43e82054d",
+    "details": {
+      "title": "✅ @功能验证测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 61,
+    "timestamp": "2026-03-20T13:33:14.851Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "9e199bf3-eeb9-450e-9c42-f22ae4a37c15",
+    "details": {
+      "title": "✅ @功能验证测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 62,
+    "timestamp": "2026-03-20T13:33:14.871Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "f9e054a1-0e54-4052-b099-726c562323d5",
+    "details": {
+      "title": "✅ @功能验证测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 63,
+    "timestamp": "2026-03-20T13:45:28.066Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "263ab34e-a727-4814-b516-a28a12bc4677",
+    "details": {
+      "title": "📋 BCE 规范流程测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 64,
+    "timestamp": "2026-03-20T13:45:28.098Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "4b5d5992-bc55-4b6b-9ae2-623039769232",
+    "details": {
+      "title": "📋 BCE 规范流程测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 65,
+    "timestamp": "2026-03-20T13:45:28.120Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "c3832ca3-9775-4c34-8cba-f426857e3f81",
+    "details": {
+      "title": "📋 BCE 规范流程测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 66,
+    "timestamp": "2026-03-20T13:45:28.141Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "63f65f2c-520f-47f9-8c39-405cd7f90bed",
+    "details": {
+      "title": "📋 BCE 规范流程测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 67,
+    "timestamp": "2026-03-20T13:45:28.161Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "4d6e782e-68ad-4b0d-bd70-1bcc5c202a16",
+    "details": {
+      "title": "📋 BCE 规范流程测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 68,
+    "timestamp": "2026-03-20T13:45:28.181Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "285d70f7-75ac-470d-a19d-8fcb03517ab2",
+    "details": {
+      "title": "📋 BCE 规范流程测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 69,
+    "timestamp": "2026-03-20T13:52:21.221Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "fbe04f9f-e5fa-4c3c-a4a1-29c919751b44",
+    "details": {
+      "title": "✅ @格式修复测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 70,
+    "timestamp": "2026-03-20T13:52:21.228Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "a8fcac9b-08ab-41fe-9823-9e9d290d9133",
+    "details": {
+      "title": "✅ @格式修复测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 71,
+    "timestamp": "2026-03-20T13:52:21.235Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "7798fe39-58a5-4ca6-90ae-5c13bf76425e",
+    "details": {
+      "title": "✅ @格式修复测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 72,
+    "timestamp": "2026-03-20T13:52:21.242Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "738147f0-1c66-434f-aab4-8235939d3db4",
+    "details": {
+      "title": "✅ @格式修复测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 73,
+    "timestamp": "2026-03-20T13:52:21.249Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "7a5542a2-a079-4145-8b35-5c5333a3a154",
+    "details": {
+      "title": "✅ @格式修复测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 74,
+    "timestamp": "2026-03-20T13:52:21.255Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "6b521b31-1011-4a8a-9b80-0712d4263329",
+    "details": {
+      "title": "✅ @格式修复测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 75,
+    "timestamp": "2026-03-20T13:54:56.254Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "69f29ae6-e253-4677-8fcf-23eeb9a1c8d2",
+    "details": {
+      "title": "✅ @格式测试-天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 76,
+    "timestamp": "2026-03-20T13:54:57.317Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "721b998b-60ee-444d-adbe-37e876f1a4a2",
+    "details": {
+      "title": "✅ @格式测试-灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 77,
+    "timestamp": "2026-03-20T13:54:58.383Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "f072398a-da68-46d9-b502-a6484a08eb9c",
+    "details": {
+      "title": "✅ @格式测试-执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 78,
+    "timestamp": "2026-03-20T13:54:59.446Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "4b03a8aa-0701-4cbf-a6ea-f4b4f6bdca5d",
+    "details": {
+      "title": "✅ @格式测试-磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 79,
+    "timestamp": "2026-03-20T13:55:00.490Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "da8252cc-2647-483c-a09a-69e691601840",
+    "details": {
+      "title": "✅ @格式测试-司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 80,
+    "timestamp": "2026-03-20T13:55:01.541Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "2588c372-31bb-450c-bb41-ec34078b29a2",
+    "details": {
+      "title": "✅ @格式测试-匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 81,
+    "timestamp": "2026-03-20T13:55:51.088Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "dca8d3d3-cda4-4bfb-b37b-cc3d38e8cfb8",
+    "details": {
+      "title": "✅ @格式最终测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 82,
+    "timestamp": "2026-03-20T13:55:51.089Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "114e340b-fbf8-4f35-9ea6-df4346b9b4f7",
+    "details": {
+      "title": "✅ @格式最终测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 83,
+    "timestamp": "2026-03-20T13:55:51.090Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "245825a2-c8dc-4c79-bd75-ec1aaf852727",
+    "details": {
+      "title": "✅ @格式最终测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 84,
+    "timestamp": "2026-03-20T13:55:51.091Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "22fd4d77-dc7a-4817-94dd-2af0c13c906c",
+    "details": {
+      "title": "✅ @格式最终测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 85,
+    "timestamp": "2026-03-20T13:55:51.092Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "92ccabfe-873f-4f63-a84e-0413c030211a",
+    "details": {
+      "title": "✅ @格式最终测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 86,
+    "timestamp": "2026-03-20T13:55:51.093Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "1e3b55fd-c774-4898-9d72-2581aa22b476",
+    "details": {
+      "title": "✅ @格式最终测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 87,
+    "timestamp": "2026-03-20T13:58:34.421Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "67d28acf-3086-4e68-ba1b-103a8d170012",
+    "details": {
+      "title": "✅ @格式最终测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 88,
+    "timestamp": "2026-03-20T13:58:34.423Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "34af0e37-b6a8-43c1-95d7-eb5f787de359",
+    "details": {
+      "title": "✅ @格式最终测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 89,
+    "timestamp": "2026-03-20T13:58:34.424Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "2b9259ec-c669-4d83-a161-3d348807532d",
+    "details": {
+      "title": "✅ @格式最终测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 90,
+    "timestamp": "2026-03-20T13:58:34.426Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "47cb1d7b-2702-40ac-8011-fa9c27d275bc",
+    "details": {
+      "title": "✅ @格式最终测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 91,
+    "timestamp": "2026-03-20T13:58:34.427Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "1912c634-54af-437c-a03d-2feff2c80411",
+    "details": {
+      "title": "✅ @格式最终测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 92,
+    "timestamp": "2026-03-20T13:58:34.428Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "8bdfc859-7dbc-4d5c-a766-8db92fc98328",
+    "details": {
+      "title": "✅ @格式最终测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 93,
+    "timestamp": "2026-03-20T13:59:17.015Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "9c2cff55-3846-422b-82c2-a9af9e12c0fe",
+    "details": {
+      "title": "🔔 全员@测试 - 天枢",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 94,
+    "timestamp": "2026-03-20T13:59:17.511Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "eed17111-3c90-46fa-8086-db6f09376465",
+    "details": {
+      "title": "🔔 全员@测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 95,
+    "timestamp": "2026-03-20T13:59:18.012Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "aefb435a-9651-4537-bc71-15375b46a70f",
+    "details": {
+      "title": "🔔 全员@测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 96,
+    "timestamp": "2026-03-20T13:59:18.510Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "365156df-3aad-4d3c-820c-a8c675ff403a",
+    "details": {
+      "title": "🔔 全员@测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 97,
+    "timestamp": "2026-03-20T13:59:19.011Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "d4be0a10-50e3-440d-b8ca-88763adccd77",
+    "details": {
+      "title": "🔔 全员@测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 98,
+    "timestamp": "2026-03-20T13:59:19.512Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "95bb6672-bc62-4ae3-86b6-aa5aaf93ebe6",
+    "details": {
+      "title": "🔔 全员@测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 99,
+    "timestamp": "2026-03-20T13:59:20.011Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "3e60ef02-27cd-4e3e-883e-2fcb18c8ca08",
+    "details": {
+      "title": "🔔 全员@测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 100,
+    "timestamp": "2026-03-20T14:01:43.361Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "75c04f82-f3b4-4a0f-b6ce-6305d30a96bf",
+    "details": {
+      "title": "🔔 最终测试-天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 101,
+    "timestamp": "2026-03-20T14:01:44.439Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "e616ae3c-d677-410f-923b-fd88a23f30b7",
+    "details": {
+      "title": "🔔 最终测试-灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 102,
+    "timestamp": "2026-03-20T14:01:45.506Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "6eccb917-d296-42ce-aeff-f2a01e8088d1",
+    "details": {
+      "title": "🔔 最终测试-执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 103,
+    "timestamp": "2026-03-20T14:02:53.752Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "23860d77-d887-4246-851c-1cdc99486a2e",
+    "details": {
+      "title": "✅ @格式最终测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 104,
+    "timestamp": "2026-03-20T14:02:53.754Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "48240f25-e707-4e22-ba13-c245df25ca99",
+    "details": {
+      "title": "✅ @格式最终测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 105,
+    "timestamp": "2026-03-20T14:02:53.755Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "f91e2451-7cdf-4e21-af46-f7f217a443d0",
+    "details": {
+      "title": "✅ @格式最终测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 106,
+    "timestamp": "2026-03-20T14:02:53.757Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "0047171a-2918-4999-826f-c17beddb627b",
+    "details": {
+      "title": "✅ @格式最终测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 107,
+    "timestamp": "2026-03-20T14:02:53.758Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "189bd596-7783-4e6e-baf8-fe8b0637d611",
+    "details": {
+      "title": "✅ @格式最终测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 108,
+    "timestamp": "2026-03-20T14:02:53.759Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "286ccc4e-5250-4464-bc8f-8be91301adb0",
+    "details": {
+      "title": "✅ @格式最终测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 109,
+    "timestamp": "2026-03-20T14:05:17.952Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "fe7b7afa-394b-4621-8400-20ba7bdff0b7",
+    "details": {
+      "title": "🔔 强制重启测试-天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 110,
+    "timestamp": "2026-03-20T14:05:19.032Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "003d2a97-469a-4e6d-86e3-cf8a19253b53",
+    "details": {
+      "title": "🔔 强制重启测试-灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 111,
+    "timestamp": "2026-03-20T14:05:20.105Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "7e90045d-365b-476d-afc4-d556306b1c05",
+    "details": {
+      "title": "🔔 强制重启测试-执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 112,
+    "timestamp": "2026-03-20T14:07:58.137Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "f93edbb9-8685-40a2-b71f-d405a4ed9a93",
+    "details": {
+      "title": "🔔 @格式修复测试-天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 113,
+    "timestamp": "2026-03-20T14:07:59.219Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "594bf3bd-e6e3-4f02-99ce-27739fcec109",
+    "details": {
+      "title": "🔔 @格式修复测试-灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 114,
+    "timestamp": "2026-03-20T14:08:00.280Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "4475bd84-3e5b-4102-8a9c-cf9dbf2c8f5f",
+    "details": {
+      "title": "🔔 @格式修复测试-执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 115,
+    "timestamp": "2026-03-20T14:08:56.683Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "59255acb-f437-48df-a608-163b9ccc5947",
+    "details": {
+      "title": "✅ @格式最终测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 116,
+    "timestamp": "2026-03-20T14:08:56.685Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "bb4e4eb8-9c3f-44e5-bb2b-f5f8f5f1ce50",
+    "details": {
+      "title": "✅ @格式最终测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 117,
+    "timestamp": "2026-03-20T14:08:56.686Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "2cec80aa-98d4-4c48-948e-890807406d4b",
+    "details": {
+      "title": "✅ @格式最终测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 118,
+    "timestamp": "2026-03-20T14:08:56.687Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "5207b107-617c-4524-822c-ca97af15eb00",
+    "details": {
+      "title": "✅ @格式最终测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 119,
+    "timestamp": "2026-03-20T14:08:56.689Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "8282542b-a5fe-4edc-b6ec-cd27613f4f1f",
+    "details": {
+      "title": "✅ @格式最终测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 120,
+    "timestamp": "2026-03-20T14:08:56.690Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "b9dea695-c16a-4f0e-ac03-c707f9c5e328",
+    "details": {
+      "title": "✅ @格式最终测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 121,
+    "timestamp": "2026-03-20T14:09:26.528Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "a7a78ef5-20ea-47be-9592-c9b53d32ad3a",
+    "details": {
+      "title": "🔔 实时监控测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 122,
+    "timestamp": "2026-03-20T14:09:43.194Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "5f3cb814-92dc-423c-bbc8-fc67e9428e16",
+    "details": {
+      "title": "🔔 日志测试",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 123,
+    "timestamp": "2026-03-20T14:10:56.044Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "9b40d36c-de89-46de-948f-99f91b6fbbf7",
+    "details": {
+      "title": "🔔 最终排查测试",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 124,
+    "timestamp": "2026-03-20T14:11:37.637Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "5eca6f22-4f26-42ea-962e-767d432dc9b4",
+    "details": {
+      "title": "🔔 详细日志测试",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 125,
+    "timestamp": "2026-03-20T14:13:20.633Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "443cf20c-43e1-4ac9-a68d-0ed24ff0cfc1",
+    "details": {
+      "title": "🚀 全员测试 - 天枢",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 126,
+    "timestamp": "2026-03-20T14:13:21.431Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "c86e7473-a117-4e73-bee4-f265f9573cab",
+    "details": {
+      "title": "🚀 全员测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 127,
+    "timestamp": "2026-03-20T14:13:22.228Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "895791ec-eb34-4064-a0dd-f6cd88f5cdf0",
+    "details": {
+      "title": "🚀 全员测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 128,
+    "timestamp": "2026-03-20T14:13:23.028Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "9e70b696-771f-4ab2-992c-eb02e05be21f",
+    "details": {
+      "title": "🚀 全员测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 129,
+    "timestamp": "2026-03-20T14:13:23.829Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "fc8bd84c-b5c3-4e82-817a-6b47c7bfd0f0",
+    "details": {
+      "title": "🚀 全员测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 130,
+    "timestamp": "2026-03-20T14:13:24.629Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "5dd58a99-d52e-4e2b-9a4b-704983ba11bc",
+    "details": {
+      "title": "🚀 全员测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 131,
+    "timestamp": "2026-03-20T14:13:25.429Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "cdbf8bf2-105c-4128-91af-adcc1400a09e",
+    "details": {
+      "title": "🚀 全员测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 132,
+    "timestamp": "2026-03-20T14:14:58.592Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "c93fa2c5-98b7-4079-a31c-6c7173918ccf",
+    "details": {
+      "title": "🔔 日志测试",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 133,
+    "timestamp": "2026-03-20T14:15:56.865Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "d87f01f4-d324-48e0-88bd-5d4794541077",
+    "details": {
+      "title": "🔔 代码修复测试",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 134,
+    "timestamp": "2026-03-20T14:16:45.275Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "4990188b-116e-46fc-b5fd-59b0bbcda048",
+    "details": {
+      "title": "🔔 最终修复测试-天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 135,
+    "timestamp": "2026-03-20T14:16:47.343Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "e1f20b35-5517-4998-b15b-ca562726b6a3",
+    "details": {
+      "title": "🔔 最终修复测试-灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 136,
+    "timestamp": "2026-03-20T14:16:49.418Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "32dd1653-1316-4cb4-96a8-231de8cf2da6",
+    "details": {
+      "title": "🔔 最终修复测试-执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 137,
+    "timestamp": "2026-03-20T14:20:35.073Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "b33c1c7c-14c0-4108-8b56-aa96a44656b8",
+    "details": {
+      "title": "🔔 最终测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 138,
+    "timestamp": "2026-03-20T14:21:05.916Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "55f00a45-7fa2-4c2f-bc51-fe1a983610a3",
+    "details": {
+      "title": "🔔 实时日志测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 139,
+    "timestamp": "2026-03-20T14:21:19.068Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "f80c2c2d-fdb6-4019-bf7d-47385ac66dd9",
+    "details": {
+      "title": "🔔 测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 140,
+    "timestamp": "2026-03-20T14:24:08.556Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "af4f5761-8b20-4c7e-ae20-d791d7f1181e",
+    "details": {
+      "title": "🔔 API 测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 141,
+    "timestamp": "2026-03-20T14:26:34.111Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "850cce39-9150-4f69-b5d5-4ee537b3c729",
+    "details": {
+      "title": "🔔 最终测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 142,
+    "timestamp": "2026-03-20T14:26:57.098Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "2dc3802c-c168-4ef8-8f25-a752da8cd19d",
+    "details": {
+      "title": "🔔 清除缓存测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 143,
+    "timestamp": "2026-03-20T14:35:56.147Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "75a36712-53d2-4479-a12d-e31464c94df9",
+    "details": {
+      "title": "🚀 新代码测试 - 天策",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 144,
+    "timestamp": "2026-03-20T14:35:58.290Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "c7ab4d5f-eeb6-4e5f-ba93-ff83964dbabc",
+    "details": {
+      "title": "🚀 新代码测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 145,
+    "timestamp": "2026-03-20T14:36:00.470Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "5db813d3-27e4-45c3-820d-5ceffb6a0e05",
+    "details": {
+      "title": "🚀 新代码测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 146,
+    "timestamp": "2026-03-20T14:36:10.301Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "b3f61cf3-dc1b-4dcc-90b2-c1d6c5ae33be",
+    "details": {
+      "title": "🔔 新进程测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 147,
+    "timestamp": "2026-03-20T14:36:22.644Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "27a2679e-7e48-433c-9a00-acf5d0a401f4",
+    "details": {
+      "title": "🔔 新进程测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 148,
+    "timestamp": "2026-03-20T14:38:47.903Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "20d33375-fb3a-4dbc-935e-767558341455",
+    "details": {
+      "title": "🔔 完整流程测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 149,
+    "timestamp": "2026-03-20T14:40:27.861Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "131baa28-3004-43e4-9ea0-564f37fb3959",
+    "details": {
+      "title": "🔔 调试日志测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 150,
+    "timestamp": "2026-03-20T14:41:58.871Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "fd43003d-bf1b-46ec-aa3f-6c0be19bd334",
+    "details": {
+      "title": "🔔 格式验证测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 151,
+    "timestamp": "2026-03-20T14:43:49.508Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "bbdbfda7-91e6-48d2-9106-e440a6fe863c",
+    "details": {
+      "title": "🔔 顶层 at 测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 152,
+    "timestamp": "2026-03-20T14:44:55.283Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "2c5a9074-613f-4578-af82-71d69124335b",
+    "details": {
+      "title": "🔔 post 消息测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 153,
+    "timestamp": "2026-03-20T14:46:26.440Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "6431b2ad-24d5-4069-af7a-aef687997925",
+    "details": {
+      "title": "🔔 post 消息测试 2",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 154,
+    "timestamp": "2026-03-20T14:50:20.679Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "b8bb4bdb-452f-436b-a7ec-17e423273ea4",
+    "details": {
+      "title": "🔔 代码修复测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 155,
+    "timestamp": "2026-03-20T14:51:43.582Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "6afa150c-334f-4391-bc34-f05d1f9ba44a",
+    "details": {
+      "title": "🔔 最终测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 156,
+    "timestamp": "2026-03-20T15:20:06.476Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "e7bc7b60-1460-4508-8b5a-37831fc8d66a",
+    "details": {
+      "title": "🔔 最终测试 - 天枢",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 157,
+    "timestamp": "2026-03-20T15:20:06.506Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "0dc5cda9-8d27-456f-bfde-a7af325d903b",
+    "details": {
+      "title": "🔔 最终测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 158,
+    "timestamp": "2026-03-20T15:20:06.529Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "320dcd8e-90d4-4045-8c5e-9810c23058df",
+    "details": {
+      "title": "🔔 最终测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 159,
+    "timestamp": "2026-03-20T15:25:31.563Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "dbdd2d5b-b281-4812-89e3-9b852ee56f02",
+    "details": {
+      "title": "✅ 全员@测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 160,
+    "timestamp": "2026-03-20T15:25:31.565Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "ab545c38-6940-45b9-b502-467b44828697",
+    "details": {
+      "title": "✅ 全员@测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 161,
+    "timestamp": "2026-03-20T15:25:31.567Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "1c9291a4-71b9-4f08-92be-cff60b5648d2",
+    "details": {
+      "title": "✅ 全员@测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 162,
+    "timestamp": "2026-03-20T15:25:31.569Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "c049dbbc-dd3c-4d7d-94a0-13a7c2e0e7db",
+    "details": {
+      "title": "✅ 全员@测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 163,
+    "timestamp": "2026-03-20T15:25:31.570Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "13e2f44a-c476-4c06-9a7e-a5a299fb0e5c",
+    "details": {
+      "title": "✅ 全员@测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 164,
+    "timestamp": "2026-03-20T15:30:43.422Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "efa9464a-775f-439b-9208-79cbf5b76240",
+    "details": {
+      "title": "🔔 修复测试 - 天枢",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 165,
+    "timestamp": "2026-03-20T15:30:43.455Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "2c13313b-7dd0-43a2-8875-722b4b7fd015",
+    "details": {
+      "title": "🔔 修复测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 166,
+    "timestamp": "2026-03-20T15:33:30.031Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "5d6085f7-594e-4288-9141-0fe8a12cb8df",
+    "details": {
+      "title": "🔔 BCE 测试-天枢",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 167,
+    "timestamp": "2026-03-20T15:33:31.075Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "8b04e6fe-a7be-4004-a323-2b4e292bd9ec",
+    "details": {
+      "title": "🔔 BCE 测试-灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 168,
+    "timestamp": "2026-03-20T15:33:32.126Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "8eea3671-834b-4e35-8560-0408c3505911",
+    "details": {
+      "title": "🔔 BCE 测试-司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 169,
+    "timestamp": "2026-03-20T16:07:03.661Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "8e8609a4-10c9-4cbc-aea8-e2a7aa64da6f",
+    "details": {
+      "title": "🔔 最终调试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 170,
+    "timestamp": "2026-03-20T16:07:31.522Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "3d78be1e-52df-4f06-8b7c-3d2942c72b59",
+    "details": {
+      "title": "🔔 顶层 at 测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 171,
+    "timestamp": "2026-03-20T16:09:33.610Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "bac39981-5cc9-43da-bc64-76e07e414bcd",
+    "details": {
+      "title": "✅ BCE 流程测试 - 匠心",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 172,
+    "timestamp": "2026-03-20T16:09:33.613Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "26e7e664-f6c2-4d54-9ebd-455e00df23f6",
+    "details": {
+      "title": "✅ BCE 流程测试 - 司库",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 173,
+    "timestamp": "2026-03-20T16:09:33.614Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "bd41aa62-78a0-411f-9908-ab5ed3502484",
+    "details": {
+      "title": "✅ BCE 流程测试 - 执矩",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 174,
+    "timestamp": "2026-03-20T16:09:33.616Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "d21fcff6-a2be-4476-a86c-196e42a3166a",
+    "details": {
+      "title": "✅ BCE 流程测试 - 磐石",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 175,
+    "timestamp": "2026-03-20T16:09:33.618Z",
+    "action": "CREATE_TASK",
+    "userId": "磊哥",
+    "userName": "磊哥",
+    "resourceType": "task",
+    "resourceId": "2a4d3836-39c8-49ee-af62-a69a9967030b",
+    "details": {
+      "title": "✅ BCE 流程测试 - 灵犀",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 176,
+    "timestamp": "2026-03-21T00:02:11.011Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "1f292100-b7aa-49e0-a7b9-bea7425e2fdd",
+    "details": {
+      "title": "【测试】磐石任务通知测试",
+      "assignee": "磐石",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 177,
+    "timestamp": "2026-03-21T00:05:33.405Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "ef22ba32-635a-4c8e-8dd5-a18a8c009d18",
+    "details": {
+      "title": "【全员测试】天枢的任务通知测试",
+      "assignee": "天枢",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 178,
+    "timestamp": "2026-03-21T00:05:35.417Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "bb4af7ce-40d8-4dc1-b717-f6480db3b955",
+    "details": {
+      "title": "【全员测试】匠心的任务通知测试",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 179,
+    "timestamp": "2026-03-21T00:05:37.427Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "567f095b-385c-4367-b2e7-e276f42ebf57",
+    "details": {
+      "title": "【全员测试】司库的任务通知测试",
+      "assignee": "司库",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 180,
+    "timestamp": "2026-03-21T00:05:39.436Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "d4643971-af1d-48af-a8d4-29781190d043",
+    "details": {
+      "title": "【全员测试】执矩的任务通知测试",
+      "assignee": "执矩",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 181,
+    "timestamp": "2026-03-21T00:05:41.443Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "92a92500-21cc-488f-bf9c-c4e50abfa1c1",
+    "details": {
+      "title": "【全员测试】磐石的任务通知测试",
+      "assignee": "磐石",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 182,
+    "timestamp": "2026-03-21T00:05:43.451Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "1059eaee-2c11-44cf-a15b-2b7aabc0211a",
+    "details": {
+      "title": "【全员测试】灵犀的任务通知测试",
+      "assignee": "灵犀",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 183,
+    "timestamp": "2026-03-21T00:05:45.459Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "73297820-2095-4c19-ba26-2d018627aa98",
+    "details": {
+      "title": "【全员测试】天策的任务通知测试",
+      "assignee": "天策",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 184,
+    "timestamp": "2026-03-21T04:01:17.418Z",
+    "action": "CREATE_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "89d360b7-895f-43b5-b30b-9c7cb3ce4844",
+    "details": {
+      "title": "v3.2 功能测试任务",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  }
+]

@@ -295,6 +295,7 @@ function getAllAgents() {
   return ['匠心', '司库', '执矩', '磐石', '天枢', '灵犀'];
 }
 
+// 导出供外部访问
 module.exports = router;
 module.exports.broadcasts = broadcasts;
-s = broadcasts;
+module.exports.getAllAgents = getAllAgents;

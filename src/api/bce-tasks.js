@@ -7,6 +7,12 @@ const path = require('path');
 const { checkPermission, checkTaskPermission } = require('../middleware/auth');
 const { logAudit, getAuditLogs } = require('../middleware/audit');
 
+// v3.2 新增导入
+const { validMembers } = require('../config/task-rules');
+const { addTransferHistory, isCircularTransfer } = require('../services/transfer-rules');
+const notificationService = require('../services/notification-service');
+const mailboxService = require('../services/mailbox-service');
+
 // 数据持久化文件
 const DATA_FILE = path.join(__dirname, '../../runtime/bce-data.json');
 
@@ -771,7 +777,7 @@ router.get('/audit', (req, res) => {
  * POST /api/bce/tasks/:id/confirm
  * Body: { userId: string, userName: string }
  */
-router.post('/tasks/:id/confirm', (req, res) => {
+router.post('/tasks/:id/confirm', async (req, res) => {
   try {
     const { id } = req.params;
     const { userId, userName } = req.body;
@@ -785,12 +791,34 @@ router.post('/tasks/:id/confirm', (req, res) => {
       return res.status(404).json({ error: '任务不存在' });
     }
     
+    // 幂等性检查 ✅ v3.2
+    if (task.confirmedAt) {
+      return res.status(400).json({ error: '⚠️ 任务已确认，请勿重复操作' });
+    }
+    
     task.confirmedAt = new Date().toISOString();
     task.confirmedBy = userName;
     task.requireConfirmation = false;
+    task.status = 'in_progress';
     task.updatedAt = new Date().toISOString();
     
     saveData();
+    
+    // 通知上一节点（动态计算）✅ v3.2
+    try {
+      const previousHandler = notificationService.getPreviousHandler(task);
+      await notificationService.notify(
+        previousHandler,
+        userName,
+        'task_confirmed',
+        `✅ ${userName} 已确认接收任务：${task.title}`,
+        id,
+        `task:${id}`
+      );
+      console.log(`[确认反馈] 已通知上一节点 ${previousHandler}`);
+    } catch (notifyError) {
+      console.error('[确认反馈] 通知失败:', notifyError.message);
+    }
     
     console.log(`[BCE 任务] 任务确认：${id}, 确认人：${userName}`);
     
@@ -799,7 +827,8 @@ router.post('/tasks/:id/confirm', (req, res) => {
       message: '任务已确认',
       data: {
         confirmedAt: task.confirmedAt,
-        confirmedBy: task.confirmedBy
+        confirmedBy: task.confirmedBy,
+        notifiedPreviousHandler: true
       }
     });
   } catch (error) {
@@ -831,6 +860,161 @@ router.get('/tasks/unconfirmed', (req, res) => {
     });
   } catch (error) {
     console.error('获取未确认任务失败:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * 任务转交 API（v3.2 边界检查 + 三通道通知）
+ * POST /api/bce/tasks/:id/transfer
+ */
+router.post('/tasks/:id/transfer', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { operator, nextAssignee, comment } = req.body;
+    
+    if (!operator || !nextAssignee) {
+      return res.status(400).json({ error: 'operator 和 nextAssignee 不能为空' });
+    }
+    
+    const task = tasks.get(id);
+    if (!task) {
+      return res.status(404).json({ error: '任务不存在' });
+    }
+    
+    // 边界检查 1：校验下一节点是否为有效成员 ✅ v3.2
+    if (!validMembers.includes(nextAssignee)) {
+      return res.status(400).json({ 
+        error: `无效的接收人：${nextAssignee}，有效成员：${validMembers.join('、')}` 
+      });
+    }
+    
+    // 边界检查 2：不能转交给自己 ✅ v3.2
+    if (nextAssignee === task.assignee) {
+      return res.status(400).json({ error: '不能转交给自己' });
+    }
+    
+    // 边界检查 3：循环转交检测 ✅ v3.2
+    if (isCircularTransfer(task, nextAssignee)) {
+      return res.status(400).json({ error: '检测到循环转交，请检查流转规则' });
+    }
+    
+    // 执行转交
+    const previousAssignee = task.assignee;
+    task.status = 'assigned';
+    task.assignee = nextAssignee;
+    task.transferredAt = new Date().toISOString();
+    task.transferredBy = operator;
+    task.updatedAt = new Date().toISOString();
+    
+    // 记录流转历史（限制 100 条）✅ v3.2
+    addTransferHistory(task, previousAssignee, nextAssignee, comment || `由 ${operator} 转交`);
+    
+    saveData();
+    
+    // 三通道通知下一节点
+    try {
+      await notificationService.notify(
+        nextAssignee,
+        operator,
+        'task_transferred',
+        `🔄 任务已转交：${task.title}\n转交人：${operator}\n${comment ? '备注：' + comment : ''}`,
+        id,
+        `task:${id}`
+      );
+    } catch (notifyError) {
+      console.error('[转交通知] 发送失败:', notifyError.message);
+    }
+    
+    // 写入下一节点邮箱（可靠通道）
+    try {
+      await mailboxService.send(
+        nextAssignee,
+        operator,
+        'task_transferred',
+        `🔄 任务已转交：${task.title}\n转交人：${operator}`,
+        id,
+        `task:${id}`
+      );
+    } catch (mailboxError) {
+      console.error('[转交邮箱] 写入失败:', mailboxError.message);
+    }
+    
+    console.log(`[BCE 任务] 任务转交：${id}, ${previousAssignee} -> ${nextAssignee}`);
+    
+    res.json({
+      success: true,
+      message: `任务已转交给 ${nextAssignee}`,
+      data: {
+        taskId: id,
+        previousAssignee,
+        nextAssignee,
+        transferredAt: task.transferredAt
+      }
+    });
+  } catch (error) {
+    console.error('任务转交失败:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * 任务完成并自动流转（v3.2 规则引擎触发）
+ * POST /api/bce/tasks/:id/complete
+ */
+router.post('/tasks/:id/complete', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { operator, comment } = req.body;
+    
+    const task = tasks.get(id);
+    if (!task) {
+      return res.status(404).json({ error: '任务不存在' });
+    }
+    
+    // 更新任务状态为已完成
+    task.status = 'completed';
+    task.completedAt = new Date().toISOString();
+    task.completedBy = operator || task.assignee;
+    task.updatedAt = new Date().toISOString();
+    
+    saveData();
+    
+    // 触发规则引擎，自动判断是否需要流转
+    try {
+      const { onTaskCompleted } = require('../services/transfer-rules');
+      await onTaskCompleted(id);
+    } catch (ruleError) {
+      console.error('[规则引擎] 触发失败:', ruleError.message);
+    }
+    
+    // 通知创建者任务已完成
+    try {
+      await notificationService.notify(
+        task.creator,
+        operator || task.assignee,
+        'task_completed',
+        `✅ 任务已完成：${task.title}\n完成人：${operator || task.assignee}`,
+        id,
+        `task:${id}`
+      );
+    } catch (notifyError) {
+      console.error('[完成通知] 发送失败:', notifyError.message);
+    }
+    
+    console.log(`[BCE 任务] 任务完成：${id}, 完成人：${operator || task.assignee}`);
+    
+    res.json({
+      success: true,
+      message: '任务已完成',
+      data: {
+        taskId: id,
+        completedAt: task.completedAt,
+        completedBy: task.completedBy
+      }
+    });
+  } catch (error) {
+    console.error('任务完成失败:', error);
     res.status(500).json({ error: error.message });
   }
 });

@@ -1,64 +1,121 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
+/**
+ * BCE 北斗协同引擎 - v3.2 最终版
+ * 主入口文件
+ */
 
-const taskRoutes = require('./api/tasks');
-const agentRoutes = require('./api/agents');
-const collaborationRoutes = require('./api/collaboration');
-const memoryRoutes = require('./api/memory');
-const confirmationRoutes = require('./api/confirmation');
-const boardRoutes = require('./api/board');
-const broadcastRoutes = require('./api/broadcast');
-const feishuRoutes = require('./api/feishu');
+const express = require('express');
+const path = require('path');
+
+// 导入 API 模块
+const tasksApi = require('./api/bce-tasks');
+const feishuNotifyApi = require('./api/feishu-notify');
+const feishuCardApi = require('./api/feishu-card');
+const feishuWebhookApi = require('./api/feishu-webhook');
+const mailboxApi = require('./api/mailbox');  // v3.2 新增
+const occSyncApi = require('./api/occ-sync');  // v3.2 OCC 同步
+
+// 导入服务模块
+const notificationService = require('./services/notification-service');  // v3.2 三通道
+const transferRulesService = require('./services/transfer-rules');  // v3.2 规则引擎
+const retryQueue = require('./services/retry-queue');  // v3.2 重试队列
+const mailboxService = require('./services/mailbox-service');  // v3.2 邮箱
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 中间件
-app.use(helmet({
-  contentSecurityPolicy: false,  // 开发环境禁用 CSP
-  crossOriginOpenerPolicy: false,
-  originAgentCluster: false
-}));
-app.use(cors());
-app.use(morgan('combined'));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
-// 路由
-app.use('/api/tasks', taskRoutes);
-app.use('/api/agents', agentRoutes);
-app.use('/api/collaboration', collaborationRoutes);
-app.use('/api/memory', memoryRoutes);
-app.use('/api/confirmation', confirmationRoutes);
-app.use('/api/board', boardRoutes);
-app.use('/api/broadcast', broadcastRoutes);
-app.use('/api/feishu', feishuRoutes);
+// 静态文件
+app.use(express.static(path.join(__dirname, '../public')));
+
+// API 路由
+app.use('/api/bce', tasksApi);
+app.use('/api/feishu-notify', feishuNotifyApi);
+app.use('/api/feishu/card-callback', feishuCardApi);
+app.use('/api/feishu/webhook', feishuWebhookApi);
+app.use('/api/mailbox', mailboxApi);  // v3.2 新增
+app.use('/api/occ', occSyncApi);  // v3.2 OCC 同步
 
 // 健康检查
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', service: 'BCE', timestamp: new Date().toISOString() });
-});
-
-// 根路径
-app.get('/', (req, res) => {
   res.json({
-    name: 'OpenClaw Control Center',
-    description: '北斗协同引擎 (BCE)',
-    version: '1.0.0'
+    status: 'ok',
+    service: 'BCE v3.2',
+    version: '3.2.0',
+    features: {
+      mailbox: 'enabled',
+      rules: 'enabled',
+      retry: 'enabled',
+      threeChannels: 'enabled'
+    },
+    retryQueue: retryQueue.getStatus()
   });
 });
 
-// 错误处理
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: '内部服务器错误' });
+// 规则引擎状态
+app.get('/api/rules/status', (req, res) => {
+  res.json({
+    status: 'ok',
+    rules: require('./config/task-rules').transferRules.map(r => r.name)
+  });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 BCE 服务已启动：http://localhost:${PORT}`);
+// 邮箱状态
+app.get('/api/mailbox/status', async (req, res) => {
+  const members = ['天枢', '匠心', '司库', '执矩', '磐石', '灵犀', '天策'];
+  const status = {};
+  
+  for (const member of members) {
+    status[member] = await mailboxService.count(member);
+  }
+  
+  res.json({
+    status: 'ok',
+    unreadCounts: status
+  });
 });
+
+// 启动服务
+async function start() {
+  app.listen(PORT, () => {
+    console.log(`
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║   BCE 北斗协同引擎 v3.2 最终版                              ║
+║                                                           ║
+║   HTTP: http://localhost:${PORT}                          ║
+║                                                           ║
+║   核心功能：                                               ║
+║   ✅ sessions_send 主通道                                  ║
+║   ✅ 飞书卡片备用通道                                      ║
+║   ✅ 文件系统邮箱可靠通道                                  ║
+║   ✅ 规则引擎自动流转                                      ║
+║   ✅ 通知重试队列（指数退避）                              ║
+║   ✅ 幂等性检查                                            ║
+║   ✅ 转交边界处理                                          ║
+║                                                           ║
+║   状态：http://localhost:${PORT}/health                   ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+    `);
+  });
+  
+  // 监听任务完成事件，触发规则引擎
+  process.on('task:completed', async (taskId) => {
+    console.log(`[事件] 任务完成：${taskId}`);
+    await transferRulesService.onTaskCompleted(taskId);
+  });
+}
+
+// 优雅退出
+process.on('SIGINT', async () => {
+  console.log('[BCE] 正在关闭服务...');
+  retryQueue.clear();
+  process.exit(0);
+});
+
+start();
 
 module.exports = app;
