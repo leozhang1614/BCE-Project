@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774156249765",
+  "from": "司库",
+  "to": "磐石",
+  "type": "task_created",
+  "taskId": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "sessionKey": "task:ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "content": "📋 新任务分配：🚀 北斗智投系统 - 运维调度\n优先级：P0",
+  "createdAt": "2026-03-22T05:10:49.765Z",
+  "read": false
+}

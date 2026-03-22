@@ -1,56 +1,73 @@
-# OpenClaw Control Center - 北斗协同引擎 (BCE)
+# BCE 北斗协同引擎
 
-北斗协同引擎 (Beidou Collaboration Engine) 是 OpenClaw 的任务管理和协作平台。
+**基于 OpenClaw 的智能任务协同管理系统**
 
-## 功能特性
+## ✨ 核心特性
 
-- **任务管理**: 创建、分配、跟踪任务
-- **Agent 管理**: 注册和监控 Agent 状态
-- **协作会话**: 支持多 Agent 协作工作流
+- 🎯 开发任务标准工作流（开发→验收→审核）
+- 🔄 自动流转机制
+- ⚠️ 审核不通过自动回退
+- 💬 自然语言交互
+- 🔗 OpenClaw 深度集成
 
-## 安装
+## 🚀 快速开始
+
+### 安装
 
 ```bash
+# 克隆项目
+git clone https://github.com/beidou-company/BCE-Project.git
+cd BCE-Project
+
+# 安装依赖
 npm install
+
+# 启动服务
+node src/index.js
 ```
 
-## 配置
-
-复制环境变量示例文件并配置:
+### 使用 Skill
 
 ```bash
-cp .env.example .env
+# 安装 Skill
+clawhub install bce-dev-workflow
+
+# 自然语言创建任务
+创建一个开发任务，名称是"用户模块开发"，开发者是匠心，负责人是天枢
 ```
 
-## 运行
+## 📋 工作流
 
-开发模式:
-```bash
-npm run dev
+```
+开发（开发者） → 验收（项目负责人） → 审核（执矩）
+                                        ↓
+                                 审核不通过
+                                        ↓
+                                 回退到开发节点
 ```
 
-生产模式:
-```bash
-npm start
-```
+## 🔧 API 端点
 
-## API 端点
+- `POST /api/dev-workflow/tasks` - 创建开发任务
+- `POST /api/dev-workflow/tasks/:id/submit-acceptance` - 提交验收
+- `POST /api/dev-workflow/tasks/:id/submit-audit` - 提交审核
+- `POST /api/dev-workflow/tasks/:id/audit-pass` - 审核通过
+- `POST /api/dev-workflow/tasks/:id/audit-reject` - 审核驳回
 
-| 端点 | 方法 | 描述 |
-|------|------|------|
-| `/api/tasks` | GET | 获取所有任务 |
-| `/api/tasks` | POST | 创建任务 |
-| `/api/tasks/:id` | GET | 获取单个任务 |
-| `/api/agents` | GET | 获取所有 Agent |
-| `/api/agents` | POST | 注册 Agent |
-| `/api/collaboration/sessions` | POST | 创建协作会话 |
+## 📚 文档
 
-## 技术栈
+- [开发任务流程管理规范](./执行通知 - BCE 开发任务流程管理规范_v2.0.md)
+- [开发任务标准工作流](./BCE 开发任务标准工作流_v1.0.md)
+- [任务轮询机制](./BCE 任务轮询机制_v3.0_强制版_最终版.md)
 
-- Node.js 18+
-- Express.js
-- UUID
+## 🤝 贡献
 
-## License
+欢迎提交 Issue 和 Pull Request！
 
-MIT
+## 📄 许可
+
+MIT License
+
+## 👥 作者
+
+**匠心 (CTO) @ 北斗公司**

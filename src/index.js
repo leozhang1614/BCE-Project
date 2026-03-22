@@ -3,6 +3,9 @@
  * 主入口文件
  */
 
+// 加载环境变量
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 
@@ -13,12 +16,14 @@ const feishuCardApi = require('./api/feishu-card');
 const feishuWebhookApi = require('./api/feishu-webhook');
 const mailboxApi = require('./api/mailbox');  // v3.2 新增
 const occSyncApi = require('./api/occ-sync');  // v3.2 OCC 同步
+const devWorkflowApi = require('./api/development-workflow');  // v3.3 开发工作流
 
 // 导入服务模块
 const notificationService = require('./services/notification-service');  // v3.2 三通道
 const transferRulesService = require('./services/transfer-rules');  // v3.2 规则引擎
 const retryQueue = require('./services/retry-queue');  // v3.2 重试队列
 const mailboxService = require('./services/mailbox-service');  // v3.2 邮箱
+const schedulerService = require('./services/scheduler-service');  // v3.2 定时任务轮询
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -37,6 +42,7 @@ app.use('/api/feishu/card-callback', feishuCardApi);
 app.use('/api/feishu/webhook', feishuWebhookApi);
 app.use('/api/mailbox', mailboxApi);  // v3.2 新增
 app.use('/api/occ', occSyncApi);  // v3.2 OCC 同步
+app.use('/api/dev-workflow', devWorkflowApi);  // v3.3 开发工作流
 
 // 健康检查
 app.get('/health', (req, res) => {
@@ -77,9 +83,17 @@ app.get('/api/mailbox/status', async (req, res) => {
   });
 });
 
+// 定时任务状态
+app.get('/api/scheduler/status', (req, res) => {
+  res.json({
+    status: 'ok',
+    scheduler: schedulerService.getStatus()
+  });
+});
+
 // 启动服务
 async function start() {
-  app.listen(PORT, () => {
+  const server = app.listen(PORT, () => {
     console.log(`
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
@@ -101,6 +115,15 @@ async function start() {
 ╚═══════════════════════════════════════════════════════════╝
     `);
   });
+
+  // v3.2 修复：添加错误处理
+  server.on('error', (err) => {
+    console.error('[BCE] 服务启动失败:', err);
+    process.exit(1);
+  });
+  
+  // 启动定时任务轮询（v3.2 兜底方案）
+  schedulerService.start();
   
   // 监听任务完成事件，触发规则引擎
   process.on('task:completed', async (taskId) => {
@@ -112,6 +135,7 @@ async function start() {
 // 优雅退出
 process.on('SIGINT', async () => {
   console.log('[BCE] 正在关闭服务...');
+  schedulerService.stop();
   retryQueue.clear();
   process.exit(0);
 });

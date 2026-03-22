@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "id": "dev-1774167176791",
+      "title": "🎉 BCE 工作流 v3.3 上线验证",
+      "developer": "匠心",
+      "projectOwner": "磊哥",
+      "auditor": "zhiju",
+      "status": "acceptance",
+      "currentRole": "project_owner",
+      "workflow": {
+        "currentNode": "acceptance",
+        "history": [
+          {
+            "node": "development",
+            "operator": "匠心",
+            "timestamp": "2026-03-22T08:12:56.791Z",
+            "action": "start"
+          },
+          {
+            "node": "acceptance",
+            "from": "development",
+            "operator": "匠心",
+            "timestamp": "2026-03-22T09:06:26.810Z",
+            "action": "submit_acceptance",
+            "deliverables": [
+              "源代码",
+              "自测报告",
+              "开发文档"
+            ]
+          }
+        ]
+      },
+      "deliverables": [
+        "源代码",
+        "自测报告",
+        "开发文档"
+      ],
+      "auditComments": [],
+      "createdAt": "2026-03-22T08:12:56.791Z",
+      "updatedAt": "2026-03-22T09:06:26.810Z"
+    }
+  ],
+  "updatedAt": "2026-03-22T09:06:26.810Z"
+}

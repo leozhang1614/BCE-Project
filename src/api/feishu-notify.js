@@ -3,10 +3,15 @@ const router = express.Router();
 const https = require('https');
 const { getUserIdByName } = require('../config/feishu-users');
 
-// 飞书配置
-const FEISHU_APP_ID = process.env.FEISHU_APP_ID || 'cli_a9242655a1ba1cb1';
-const FEISHU_APP_SECRET = process.env.FEISHU_APP_SECRET || 'EtioKZkhqwEWYOwiYaOvJfeNIUQMQnSU';
-const FEISHU_CHAT_ID = process.env.FEISHU_CHAT_ID || 'oc_19be54b67684b6597ff335d7534896d4';
+// 飞书配置（v3.2 修复：移除硬编码凭证）
+const FEISHU_APP_ID = process.env.FEISHU_APP_ID;
+const FEISHU_APP_SECRET = process.env.FEISHU_APP_SECRET;
+const FEISHU_CHAT_ID = process.env.FEISHU_CHAT_ID;
+
+// 启动时检查凭证
+if (!FEISHU_APP_ID || !FEISHU_APP_SECRET) {
+  console.warn('[飞书配置] 警告：缺少 FEISHU_APP_ID 或 FEISHU_APP_SECRET，飞书通知功能将不可用');
+}
 
 // 缓存 token
 let tenantAccessToken = null;

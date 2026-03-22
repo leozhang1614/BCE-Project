@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774160170593",
+  "from": "磐石",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "69cd6603-85fd-4c12-8f40-d710cc74466c",
+  "sessionKey": "task:69cd6603-85fd-4c12-8f40-d710cc74466c",
+  "content": "✅ 磐石 已确认接收任务：🚀 北斗智投系统 - 数据感知模块",
+  "createdAt": "2026-03-22T06:16:10.593Z",
+  "read": false
+}

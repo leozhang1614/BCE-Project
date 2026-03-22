@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774156249746",
+  "from": "司库",
+  "to": "磐石",
+  "type": "task_created",
+  "taskId": "69cd6603-85fd-4c12-8f40-d710cc74466c",
+  "sessionKey": "task:69cd6603-85fd-4c12-8f40-d710cc74466c",
+  "content": "📋 新任务分配：🚀 北斗智投系统 - 数据感知模块\n优先级：P0",
+  "createdAt": "2026-03-22T05:10:49.746Z",
+  "read": false
+}

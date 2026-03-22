@@ -66,6 +66,9 @@ function checkPermission(requiredAction) {
   };
 }
 
+// 导入 tasks（v3.2 修复：解决未定义变量问题）
+const tasks = require('../api/bce-tasks').tasks;
+
 /**
  * 任务操作权限检查
  * 检查用户是否有权限操作指定任务

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774105816834",
+  "from": "匠心",
+  "to": "天枢",
+  "type": "task_created",
+  "taskId": "3e5918bf-5b23-471e-8554-5e885c0eb4bf",
+  "sessionKey": "task:3e5918bf-5b23-471e-8554-5e885c0eb4bf",
+  "content": "📋 新任务分配：🧪 定时任务测试 - 天枢\n优先级：P0",
+  "createdAt": "2026-03-21T15:10:16.834Z",
+  "read": false
+}

@@ -33,7 +33,13 @@ class MailboxService {
    * 发送消息到邮箱（同时推送 sessions_send）
    */
   async send(to, from, type, content, taskId, sessionKey = null) {
-    const agentDir = path.join(this.mailboxDir, to);
+    // v3.2 修复：中文名转拼音
+    const dirName = this.toDirName(to);
+    const agentDir = path.join(this.mailboxDir, dirName);
+    
+    // v3.2 修复：添加日志
+    console.log(`[邮箱] 发送消息给 ${to} (目录：${dirName}), 类型：${type}`);
+    
     await fs.mkdir(agentDir, { recursive: true });
     
     const msg = {

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774076494151",
+  "from": "天枢",
+  "to": "磐石",
+  "type": "task_created",
+  "taskId": "17843664-a6bb-4945-9b65-0edb6951d5fe",
+  "sessionKey": "task:17843664-a6bb-4945-9b65-0edb6951d5fe",
+  "content": "📋 新任务分配：磐石最终验证测试 - 三通道通知\n优先级：P0",
+  "createdAt": "2026-03-21T07:01:34.151Z",
+  "read": false
+}

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774074503687",
+  "from": "匠心",
+  "to": "天枢",
+  "type": "task_transferred",
+  "taskId": "00391516-cc2d-44c9-bae0-a4c56c96aaea",
+  "sessionKey": "task:00391516-cc2d-44c9-bae0-a4c56c96aaea",
+  "content": "🔄 任务已转交：磐石测试 - 循环转交检测\n转交人：匠心",
+  "createdAt": "2026-03-21T06:28:23.687Z",
+  "read": false
+}

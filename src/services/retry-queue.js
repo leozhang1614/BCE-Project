@@ -7,11 +7,32 @@ class RetryQueue {
   constructor() {
     this.queue = [];
     this.maxRetries = 3;
+    this.intervalId = null;
     
-    // 每 30 秒处理一次
-    setInterval(() => this.process(), 30000);
+    this.start();
+  }
+
+  /**
+   * 启动重试队列
+   */
+  start() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
     
+    this.intervalId = setInterval(() => this.process(), 30000);
     console.log('[重试队列] 已启动，每 30 秒处理一次');
+  }
+
+  /**
+   * 停止重试队列（v3.2 修复：内存泄漏）
+   */
+  stop() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+      console.log('[重试队列] 已停止');
+    }
   }
 
   /**
@@ -140,6 +161,7 @@ class RetryQueue {
    */
   clear() {
     this.queue = [];
+    this.stop();
     console.log('[重试队列] 已清空');
   }
 }

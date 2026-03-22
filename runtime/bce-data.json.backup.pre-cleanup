@@ -1,0 +1,5554 @@
+{
+  "tasks": [
+    {
+      "id": "bc508726-ae6c-4f54-9371-cfed96b8b631",
+      "title": "TASK-002 数据持久化测试",
+      "description": "测试重启后数据是否保留",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T07:49:20.011Z",
+      "updatedAt": "2026-03-20T13:46:29.116Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T07:49:20.011Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.116Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "93b0d275-6e55-4b08-9383-814037a362e7",
+      "title": "TASK-003 权限测试",
+      "description": "测试权限控制和审计日志",
+      "creator": "天枢",
+      "assignee": null,
+      "priority": "P1",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T08:05:00.073Z",
+      "updatedAt": "2026-03-20T08:05:00.073Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T08:05:00.073Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "f6084cae-7ae7-46f0-8cac-8951748e5685",
+      "title": "BCE 系统验收测试",
+      "description": "验证所有修复功能是否正常工作：1.数据持久化 2.飞书通知 3.任务搜索 4.权限控制 5.操作审计",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T08:06:36.371Z",
+      "updatedAt": "2026-03-20T13:46:29.113Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T08:06:36.371Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.113Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "cd1c1796-c3e3-4d5f-a90e-6125bd543c2f",
+      "title": "🧪 完整流程测试 - 飞书通知验证",
+      "description": "测试任务创建后飞书通知是否正常发送",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T08:26:58.139Z",
+      "updatedAt": "2026-03-20T13:46:29.113Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T08:26:58.139Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.113Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "abb5d623-f90f-449c-b6c3-c01cd9d19c1e",
+      "title": "🔧 飞书通知修复验证",
+      "description": "验证飞书通知是否正常发送",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T09:12:44.307Z",
+      "updatedAt": "2026-03-20T09:13:36.558Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:12:44.307Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:13:36.558Z",
+          "comment": "请立即验收飞书通知功能"
+        }
+      ]
+    },
+    {
+      "id": "3b734cde-aa0a-4484-b693-6985946295ef",
+      "title": "✅ 完整信息测试",
+      "description": "测试飞书通知包含截止时间",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T09:20:39.930Z",
+      "updatedAt": "2026-03-20T13:46:29.112Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:20:39.930Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.112Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "b5798f65-ad25-4562-a5fb-6ac412d760d1",
+      "title": "📢 新模板测试",
+      "description": "测试新的飞书通知模板",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T09:23:38.636Z",
+      "updatedAt": "2026-03-20T09:24:44.174Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:23:38.636Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:24:44.174Z",
+          "comment": "请使用新模板验收"
+        }
+      ]
+    },
+    {
+      "id": "bdd79547-2152-4e55-aba4-ca8c076c9938",
+      "title": "🔔 @功能测试",
+      "description": "测试飞书@是否真正生效",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T09:36:08.030Z",
+      "updatedAt": "2026-03-20T09:36:13.238Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:36:08.030Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T09:36:13.238Z",
+          "comment": "请确认是否收到@提醒"
+        }
+      ]
+    },
+    {
+      "id": "f74f7f33-1958-43b9-b419-cb7ed5b4f5c4",
+      "title": "🧪@人功能 + 计划时间测试",
+      "description": "测试飞书@人功能和计划完成时间显示",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T09:49:09.783Z",
+      "updatedAt": "2026-03-20T13:46:29.112Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T09:49:09.783Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.112Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "ffb13cc2-f349-4010-9706-96224e4087e1",
+      "title": "✅ 修复验证测试",
+      "description": "验证@功能和计划时间",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T10:15:04.801Z",
+      "updatedAt": "2026-03-20T10:15:37.378Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T10:15:04.801Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T10:15:37.378Z",
+          "comment": "请使用新模板验收@功能"
+        }
+      ]
+    },
+    {
+      "id": "e17b7817-6e31-47ca-b243-c906d107febc",
+      "title": "【实战验收】BCE 系统完整功能测试",
+      "description": "验证 BCE 系统能否完整支撑项目管理和任务跟进",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "accepted",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T10:29:56.457Z",
+      "updatedAt": "2026-03-20T10:30:23.289Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T10:29:56.457Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T10:30:02.673Z",
+          "comment": "请验证飞书@功能是否生效，计划完成时间是否正确显示"
+        },
+        {
+          "from": "assigned",
+          "to": "executing",
+          "operator": "匠心",
+          "timestamp": "2026-03-20T10:30:08.285Z",
+          "comment": "开始执行验收测试任务"
+        },
+        {
+          "from": "executing",
+          "to": "reviewing",
+          "operator": "匠心",
+          "timestamp": "2026-03-20T10:30:13.425Z",
+          "comment": "申请验收"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T10:30:23.289Z",
+          "comment": "✅ 验收通过！BCE 系统可以投入使用"
+        }
+      ],
+      "deliverables": [
+        "功能测试通过",
+        "文档验收完成"
+      ],
+      "acceptor": "天枢",
+      "acceptedAt": "2026-03-20T10:30:23.289Z"
+    },
+    {
+      "id": "f9c8a873-973c-4b85-83b9-d5ad23d8352e",
+      "title": "🔴@功能验证测试",
+      "description": "测试飞书@功能是否修复",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T10:35:08.385Z",
+      "updatedAt": "2026-03-20T13:43:04.640Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T10:35:08.385Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.640Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "cbbbedec-8c6a-48d6-a36e-d024ef1c2745",
+      "title": "🔔 飞书@功能修复测试",
+      "description": "测试正确的@标签格式",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T10:39:42.281Z",
+      "updatedAt": "2026-03-20T10:40:05.722Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T10:39:42.281Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T10:40:05.722Z",
+          "comment": "请验证@功能是否生效"
+        }
+      ]
+    },
+    {
+      "id": "478f4b2b-2114-4be3-9c47-9c0331593d03",
+      "title": "✅ 完整功能验证",
+      "description": "验证@功能和计划时间",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T10:42:18.899Z",
+      "updatedAt": "2026-03-20T10:42:22.301Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T10:42:18.899Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T10:42:22.301Z",
+          "comment": "请验证计划完成时间是否显示"
+        }
+      ]
+    },
+    {
+      "id": "b85dae3b-02a9-43ec-8c07-beaf0380e838",
+      "title": "📚 BCE 产品说明书全员学习",
+      "description": "磊哥指令：全员学习 BCE 项目产品说明书，20:00 前完成学习并回复确认",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T10:54:45.830Z",
+      "updatedAt": "2026-03-20T12:30:52.909Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T10:54:45.830Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T12:30:52.909Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复"
+        }
+      ]
+    },
+    {
+      "id": "0d7cb961-f666-48ea-b282-00e84f7c1040",
+      "title": "📚 BCE 产品说明书培训 - 匠心",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:03:21.611Z",
+      "updatedAt": "2026-03-20T13:46:29.111Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:03:21.611Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.111Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "3344171d-ad54-4d27-8f9d-0d82dd2aa85f",
+      "title": "📚 BCE 产品说明书培训 - 司库",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:03:21.647Z",
+      "updatedAt": "2026-03-20T13:46:29.111Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:03:21.647Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.111Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "de2003ba-9b4e-46bc-80a1-d49552f3c8bd",
+      "title": "📚 BCE 产品说明书培训 - 执矩",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:03:21.670Z",
+      "updatedAt": "2026-03-20T13:46:29.111Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:03:21.670Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.111Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "64890fe9-e2ff-419f-9d18-141e20f477cb",
+      "title": "📚 BCE 产品说明书培训 - 磐石",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:03:21.692Z",
+      "updatedAt": "2026-03-20T13:46:29.110Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:03:21.692Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.110Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "da3c58d1-3001-4d57-b822-41dee27559cd",
+      "title": "📚 BCE 产品说明书培训 - 灵犀",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:03:21.715Z",
+      "updatedAt": "2026-03-20T13:46:29.110Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:03:21.715Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.110Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "9747c503-7dc4-42ea-82c4-78867ba2300b",
+      "title": "📚 BCE 产品说明书培训 - 天策",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:03:21.737Z",
+      "updatedAt": "2026-03-20T13:46:29.109Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:03:21.737Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.109Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "cf614c6a-dec0-417d-948b-b92b347671b1",
+      "title": "🔔 最终测试通知",
+      "description": "测试飞书通知是否正常",
+      "creator": "磊哥",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:19:07.892Z",
+      "updatedAt": "2026-03-20T11:19:16.867Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:19:07.893Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:19:16.867Z",
+          "comment": "请确认是否收到飞书通知"
+        }
+      ]
+    },
+    {
+      "id": "122e09a8-37b4-4149-be85-801227084d85",
+      "title": "📚 BCE 产品说明书培训 - 匠心",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:25:06.701Z",
+      "updatedAt": "2026-03-20T13:46:29.109Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:25:06.701Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.109Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "d78f8b12-1fdd-4352-b250-d8f72189623f",
+      "title": "📚 BCE 产品说明书培训 - 司库",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:25:06.738Z",
+      "updatedAt": "2026-03-20T13:06:39.237Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:25:06.738Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:06:39.237Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "56afead1-f0eb-43e8-be71-7901ebdee032",
+      "title": "📚 BCE 产品说明书培训 - 执矩",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:25:06.761Z",
+      "updatedAt": "2026-03-20T13:06:39.238Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:25:06.761Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:06:39.238Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "dc6a3343-7c49-4bfb-b709-a4b0e2a99108",
+      "title": "📚 BCE 产品说明书培训 - 磐石",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:25:06.786Z",
+      "updatedAt": "2026-03-20T13:06:39.238Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:25:06.786Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:06:39.238Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "9a5ac446-dff3-4d77-b5ad-01326ce7b66d",
+      "title": "📚 BCE 产品说明书培训 - 灵犀",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:25:06.813Z",
+      "updatedAt": "2026-03-20T13:06:39.238Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:25:06.813Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:06:39.238Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "315250a7-79da-4191-9739-2bceea0771d2",
+      "title": "📚 BCE 产品说明书培训 - 天策",
+      "description": "BCE 项目最终测试：学习产品说明书，20:00 前完成并回复确认",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T20:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:25:06.837Z",
+      "updatedAt": "2026-03-20T13:06:39.238Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:25:06.837Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:06:39.238Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "8f0c3a55-462e-459c-85ad-c8d9407c57a2",
+      "title": "🔧 BCE 任务看板加载问题修复",
+      "description": "问题：http://192.168.31.187:3000/board.html 一直显示加载中，按钮无法交互\n\n排查结果：\n1. API /api/board 返回空数据 []\n2. 看板页面可能因为没有任务板而卡住\n3. 需要修复看板页面的加载逻辑\n\n修复要求：\n1. 修复看板加载逻辑，空数据时显示友好提示\n2. 确保按钮可以正常交互\n3. 测试看板功能正常",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 项目",
+      "subTasks": [],
+      "createdAt": "2026-03-20T11:51:38.946Z",
+      "updatedAt": "2026-03-20T13:46:29.108Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T11:51:38.946Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.108Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "8f2c16f0-737a-45ef-9885-b4a634a88f43",
+      "title": "🔔 测试任务确认功能",
+      "description": "测试要求回复功能",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:14:35.546Z",
+      "updatedAt": "2026-03-20T12:14:40.624Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:14:35.546Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:14:40.624Z",
+          "comment": "请立即确认收到任务"
+        }
+      ]
+    },
+    {
+      "id": "5c8e8913-2fd5-48f5-89c5-368f1ef9730c",
+      "title": "🧪 BCE 协作功能测试 - 匠心",
+      "description": "测试 BCE 系统任务分配和确认流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 协作测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:38:30.032Z",
+      "updatedAt": "2026-03-20T13:46:29.107Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:38:30.032Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.107Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "87ba214c-cfda-47be-a80e-b61f3dfc7719",
+      "title": "🧪 BCE 协作功能测试 - 司库",
+      "description": "测试 BCE 系统任务分配和确认流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 协作测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:38:30.068Z",
+      "updatedAt": "2026-03-20T13:46:29.107Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:38:30.068Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.107Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "2b9cd308-24cc-4c2e-989c-9af9cf843f89",
+      "title": "🧪 BCE 协作功能测试 - 执矩",
+      "description": "测试 BCE 系统任务分配和确认流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 协作测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:38:30.089Z",
+      "updatedAt": "2026-03-20T13:46:29.106Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:38:30.089Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.106Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "664203ef-4a24-4437-8aa1-9188df955308",
+      "title": "🧪 BCE 协作功能测试 - 磐石",
+      "description": "测试 BCE 系统任务分配和确认流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 协作测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:38:30.112Z",
+      "updatedAt": "2026-03-20T13:46:29.106Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:38:30.112Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.106Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "66e93621-0c31-4515-ab49-547e6ff089aa",
+      "title": "🧪 BCE 协作功能测试 - 灵犀",
+      "description": "测试 BCE 系统任务分配和确认流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 协作测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:38:30.136Z",
+      "updatedAt": "2026-03-20T13:46:29.105Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:38:30.136Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.105Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "691c1f4a-eb7f-4d9b-b99c-2266d8daa0bf",
+      "title": "🧪 BCE 协作功能测试 - 天策",
+      "description": "测试 BCE 系统任务分配和确认流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:00:00.000Z",
+      "projectId": "BCE 协作测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:38:30.158Z",
+      "updatedAt": "2026-03-20T13:46:29.102Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:38:30.158Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.102Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "6bac430f-e6c3-4ea6-8b0b-0490b54f5d36",
+      "title": "🔔 飞书通知修复验证",
+      "description": "测试任务分配时是否发送飞书@通知",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T18:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:56:52.709Z",
+      "updatedAt": "2026-03-20T12:57:59.974Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T12:56:52.709Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T12:57:59.974Z",
+          "comment": "请立即确认收到任务！"
+        }
+      ]
+    },
+    {
+      "id": "edc75161-9544-4573-8b38-5edc20538456",
+      "title": "🧪 BCE 任务分配测试 - 匠心",
+      "description": "磊哥指令：测试 BCE 任务分配和@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:30:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:57:24.508Z",
+      "updatedAt": "2026-03-20T13:46:29.098Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:57:24.508Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.098Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "ab0cb302-2059-47af-8223-ebab42b098a5",
+      "title": "🧪 BCE 任务分配测试 - 司库",
+      "description": "磊哥指令：测试 BCE 任务分配和@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:30:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:57:24.529Z",
+      "updatedAt": "2026-03-20T13:46:29.097Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:57:24.529Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.097Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "7381798b-3b74-4734-8514-4033a86330a4",
+      "title": "🧪 BCE 任务分配测试 - 执矩",
+      "description": "磊哥指令：测试 BCE 任务分配和@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:30:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:57:24.549Z",
+      "updatedAt": "2026-03-20T13:46:29.096Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:57:24.549Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.096Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "ac9fef93-8789-47df-a6e6-e5f81cc2081a",
+      "title": "🧪 BCE 任务分配测试 - 磐石",
+      "description": "磊哥指令：测试 BCE 任务分配和@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:30:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:57:24.570Z",
+      "updatedAt": "2026-03-20T13:46:29.096Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:57:24.570Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.096Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "2ac8aa62-8dd4-44cd-9028-51a7016d8406",
+      "title": "🧪 BCE 任务分配测试 - 灵犀",
+      "description": "磊哥指令：测试 BCE 任务分配和@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:30:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:57:24.590Z",
+      "updatedAt": "2026-03-20T13:46:29.095Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:57:24.590Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.095Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "251d0ff6-645a-4724-a79a-4798d4326f00",
+      "title": "🧪 BCE 任务分配测试 - 天策",
+      "description": "磊哥指令：测试 BCE 任务分配和@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T21:30:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T12:57:24.612Z",
+      "updatedAt": "2026-03-20T13:46:29.095Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T12:57:24.612Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.095Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "73c30eab-e7f5-4a4f-acf8-6c28bfa10ded",
+      "title": "🔔 测试@灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:12:49.177Z",
+      "updatedAt": "2026-03-20T13:12:49.215Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:12:49.177Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:12:49.215Z",
+          "comment": "测试飞书@通知"
+        }
+      ]
+    },
+    {
+      "id": "71843a31-ecfc-4fc7-b56a-cf8d7526bb89",
+      "title": "🔔 测试@执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:12:49.222Z",
+      "updatedAt": "2026-03-20T13:12:49.245Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:12:49.222Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:12:49.245Z",
+          "comment": "测试飞书@通知"
+        }
+      ]
+    },
+    {
+      "id": "77460868-5629-498d-aab3-04ad2e46e289",
+      "title": "✅ @功能修复测试 - 匠心",
+      "description": "磊哥指令：测试修复后的飞书@功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:14:50.066Z",
+      "updatedAt": "2026-03-20T13:46:29.094Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:14:50.066Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.094Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "80523776-d991-4320-9279-9f508dc04fe9",
+      "title": "✅ @功能修复测试 - 司库",
+      "description": "磊哥指令：测试修复后的飞书@功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:14:50.089Z",
+      "updatedAt": "2026-03-20T13:46:29.094Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:14:50.089Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.094Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "51b7927a-07c3-46d4-9996-5fbeb3360402",
+      "title": "✅ @功能修复测试 - 执矩",
+      "description": "磊哥指令：测试修复后的飞书@功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:14:50.112Z",
+      "updatedAt": "2026-03-20T13:46:29.093Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:14:50.112Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.093Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "28599d9d-ac1d-462e-a508-009cfeda245d",
+      "title": "✅ @功能修复测试 - 磐石",
+      "description": "磊哥指令：测试修复后的飞书@功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:14:50.135Z",
+      "updatedAt": "2026-03-20T13:46:29.093Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:14:50.135Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.093Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "e352f96d-7aaf-406d-9452-8da9ebf57a60",
+      "title": "✅ @功能修复测试 - 灵犀",
+      "description": "磊哥指令：测试修复后的飞书@功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:14:50.157Z",
+      "updatedAt": "2026-03-20T13:46:29.092Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:14:50.157Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.093Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "b17a52f8-7fed-4018-929b-ce8161c9bb6c",
+      "title": "✅ @功能修复测试 - 天策",
+      "description": "磊哥指令：测试修复后的飞书@功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:14:50.179Z",
+      "updatedAt": "2026-03-20T13:46:29.092Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:14:50.179Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.092Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "c657d6e0-5363-4824-8744-8b5289dbc148",
+      "title": "📋 任务分配流程测试 - 匠心",
+      "description": "磊哥指令：测试完整的任务分配流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 流程测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:23:48.304Z",
+      "updatedAt": "2026-03-20T13:46:29.092Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:23:48.304Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.092Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "5e4831e1-c0eb-4092-b11a-7ac073bfcccf",
+      "title": "📋 任务分配流程测试 - 司库",
+      "description": "磊哥指令：测试完整的任务分配流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 流程测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:23:48.345Z",
+      "updatedAt": "2026-03-20T13:46:29.091Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:23:48.345Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.091Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "f739cdbb-4614-4e6b-9b89-7131da03d5ce",
+      "title": "📋 任务分配流程测试 - 执矩",
+      "description": "磊哥指令：测试完整的任务分配流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 流程测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:23:48.367Z",
+      "updatedAt": "2026-03-20T13:46:29.091Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:23:48.367Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.091Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "0f86408d-0924-4f4e-b7eb-ebf3579001a3",
+      "title": "📋 任务分配流程测试 - 磐石",
+      "description": "磊哥指令：测试完整的任务分配流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 流程测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:23:48.387Z",
+      "updatedAt": "2026-03-20T13:46:29.090Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:23:48.387Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.090Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "d2942cee-8b92-4ba4-8461-a18593b55f03",
+      "title": "📋 任务分配流程测试 - 灵犀",
+      "description": "磊哥指令：测试完整的任务分配流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 流程测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:23:48.407Z",
+      "updatedAt": "2026-03-20T13:46:29.090Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:23:48.407Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.090Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "d44e0bea-63bd-4cd7-823f-b7f35bbb31c5",
+      "title": "📋 任务分配流程测试 - 天策",
+      "description": "磊哥指令：测试完整的任务分配流程。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:00:00.000Z",
+      "projectId": "BCE 流程测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:23:48.428Z",
+      "updatedAt": "2026-03-20T13:46:29.089Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:23:48.428Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.089Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "648ffc65-7e48-408b-9971-ee4a809b965c",
+      "title": "✅ @功能验证测试 - 匠心",
+      "description": "磊哥指令：验证飞书@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 验证测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:33:14.752Z",
+      "updatedAt": "2026-03-20T13:43:04.639Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:33:14.752Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.639Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "d1273c62-f2c8-495b-8af0-ec4048132b49",
+      "title": "✅ @功能验证测试 - 司库",
+      "description": "磊哥指令：验证飞书@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 验证测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:33:14.789Z",
+      "updatedAt": "2026-03-20T13:43:04.638Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:33:14.789Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.638Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "76f2f112-2c04-4059-bc2f-7a1aa0a5e2c0",
+      "title": "✅ @功能验证测试 - 执矩",
+      "description": "磊哥指令：验证飞书@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 验证测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:33:14.810Z",
+      "updatedAt": "2026-03-20T13:43:04.637Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:33:14.810Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.637Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "d2735e1d-bd6b-43c3-af16-08b43e82054d",
+      "title": "✅ @功能验证测试 - 磐石",
+      "description": "磊哥指令：验证飞书@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 验证测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:33:14.830Z",
+      "updatedAt": "2026-03-20T13:43:04.636Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:33:14.830Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.636Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "9e199bf3-eeb9-450e-9c42-f22ae4a37c15",
+      "title": "✅ @功能验证测试 - 灵犀",
+      "description": "磊哥指令：验证飞书@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 验证测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:33:14.850Z",
+      "updatedAt": "2026-03-20T13:43:04.635Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:33:14.850Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.635Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "f9e054a1-0e54-4052-b099-726c562323d5",
+      "title": "✅ @功能验证测试 - 天策",
+      "description": "磊哥指令：验证飞书@通知功能。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 验证测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:33:14.870Z",
+      "updatedAt": "2026-03-20T13:43:04.632Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:33:14.870Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:43:04.632Z",
+          "comment": "请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "263ab34e-a727-4814-b516-a28a12bc4677",
+      "title": "📋 BCE 规范流程测试 - 匠心",
+      "description": "磊哥指令：严格执行 BCE 规范流程测试。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 规范测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:45:28.065Z",
+      "updatedAt": "2026-03-20T13:46:29.089Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:45:28.065Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.089Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "4b5d5992-bc55-4b6b-9ae2-623039769232",
+      "title": "📋 BCE 规范流程测试 - 司库",
+      "description": "磊哥指令：严格执行 BCE 规范流程测试。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 规范测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:45:28.098Z",
+      "updatedAt": "2026-03-20T13:46:29.088Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:45:28.098Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.088Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "c3832ca3-9775-4c34-8cba-f426857e3f81",
+      "title": "📋 BCE 规范流程测试 - 执矩",
+      "description": "磊哥指令：严格执行 BCE 规范流程测试。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 规范测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:45:28.120Z",
+      "updatedAt": "2026-03-20T13:46:29.088Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:45:28.120Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.088Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "63f65f2c-520f-47f9-8c39-405cd7f90bed",
+      "title": "📋 BCE 规范流程测试 - 磐石",
+      "description": "磊哥指令：严格执行 BCE 规范流程测试。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 规范测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:45:28.141Z",
+      "updatedAt": "2026-03-20T13:46:29.086Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:45:28.141Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.086Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "4d6e782e-68ad-4b0d-bd70-1bcc5c202a16",
+      "title": "📋 BCE 规范流程测试 - 灵犀",
+      "description": "磊哥指令：严格执行 BCE 规范流程测试。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 规范测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:45:28.161Z",
+      "updatedAt": "2026-03-20T13:46:29.086Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:45:28.161Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.086Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "285d70f7-75ac-470d-a19d-8fcb03517ab2",
+      "title": "📋 BCE 规范流程测试 - 天策",
+      "description": "磊哥指令：严格执行 BCE 规范流程测试。请确认收到任务并回复。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T22:30:00.000Z",
+      "projectId": "BCE 规范测试",
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:45:28.181Z",
+      "updatedAt": "2026-03-20T13:46:29.084Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:45:28.181Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:46:29.084Z",
+          "comment": "磊哥指令：严格执行 BCE 规范流程，请确认收到任务并回复"
+        }
+      ]
+    },
+    {
+      "id": "fbe04f9f-e5fa-4c3c-a4a1-29c919751b44",
+      "title": "✅ @格式修复测试 - 匠心",
+      "description": "测试飞书@格式修复。请确认收到。",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:52:21.220Z",
+      "updatedAt": "2026-03-20T13:52:28.913Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:52:21.220Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:52:28.913Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "a8fcac9b-08ab-41fe-9823-9e9d290d9133",
+      "title": "✅ @格式修复测试 - 司库",
+      "description": "测试飞书@格式修复。请确认收到。",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:52:21.228Z",
+      "updatedAt": "2026-03-20T13:52:28.913Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:52:21.228Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:52:28.913Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "7798fe39-58a5-4ca6-90ae-5c13bf76425e",
+      "title": "✅ @格式修复测试 - 执矩",
+      "description": "测试飞书@格式修复。请确认收到。",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:52:21.235Z",
+      "updatedAt": "2026-03-20T13:52:28.912Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:52:21.235Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:52:28.912Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "738147f0-1c66-434f-aab4-8235939d3db4",
+      "title": "✅ @格式修复测试 - 磐石",
+      "description": "测试飞书@格式修复。请确认收到。",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:52:21.241Z",
+      "updatedAt": "2026-03-20T13:52:28.911Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:52:21.241Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:52:28.911Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "7a5542a2-a079-4145-8b35-5c5333a3a154",
+      "title": "✅ @格式修复测试 - 灵犀",
+      "description": "测试飞书@格式修复。请确认收到。",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:52:21.248Z",
+      "updatedAt": "2026-03-20T13:52:28.911Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:52:21.248Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:52:28.911Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "6b521b31-1011-4a8a-9b80-0712d4263329",
+      "title": "✅ @格式修复测试 - 天策",
+      "description": "测试飞书@格式修复。请确认收到。",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:52:21.255Z",
+      "updatedAt": "2026-03-20T13:52:28.909Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:52:21.255Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:52:28.909Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "69f29ae6-e253-4677-8fcf-23eeb9a1c8d2",
+      "title": "✅ @格式测试-天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:54:56.252Z",
+      "updatedAt": "2026-03-20T13:54:56.284Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:56.252Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:56.284Z",
+          "comment": "测试@格式"
+        }
+      ]
+    },
+    {
+      "id": "721b998b-60ee-444d-adbe-37e876f1a4a2",
+      "title": "✅ @格式测试-灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:54:57.315Z",
+      "updatedAt": "2026-03-20T13:54:57.355Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:57.315Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:57.355Z",
+          "comment": "测试@格式"
+        }
+      ]
+    },
+    {
+      "id": "f072398a-da68-46d9-b502-a6484a08eb9c",
+      "title": "✅ @格式测试-执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:54:58.381Z",
+      "updatedAt": "2026-03-20T13:54:58.423Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:58.381Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:58.423Z",
+          "comment": "测试@格式"
+        }
+      ]
+    },
+    {
+      "id": "4b03a8aa-0701-4cbf-a6ea-f4b4f6bdca5d",
+      "title": "✅ @格式测试-磐石",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:54:59.444Z",
+      "updatedAt": "2026-03-20T13:54:59.471Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:59.444Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:54:59.471Z",
+          "comment": "测试@格式"
+        }
+      ]
+    },
+    {
+      "id": "da8252cc-2647-483c-a09a-69e691601840",
+      "title": "✅ @格式测试-司库",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:00.489Z",
+      "updatedAt": "2026-03-20T13:55:00.516Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:00.489Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:00.516Z",
+          "comment": "测试@格式"
+        }
+      ]
+    },
+    {
+      "id": "2588c372-31bb-450c-bb41-ec34078b29a2",
+      "title": "✅ @格式测试-匠心",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:01.539Z",
+      "updatedAt": "2026-03-20T13:55:01.571Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:01.539Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:01.571Z",
+          "comment": "测试@格式"
+        }
+      ]
+    },
+    {
+      "id": "dca8d3d3-cda4-4bfb-b37b-cc3d38e8cfb8",
+      "title": "✅ @格式最终测试 - 匠心",
+      "description": "测试飞书@格式（<at user_id=\"xxx\"></at>姓名）",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:51.087Z",
+      "updatedAt": "2026-03-20T13:55:51.099Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:55:51.087Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:51.099Z",
+          "comment": "@格式最终测试（<at user_id=\"xxx\"></at>姓名）"
+        }
+      ]
+    },
+    {
+      "id": "114e340b-fbf8-4f35-9ea6-df4346b9b4f7",
+      "title": "✅ @格式最终测试 - 司库",
+      "description": "测试飞书@格式（<at user_id=\"xxx\"></at>姓名）",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:51.089Z",
+      "updatedAt": "2026-03-20T13:55:51.098Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:55:51.089Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:51.098Z",
+          "comment": "@格式最终测试（<at user_id=\"xxx\"></at>姓名）"
+        }
+      ]
+    },
+    {
+      "id": "245825a2-c8dc-4c79-bd75-ec1aaf852727",
+      "title": "✅ @格式最终测试 - 执矩",
+      "description": "测试飞书@格式（<at user_id=\"xxx\"></at>姓名）",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:51.090Z",
+      "updatedAt": "2026-03-20T13:55:51.097Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:55:51.090Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:51.097Z",
+          "comment": "@格式最终测试（<at user_id=\"xxx\"></at>姓名）"
+        }
+      ]
+    },
+    {
+      "id": "22fd4d77-dc7a-4817-94dd-2af0c13c906c",
+      "title": "✅ @格式最终测试 - 磐石",
+      "description": "测试飞书@格式（<at user_id=\"xxx\"></at>姓名）",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:51.091Z",
+      "updatedAt": "2026-03-20T13:55:51.097Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:55:51.091Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:51.097Z",
+          "comment": "@格式最终测试（<at user_id=\"xxx\"></at>姓名）"
+        }
+      ]
+    },
+    {
+      "id": "92ccabfe-873f-4f63-a84e-0413c030211a",
+      "title": "✅ @格式最终测试 - 灵犀",
+      "description": "测试飞书@格式（<at user_id=\"xxx\"></at>姓名）",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:51.092Z",
+      "updatedAt": "2026-03-20T13:55:51.096Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:55:51.092Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:51.096Z",
+          "comment": "@格式最终测试（<at user_id=\"xxx\"></at>姓名）"
+        }
+      ]
+    },
+    {
+      "id": "1e3b55fd-c774-4898-9d72-2581aa22b476",
+      "title": "✅ @格式最终测试 - 天策",
+      "description": "测试飞书@格式（<at user_id=\"xxx\"></at>姓名）",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:55:51.093Z",
+      "updatedAt": "2026-03-20T13:55:51.095Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:55:51.093Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:55:51.095Z",
+          "comment": "@格式最终测试（<at user_id=\"xxx\"></at>姓名）"
+        }
+      ]
+    },
+    {
+      "id": "67d28acf-3086-4e68-ba1b-103a8d170012",
+      "title": "✅ @格式最终测试 - 匠心",
+      "description": "测试飞书@格式（只输出<at>标签）",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:58:34.420Z",
+      "updatedAt": "2026-03-20T13:58:34.433Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:58:34.420Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:58:34.433Z",
+          "comment": "@格式最终测试（只输出<at>标签）"
+        }
+      ]
+    },
+    {
+      "id": "34af0e37-b6a8-43c1-95d7-eb5f787de359",
+      "title": "✅ @格式最终测试 - 司库",
+      "description": "测试飞书@格式（只输出<at>标签）",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:58:34.422Z",
+      "updatedAt": "2026-03-20T13:58:34.433Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:58:34.422Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:58:34.433Z",
+          "comment": "@格式最终测试（只输出<at>标签）"
+        }
+      ]
+    },
+    {
+      "id": "2b9259ec-c669-4d83-a161-3d348807532d",
+      "title": "✅ @格式最终测试 - 执矩",
+      "description": "测试飞书@格式（只输出<at>标签）",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:58:34.424Z",
+      "updatedAt": "2026-03-20T13:58:34.432Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:58:34.424Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:58:34.432Z",
+          "comment": "@格式最终测试（只输出<at>标签）"
+        }
+      ]
+    },
+    {
+      "id": "47cb1d7b-2702-40ac-8011-fa9c27d275bc",
+      "title": "✅ @格式最终测试 - 磐石",
+      "description": "测试飞书@格式（只输出<at>标签）",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:58:34.425Z",
+      "updatedAt": "2026-03-20T13:58:34.431Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:58:34.425Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:58:34.431Z",
+          "comment": "@格式最终测试（只输出<at>标签）"
+        }
+      ]
+    },
+    {
+      "id": "1912c634-54af-437c-a03d-2feff2c80411",
+      "title": "✅ @格式最终测试 - 灵犀",
+      "description": "测试飞书@格式（只输出<at>标签）",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:58:34.426Z",
+      "updatedAt": "2026-03-20T13:58:34.431Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:58:34.426Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:58:34.431Z",
+          "comment": "@格式最终测试（只输出<at>标签）"
+        }
+      ]
+    },
+    {
+      "id": "8bdfc859-7dbc-4d5c-a766-8db92fc98328",
+      "title": "✅ @格式最终测试 - 天策",
+      "description": "测试飞书@格式（只输出<at>标签）",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:58:34.427Z",
+      "updatedAt": "2026-03-20T13:58:34.430Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T13:58:34.427Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:58:34.430Z",
+          "comment": "@格式最终测试（只输出<at>标签）"
+        }
+      ]
+    },
+    {
+      "id": "9c2cff55-3846-422b-82c2-a9af9e12c0fe",
+      "title": "🔔 全员@测试 - 天枢",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:17.014Z",
+      "updatedAt": "2026-03-20T13:59:17.017Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:17.014Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:17.017Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "eed17111-3c90-46fa-8086-db6f09376465",
+      "title": "🔔 全员@测试 - 匠心",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:17.509Z",
+      "updatedAt": "2026-03-20T13:59:17.513Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:17.509Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:17.513Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "aefb435a-9651-4537-bc71-15375b46a70f",
+      "title": "🔔 全员@测试 - 司库",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:18.009Z",
+      "updatedAt": "2026-03-20T13:59:18.014Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:18.009Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:18.014Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "365156df-3aad-4d3c-820c-a8c675ff403a",
+      "title": "🔔 全员@测试 - 执矩",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:18.509Z",
+      "updatedAt": "2026-03-20T13:59:18.512Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:18.509Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:18.512Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "d4be0a10-50e3-440d-b8ca-88763adccd77",
+      "title": "🔔 全员@测试 - 磐石",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:19.009Z",
+      "updatedAt": "2026-03-20T13:59:19.013Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:19.009Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:19.013Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "95bb6672-bc62-4ae3-86b6-aa5aaf93ebe6",
+      "title": "🔔 全员@测试 - 灵犀",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:19.509Z",
+      "updatedAt": "2026-03-20T13:59:19.514Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:19.509Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:19.514Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "3e60ef02-27cd-4e3e-883e-2fcb18c8ca08",
+      "title": "🔔 全员@测试 - 天策",
+      "description": "测试飞书@通知格式是否正确",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T13:59:20.009Z",
+      "updatedAt": "2026-03-20T13:59:20.014Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:20.009Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T13:59:20.014Z",
+          "comment": "🔔 请立即确认收到任务！要求 20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "75c04f82-f3b4-4a0f-b6ce-6305d30a96bf",
+      "title": "🔔 最终测试-天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:01:43.359Z",
+      "updatedAt": "2026-03-20T14:01:43.409Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:01:43.359Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:01:43.409Z",
+          "comment": "最终测试"
+        }
+      ]
+    },
+    {
+      "id": "e616ae3c-d677-410f-923b-fd88a23f30b7",
+      "title": "🔔 最终测试-灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:01:44.438Z",
+      "updatedAt": "2026-03-20T14:01:44.477Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:01:44.438Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:01:44.477Z",
+          "comment": "最终测试"
+        }
+      ]
+    },
+    {
+      "id": "6eccb917-d296-42ce-aeff-f2a01e8088d1",
+      "title": "🔔 最终测试-执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:01:45.500Z",
+      "updatedAt": "2026-03-20T14:01:45.529Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:01:45.500Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:01:45.529Z",
+          "comment": "最终测试"
+        }
+      ]
+    },
+    {
+      "id": "23860d77-d887-4246-851c-1cdc99486a2e",
+      "title": "✅ @格式最终测试 - 匠心",
+      "description": "测试飞书@格式（post 消息类型）",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:02:53.751Z",
+      "updatedAt": "2026-03-20T14:02:53.764Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:02:53.751Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:02:53.764Z",
+          "comment": "@格式最终测试（post 消息类型）"
+        }
+      ]
+    },
+    {
+      "id": "48240f25-e707-4e22-ba13-c245df25ca99",
+      "title": "✅ @格式最终测试 - 司库",
+      "description": "测试飞书@格式（post 消息类型）",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:02:53.754Z",
+      "updatedAt": "2026-03-20T14:02:53.763Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:02:53.754Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:02:53.763Z",
+          "comment": "@格式最终测试（post 消息类型）"
+        }
+      ]
+    },
+    {
+      "id": "f91e2451-7cdf-4e21-af46-f7f217a443d0",
+      "title": "✅ @格式最终测试 - 执矩",
+      "description": "测试飞书@格式（post 消息类型）",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:02:53.755Z",
+      "updatedAt": "2026-03-20T14:02:53.763Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:02:53.755Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:02:53.763Z",
+          "comment": "@格式最终测试（post 消息类型）"
+        }
+      ]
+    },
+    {
+      "id": "0047171a-2918-4999-826f-c17beddb627b",
+      "title": "✅ @格式最终测试 - 磐石",
+      "description": "测试飞书@格式（post 消息类型）",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:02:53.756Z",
+      "updatedAt": "2026-03-20T14:02:53.762Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:02:53.756Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:02:53.762Z",
+          "comment": "@格式最终测试（post 消息类型）"
+        }
+      ]
+    },
+    {
+      "id": "189bd596-7783-4e6e-baf8-fe8b0637d611",
+      "title": "✅ @格式最终测试 - 灵犀",
+      "description": "测试飞书@格式（post 消息类型）",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:02:53.757Z",
+      "updatedAt": "2026-03-20T14:02:53.762Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:02:53.757Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:02:53.762Z",
+          "comment": "@格式最终测试（post 消息类型）"
+        }
+      ]
+    },
+    {
+      "id": "286ccc4e-5250-4464-bc8f-8be91301adb0",
+      "title": "✅ @格式最终测试 - 天策",
+      "description": "测试飞书@格式（post 消息类型）",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:02:53.758Z",
+      "updatedAt": "2026-03-20T14:02:53.761Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:02:53.758Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:02:53.761Z",
+          "comment": "@格式最终测试（post 消息类型）"
+        }
+      ]
+    },
+    {
+      "id": "fe7b7afa-394b-4621-8400-20ba7bdff0b7",
+      "title": "🔔 强制重启测试-天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:05:17.949Z",
+      "updatedAt": "2026-03-20T14:05:17.987Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:05:17.949Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:05:17.987Z",
+          "comment": "强制重启后测试"
+        }
+      ]
+    },
+    {
+      "id": "003d2a97-469a-4e6d-86e3-cf8a19253b53",
+      "title": "🔔 强制重启测试-灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:05:19.030Z",
+      "updatedAt": "2026-03-20T14:05:19.056Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:05:19.030Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:05:19.056Z",
+          "comment": "强制重启后测试"
+        }
+      ]
+    },
+    {
+      "id": "7e90045d-365b-476d-afc4-d556306b1c05",
+      "title": "🔔 强制重启测试-执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:05:20.102Z",
+      "updatedAt": "2026-03-20T14:05:20.143Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:05:20.102Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:05:20.143Z",
+          "comment": "强制重启后测试"
+        }
+      ]
+    },
+    {
+      "id": "f93edbb9-8685-40a2-b71f-d405a4ed9a93",
+      "title": "🔔 @格式修复测试-天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:07:58.134Z",
+      "updatedAt": "2026-03-20T14:07:58.192Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:07:58.134Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:07:58.192Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "594bf3bd-e6e3-4f02-99ce-27739fcec109",
+      "title": "🔔 @格式修复测试-灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:07:59.217Z",
+      "updatedAt": "2026-03-20T14:07:59.257Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:07:59.217Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:07:59.257Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "4475bd84-3e5b-4102-8a9c-cf9dbf2c8f5f",
+      "title": "🔔 @格式修复测试-执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:00.278Z",
+      "updatedAt": "2026-03-20T14:08:00.304Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:00.278Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:00.304Z",
+          "comment": "@格式修复测试"
+        }
+      ]
+    },
+    {
+      "id": "59255acb-f437-48df-a608-163b9ccc5947",
+      "title": "✅ @格式最终测试 - 匠心",
+      "description": "测试飞书@格式（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:56.682Z",
+      "updatedAt": "2026-03-20T14:08:56.695Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:08:56.682Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:56.695Z",
+          "comment": "@格式最终测试（全员正确 user_id）"
+        }
+      ]
+    },
+    {
+      "id": "bb4e4eb8-9c3f-44e5-bb2b-f5f8f5f1ce50",
+      "title": "✅ @格式最终测试 - 司库",
+      "description": "测试飞书@格式（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:56.684Z",
+      "updatedAt": "2026-03-20T14:08:56.694Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:08:56.684Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:56.694Z",
+          "comment": "@格式最终测试（全员正确 user_id）"
+        }
+      ]
+    },
+    {
+      "id": "2cec80aa-98d4-4c48-948e-890807406d4b",
+      "title": "✅ @格式最终测试 - 执矩",
+      "description": "测试飞书@格式（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:56.685Z",
+      "updatedAt": "2026-03-20T14:08:56.694Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:08:56.685Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:56.694Z",
+          "comment": "@格式最终测试（全员正确 user_id）"
+        }
+      ]
+    },
+    {
+      "id": "5207b107-617c-4524-822c-ca97af15eb00",
+      "title": "✅ @格式最终测试 - 磐石",
+      "description": "测试飞书@格式（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:56.687Z",
+      "updatedAt": "2026-03-20T14:08:56.694Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:08:56.687Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:56.694Z",
+          "comment": "@格式最终测试（全员正确 user_id）"
+        }
+      ]
+    },
+    {
+      "id": "8282542b-a5fe-4edc-b6ec-cd27613f4f1f",
+      "title": "✅ @格式最终测试 - 灵犀",
+      "description": "测试飞书@格式（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:56.688Z",
+      "updatedAt": "2026-03-20T14:08:56.693Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:08:56.688Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:56.693Z",
+          "comment": "@格式最终测试（全员正确 user_id）"
+        }
+      ]
+    },
+    {
+      "id": "b9dea695-c16a-4f0e-ac03-c707f9c5e328",
+      "title": "✅ @格式最终测试 - 天策",
+      "description": "测试飞书@格式（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-20T23:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:08:56.689Z",
+      "updatedAt": "2026-03-20T14:08:56.692Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T14:08:56.689Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:08:56.692Z",
+          "comment": "@格式最终测试（全员正确 user_id）"
+        }
+      ]
+    },
+    {
+      "id": "a7a78ef5-20ea-47be-9592-c9b53d32ad3a",
+      "title": "🔔 实时监控测试 - 天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:09:26.524Z",
+      "updatedAt": "2026-03-20T14:09:26.524Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:09:26.524Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "5f3cb814-92dc-423c-bbc8-fc67e9428e16",
+      "title": "🔔 日志测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:09:43.193Z",
+      "updatedAt": "2026-03-20T14:09:43.216Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:09:43.193Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:09:43.216Z",
+          "comment": "日志测试"
+        }
+      ]
+    },
+    {
+      "id": "9b40d36c-de89-46de-948f-99f91b6fbbf7",
+      "title": "🔔 最终排查测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:10:56.042Z",
+      "updatedAt": "2026-03-20T14:10:56.072Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:10:56.042Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:10:56.072Z",
+          "comment": "最终排查"
+        }
+      ]
+    },
+    {
+      "id": "5eca6f22-4f26-42ea-962e-767d432dc9b4",
+      "title": "🔔 详细日志测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:11:37.635Z",
+      "updatedAt": "2026-03-20T14:11:37.665Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:11:37.635Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:11:37.665Z",
+          "comment": "详细日志测试"
+        }
+      ]
+    },
+    {
+      "id": "443cf20c-43e1-4ac9-a68d-0ed24ff0cfc1",
+      "title": "🚀 全员测试 - 天枢",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:20.631Z",
+      "updatedAt": "2026-03-20T14:13:20.635Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:20.631Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:20.635Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "c86e7473-a117-4e73-bee4-f265f9573cab",
+      "title": "🚀 全员测试 - 匠心",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:21.428Z",
+      "updatedAt": "2026-03-20T14:13:21.434Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:21.428Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:21.434Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "895791ec-eb34-4064-a0dd-f6cd88f5cdf0",
+      "title": "🚀 全员测试 - 司库",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:22.226Z",
+      "updatedAt": "2026-03-20T14:13:22.229Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:22.226Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:22.229Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "9e70b696-771f-4ab2-992c-eb02e05be21f",
+      "title": "🚀 全员测试 - 执矩",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:23.026Z",
+      "updatedAt": "2026-03-20T14:13:23.030Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:23.026Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:23.030Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "fc8bd84c-b5c3-4e82-817a-6b47c7bfd0f0",
+      "title": "🚀 全员测试 - 磐石",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:23.827Z",
+      "updatedAt": "2026-03-20T14:13:23.830Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:23.827Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:23.830Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "5dd58a99-d52e-4e2b-9a4b-704983ba11bc",
+      "title": "🚀 全员测试 - 灵犀",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:24.627Z",
+      "updatedAt": "2026-03-20T14:13:24.631Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:24.627Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:24.631Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "cdbf8bf2-105c-4128-91af-adcc1400a09e",
+      "title": "🚀 全员测试 - 天策",
+      "description": "BCE 飞书@通知测试",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": "2026-03-21T23:59:59.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:13:25.427Z",
+      "updatedAt": "2026-03-20T14:13:25.431Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:25.427Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:13:25.431Z",
+          "comment": "🔔 请立即确认收到任务！20 秒内回复\"收到 + 姓名 + 任务类型\""
+        }
+      ]
+    },
+    {
+      "id": "c93fa2c5-98b7-4079-a31c-6c7173918ccf",
+      "title": "🔔 日志测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:14:58.591Z",
+      "updatedAt": "2026-03-20T14:14:58.591Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:14:58.591Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "d87f01f4-d324-48e0-88bd-5d4794541077",
+      "title": "🔔 代码修复测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:15:56.863Z",
+      "updatedAt": "2026-03-20T14:15:56.903Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:15:56.863Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:15:56.903Z",
+          "comment": "代码修复测试"
+        }
+      ]
+    },
+    {
+      "id": "4990188b-116e-46fc-b5fd-59b0bbcda048",
+      "title": "🔔 最终修复测试-天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:16:45.274Z",
+      "updatedAt": "2026-03-20T14:16:45.296Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:16:45.274Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:16:45.296Z",
+          "comment": "最终修复测试"
+        }
+      ]
+    },
+    {
+      "id": "e1f20b35-5517-4998-b15b-ca562726b6a3",
+      "title": "🔔 最终修复测试-灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:16:47.342Z",
+      "updatedAt": "2026-03-20T14:16:47.378Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:16:47.342Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:16:47.378Z",
+          "comment": "最终修复测试"
+        }
+      ]
+    },
+    {
+      "id": "32dd1653-1316-4cb4-96a8-231de8cf2da6",
+      "title": "🔔 最终修复测试-执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:16:49.417Z",
+      "updatedAt": "2026-03-20T14:16:49.443Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:16:49.417Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:16:49.443Z",
+          "comment": "最终修复测试"
+        }
+      ]
+    },
+    {
+      "id": "b33c1c7c-14c0-4108-8b56-aa96a44656b8",
+      "title": "🔔 最终测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:20:35.070Z",
+      "updatedAt": "2026-03-20T14:20:35.070Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:20:35.070Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "55f00a45-7fa2-4c2f-bc51-fe1a983610a3",
+      "title": "🔔 实时日志测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:21:05.915Z",
+      "updatedAt": "2026-03-20T14:21:05.933Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:21:05.915Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:21:05.933Z",
+          "comment": "实时日志测试"
+        }
+      ]
+    },
+    {
+      "id": "f80c2c2d-fdb6-4019-bf7d-47385ac66dd9",
+      "title": "🔔 测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:21:19.065Z",
+      "updatedAt": "2026-03-20T14:21:19.065Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:21:19.065Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "af4f5761-8b20-4c7e-ae20-d791d7f1181e",
+      "title": "🔔 API 测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:24:08.554Z",
+      "updatedAt": "2026-03-20T14:24:08.554Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:24:08.554Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "850cce39-9150-4f69-b5d5-4ee537b3c729",
+      "title": "🔔 最终测试 - 执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:26:34.109Z",
+      "updatedAt": "2026-03-20T14:26:34.109Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:26:34.109Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "2dc3802c-c168-4ef8-8f25-a752da8cd19d",
+      "title": "🔔 清除缓存测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:26:57.096Z",
+      "updatedAt": "2026-03-20T14:26:57.096Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:26:57.096Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "75a36712-53d2-4479-a12d-e31464c94df9",
+      "title": "🚀 新代码测试 - 天策",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:35:56.144Z",
+      "updatedAt": "2026-03-20T14:35:56.169Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:35:56.145Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:35:56.169Z",
+          "comment": "新代码测试"
+        }
+      ]
+    },
+    {
+      "id": "c7ab4d5f-eeb6-4e5f-ba93-ff83964dbabc",
+      "title": "🚀 新代码测试 - 灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:35:58.289Z",
+      "updatedAt": "2026-03-20T14:35:58.422Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:35:58.289Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:35:58.422Z",
+          "comment": "新代码测试"
+        }
+      ]
+    },
+    {
+      "id": "5db813d3-27e4-45c3-820d-5ceffb6a0e05",
+      "title": "🚀 新代码测试 - 执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:36:00.468Z",
+      "updatedAt": "2026-03-20T14:36:00.492Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:36:00.468Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:36:00.492Z",
+          "comment": "新代码测试"
+        }
+      ]
+    },
+    {
+      "id": "b3f61cf3-dc1b-4dcc-90b2-c1d6c5ae33be",
+      "title": "🔔 新进程测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:36:10.301Z",
+      "updatedAt": "2026-03-20T14:36:10.323Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:36:10.301Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:36:10.323Z",
+          "comment": "新进程测试"
+        }
+      ]
+    },
+    {
+      "id": "27a2679e-7e48-433c-9a00-acf5d0a401f4",
+      "title": "🔔 新进程测试 - 执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:36:22.643Z",
+      "updatedAt": "2026-03-20T14:36:22.643Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:36:22.643Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "20d33375-fb3a-4dbc-935e-767558341455",
+      "title": "🔔 完整流程测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:38:47.902Z",
+      "updatedAt": "2026-03-20T14:38:47.902Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:38:47.902Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "131baa28-3004-43e4-9ea0-564f37fb3959",
+      "title": "🔔 调试日志测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:40:27.859Z",
+      "updatedAt": "2026-03-20T14:40:27.859Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:40:27.859Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "fd43003d-bf1b-46ec-aa3f-6c0be19bd334",
+      "title": "🔔 格式验证测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:41:58.869Z",
+      "updatedAt": "2026-03-20T14:41:58.869Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:41:58.869Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "bbdbfda7-91e6-48d2-9106-e440a6fe863c",
+      "title": "🔔 顶层 at 测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:43:49.506Z",
+      "updatedAt": "2026-03-20T14:43:49.506Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:43:49.506Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "2c5a9074-613f-4578-af82-71d69124335b",
+      "title": "🔔 post 消息测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:44:55.280Z",
+      "updatedAt": "2026-03-20T14:44:55.280Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:44:55.280Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "6431b2ad-24d5-4069-af7a-aef687997925",
+      "title": "🔔 post 消息测试 2",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:46:26.439Z",
+      "updatedAt": "2026-03-20T14:46:26.439Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:46:26.439Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "b8bb4bdb-452f-436b-a7ec-17e423273ea4",
+      "title": "🔔 代码修复测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:50:20.677Z",
+      "updatedAt": "2026-03-20T14:50:20.677Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:50:20.677Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "6afa150c-334f-4391-bc34-f05d1f9ba44a",
+      "title": "🔔 最终测试",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T14:51:43.580Z",
+      "updatedAt": "2026-03-20T14:51:43.580Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T14:51:43.580Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "e7bc7b60-1460-4508-8b5a-37831fc8d66a",
+      "title": "🔔 最终测试 - 天枢",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:20:06.475Z",
+      "updatedAt": "2026-03-20T15:20:06.492Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:20:06.475Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:20:06.492Z",
+          "comment": "最终测试"
+        }
+      ]
+    },
+    {
+      "id": "0dc5cda9-8d27-456f-bfde-a7af325d903b",
+      "title": "🔔 最终测试 - 灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:20:06.505Z",
+      "updatedAt": "2026-03-20T15:20:06.523Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:20:06.505Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:20:06.523Z",
+          "comment": "最终测试"
+        }
+      ]
+    },
+    {
+      "id": "320dcd8e-90d4-4045-8c5e-9810c23058df",
+      "title": "🔔 最终测试 - 司库",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:20:06.529Z",
+      "updatedAt": "2026-03-20T15:20:06.549Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:20:06.529Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:20:06.549Z",
+          "comment": "最终测试"
+        }
+      ]
+    },
+    {
+      "id": "dbdd2d5b-b281-4812-89e3-9b852ee56f02",
+      "title": "✅ 全员@测试 - 匠心",
+      "description": "测试飞书@功能（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T00:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:25:31.562Z",
+      "updatedAt": "2026-03-20T15:25:31.562Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T15:25:31.562Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "ab545c38-6940-45b9-b502-467b44828697",
+      "title": "✅ 全员@测试 - 司库",
+      "description": "测试飞书@功能（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T00:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:25:31.565Z",
+      "updatedAt": "2026-03-20T15:25:31.565Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T15:25:31.565Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "1c9291a4-71b9-4f08-92be-cff60b5648d2",
+      "title": "✅ 全员@测试 - 执矩",
+      "description": "测试飞书@功能（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T00:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:25:31.566Z",
+      "updatedAt": "2026-03-20T15:25:31.566Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T15:25:31.566Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "c049dbbc-dd3c-4d7d-94a0-13a7c2e0e7db",
+      "title": "✅ 全员@测试 - 磐石",
+      "description": "测试飞书@功能（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T00:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:25:31.568Z",
+      "updatedAt": "2026-03-20T15:25:31.568Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T15:25:31.568Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "13e2f44a-c476-4c06-9a7e-a5a299fb0e5c",
+      "title": "✅ 全员@测试 - 灵犀",
+      "description": "测试飞书@功能（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T00:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:25:31.570Z",
+      "updatedAt": "2026-03-20T15:25:31.570Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T15:25:31.570Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "efa9464a-775f-439b-9208-79cbf5b76240",
+      "title": "🔔 修复测试 - 天枢",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:30:43.420Z",
+      "updatedAt": "2026-03-20T15:30:43.437Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:30:43.420Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:30:43.437Z",
+          "comment": "修复测试"
+        }
+      ]
+    },
+    {
+      "id": "2c13313b-7dd0-43a2-8875-722b4b7fd015",
+      "title": "🔔 修复测试 - 匠心",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:30:43.454Z",
+      "updatedAt": "2026-03-20T15:30:43.454Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:30:43.454Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "5d6085f7-594e-4288-9141-0fe8a12cb8df",
+      "title": "🔔 BCE 测试-天枢",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:33:30.029Z",
+      "updatedAt": "2026-03-20T15:33:30.047Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:33:30.029Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:33:30.047Z",
+          "comment": "BCE 测试"
+        }
+      ]
+    },
+    {
+      "id": "8b04e6fe-a7be-4004-a323-2b4e292bd9ec",
+      "title": "🔔 BCE 测试-灵犀",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:33:31.073Z",
+      "updatedAt": "2026-03-20T15:33:31.098Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:33:31.073Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "pending",
+          "to": "assigned",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:33:31.098Z",
+          "comment": "BCE 测试"
+        }
+      ]
+    },
+    {
+      "id": "8eea3671-834b-4e35-8560-0408c3505911",
+      "title": "🔔 BCE 测试-司库",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T15:33:32.123Z",
+      "updatedAt": "2026-03-20T15:33:32.123Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T15:33:32.123Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "8e8609a4-10c9-4cbc-aea8-e2a7aa64da6f",
+      "title": "🔔 最终调试 - 执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:07:03.660Z",
+      "updatedAt": "2026-03-20T16:07:03.660Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T16:07:03.660Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "3d78be1e-52df-4f06-8b7c-3d2942c72b59",
+      "title": "🔔 顶层 at 测试 - 执矩",
+      "description": "",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:07:31.520Z",
+      "updatedAt": "2026-03-20T16:07:31.520Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-20T16:07:31.520Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "bac39981-5cc9-43da-bc64-76e07e414bcd",
+      "title": "✅ BCE 流程测试 - 匠心",
+      "description": "测试 BCE 任务分配流程（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T02:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:09:33.608Z",
+      "updatedAt": "2026-03-20T16:09:33.608Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T16:09:33.608Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "26e7e664-f6c2-4d54-9ebd-455e00df23f6",
+      "title": "✅ BCE 流程测试 - 司库",
+      "description": "测试 BCE 任务分配流程（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T02:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:09:33.612Z",
+      "updatedAt": "2026-03-20T16:09:33.612Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T16:09:33.612Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "bd41aa62-78a0-411f-9908-ab5ed3502484",
+      "title": "✅ BCE 流程测试 - 执矩",
+      "description": "测试 BCE 任务分配流程（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T02:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:09:33.614Z",
+      "updatedAt": "2026-03-20T16:09:33.614Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T16:09:33.614Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "d21fcff6-a2be-4476-a86c-196e42a3166a",
+      "title": "✅ BCE 流程测试 - 磐石",
+      "description": "测试 BCE 任务分配流程（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T02:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:09:33.616Z",
+      "updatedAt": "2026-03-20T16:09:33.616Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T16:09:33.616Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "2a4d3836-39c8-49ee-af62-a69a9967030b",
+      "title": "✅ BCE 流程测试 - 灵犀",
+      "description": "测试 BCE 任务分配流程（全员正确 user_id）",
+      "creator": "磊哥",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T02:00:00.000Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-20T16:09:33.617Z",
+      "updatedAt": "2026-03-20T16:09:33.617Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "磊哥",
+          "timestamp": "2026-03-20T16:09:33.617Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "1f292100-b7aa-49e0-a7b9-bea7425e2fdd",
+      "title": "【测试】磐石任务通知测试",
+      "description": "测试任务创建时是否能正确@磐石",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P1",
+      "status": "pending",
+      "dueDate": "2026-03-22T00:02:10.994Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:02:11.010Z",
+      "updatedAt": "2026-03-21T00:02:11.010Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:02:11.010Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "ef22ba32-635a-4c8e-8dd5-a18a8c009d18",
+      "title": "【全员测试】天枢的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:33.397Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:33.404Z",
+      "updatedAt": "2026-03-21T00:05:33.404Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:33.404Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "bb4af7ce-40d8-4dc1-b717-f6480db3b955",
+      "title": "【全员测试】匠心的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:35.411Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:35.414Z",
+      "updatedAt": "2026-03-21T00:05:35.414Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:35.414Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "567f095b-385c-4367-b2e7-e276f42ebf57",
+      "title": "【全员测试】司库的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:37.422Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:37.424Z",
+      "updatedAt": "2026-03-21T00:05:37.424Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:37.424Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "d4643971-af1d-48af-a8d4-29781190d043",
+      "title": "【全员测试】执矩的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "执矩",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:39.430Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:39.433Z",
+      "updatedAt": "2026-03-21T00:05:39.433Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:39.433Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "92a92500-21cc-488f-bf9c-c4e50abfa1c1",
+      "title": "【全员测试】磐石的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:41.439Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:41.440Z",
+      "updatedAt": "2026-03-21T00:05:41.440Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:41.440Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "1059eaee-2c11-44cf-a15b-2b7aabc0211a",
+      "title": "【全员测试】灵犀的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "灵犀",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:43.447Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:43.449Z",
+      "updatedAt": "2026-03-21T00:05:43.449Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:43.449Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "73297820-2095-4c19-ba26-2d018627aa98",
+      "title": "【全员测试】天策的任务通知测试",
+      "description": "测试任务：请在20秒内回复\"收到\"确认任务",
+      "creator": "天枢",
+      "assignee": "天策",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": "2026-03-21T01:05:45.454Z",
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T00:05:45.456Z",
+      "updatedAt": "2026-03-21T00:05:45.456Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T00:05:45.456Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "89d360b7-895f-43b5-b30b-9c7cb3ce4844",
+      "title": "v3.2 功能测试任务",
+      "description": "测试三通道通知+规则引擎+边界检查",
+      "creator": "天枢",
+      "assignee": "匠心",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T04:01:17.415Z",
+      "updatedAt": "2026-03-21T04:02:21.302Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T04:01:17.415Z",
+          "comment": "任务创建"
+        }
+      ],
+      "confirmedAt": "2026-03-21T04:01:17.488Z",
+      "confirmedBy": "匠心",
+      "requireConfirmation": false,
+      "transferredAt": "2026-03-21T04:02:21.302Z",
+      "transferredBy": "执矩",
+      "transferHistory": [
+        {
+          "from": "匠心",
+          "to": "司库",
+          "comment": "技术方案完成，转财务审核",
+          "timestamp": "2026-03-21T04:02:01.383Z"
+        },
+        {
+          "from": "司库",
+          "to": "执矩",
+          "comment": "财务审核通过",
+          "timestamp": "2026-03-21T04:02:01.439Z"
+        },
+        {
+          "from": "执矩",
+          "to": "匠心",
+          "comment": "安全审核通过",
+          "timestamp": "2026-03-21T04:02:21.205Z"
+        },
+        {
+          "from": "匠心",
+          "to": "司库",
+          "comment": "重新审核",
+          "timestamp": "2026-03-21T04:02:21.247Z"
+        },
+        {
+          "from": "司库",
+          "to": "执矩",
+          "comment": "重新审核",
+          "timestamp": "2026-03-21T04:02:21.276Z"
+        },
+        {
+          "from": "执矩",
+          "to": "匠心",
+          "comment": "第3轮",
+          "timestamp": "2026-03-21T04:02:21.302Z"
+        }
+      ]
+    },
+    {
+      "id": "f425c8c1-01fe-4a23-8aef-d729deccfa4c",
+      "title": "磐石测试任务 - 三通道通知验证",
+      "description": "测试 sessions_send+ 飞书卡片 + 邮箱三通道通知",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T06:10:25.302Z",
+      "updatedAt": "2026-03-21T06:10:25.302Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T06:10:25.302Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "00391516-cc2d-44c9-bae0-a4c56c96aaea",
+      "title": "磐石测试 - 循环转交检测",
+      "description": "测试循环转交是否被正确阻止",
+      "creator": "天枢",
+      "assignee": "天枢",
+      "priority": "P0",
+      "status": "assigned",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T06:26:30.842Z",
+      "updatedAt": "2026-03-21T06:28:23.684Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T06:26:30.842Z",
+          "comment": "任务创建"
+        }
+      ],
+      "transferredAt": "2026-03-21T06:28:23.684Z",
+      "transferredBy": "匠心",
+      "transferHistory": [
+        {
+          "from": "匠心",
+          "to": "司库",
+          "comment": "第 1 次转交",
+          "timestamp": "2026-03-21T06:26:47.924Z"
+        },
+        {
+          "from": "司库",
+          "to": "执矩",
+          "comment": "第 2 次转交",
+          "timestamp": "2026-03-21T06:26:50.823Z"
+        },
+        {
+          "from": "执矩",
+          "to": "匠心",
+          "comment": "第 3 次转交 - 匠心第 1 次",
+          "timestamp": "2026-03-21T06:26:53.647Z"
+        },
+        {
+          "from": "匠心",
+          "to": "司库",
+          "comment": "第 4 次转交",
+          "timestamp": "2026-03-21T06:26:56.390Z"
+        },
+        {
+          "from": "司库",
+          "to": "执矩",
+          "comment": "第 5 次转交",
+          "timestamp": "2026-03-21T06:27:11.663Z"
+        },
+        {
+          "from": "执矩",
+          "to": "匠心",
+          "comment": "第 6 次转交 - 匠心第 2 次",
+          "timestamp": "2026-03-21T06:27:15.609Z"
+        },
+        {
+          "from": "匠心",
+          "to": "天枢",
+          "comment": "转给天枢验收",
+          "timestamp": "2026-03-21T06:28:23.684Z"
+        }
+      ]
+    },
+    {
+      "id": "bc80b029-89a8-4927-aa7a-c6c5ef02e334",
+      "title": "磐石测试 2",
+      "description": "测试邮箱写入",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P1",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T06:28:29.344Z",
+      "updatedAt": "2026-03-21T06:28:29.344Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T06:28:29.344Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "d0355041-7164-4392-889f-e8b54a120467",
+      "title": "磐石测试 3 - 邮箱验证",
+      "description": "测试邮箱写入功能",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P1",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T06:29:58.360Z",
+      "updatedAt": "2026-03-21T06:29:58.360Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T06:29:58.360Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "3b21c866-574c-43d3-939c-e5bdc02b81ef",
+      "title": "磐石最终验收测试",
+      "description": "验证三通道通知完整功能",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T06:40:24.615Z",
+      "updatedAt": "2026-03-21T06:40:24.615Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T06:40:24.615Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "132d6c2d-8d73-42d0-94ee-6177598d3459",
+      "title": "磐石最终验证测试 - 三通道通知",
+      "description": "验证任务创建时三通道通知是否正常工作",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T06:59:41.196Z",
+      "updatedAt": "2026-03-21T06:59:41.196Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T06:59:41.196Z",
+          "comment": "任务创建"
+        }
+      ]
+    },
+    {
+      "id": "17843664-a6bb-4945-9b65-0edb6951d5fe",
+      "title": "磐石最终验证测试 - 三通道通知",
+      "description": "验证任务创建时三通道通知是否正常工作",
+      "creator": "天枢",
+      "assignee": "磐石",
+      "priority": "P0",
+      "status": "pending",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-21T07:01:34.146Z",
+      "updatedAt": "2026-03-21T07:01:34.146Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "天枢",
+          "timestamp": "2026-03-21T07:01:34.146Z",
+          "comment": "任务创建"
+        }
+      ]
+    }
+  ],
+  "subTasks": [],
+  "comments": [],
+  "savedAt": "2026-03-21T07:01:34.147Z"
+}

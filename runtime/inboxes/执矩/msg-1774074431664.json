@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774074431664",
+  "from": "司库",
+  "to": "执矩",
+  "type": "task_transferred",
+  "taskId": "00391516-cc2d-44c9-bae0-a4c56c96aaea",
+  "sessionKey": "task:00391516-cc2d-44c9-bae0-a4c56c96aaea",
+  "content": "🔄 任务已转交：磐石测试 - 循环转交检测\n转交人：司库",
+  "createdAt": "2026-03-21T06:27:11.664Z",
+  "read": false
+}

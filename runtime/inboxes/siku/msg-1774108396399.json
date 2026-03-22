@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774108396399",
+  "from": "匠心",
+  "to": "司库",
+  "type": "task_created",
+  "taskId": "4465558d-5206-4b33-aea5-d5e38acf5790",
+  "sessionKey": "task:4465558d-5206-4b33-aea5-d5e38acf5790",
+  "content": "📋 新任务分配：🧪 定时任务测试 - 司库\n优先级：P0",
+  "createdAt": "2026-03-21T15:53:16.399Z",
+  "read": false
+}

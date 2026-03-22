@@ -1,13 +1,14 @@
 /**
  * 通知服务（v3.2 三通道设计）
  * 主通道：OpenClaw sessions_send（通过 Gateway HTTP API）
- * 备用通道：飞书卡片
+ * 备用通道：飞书卡片（实际调用飞书 API）
  * 可靠通道：文件系统邮箱
  */
 
 const http = require('http');
 const retryQueue = require('./retry-queue');
 const mailboxService = require('./mailbox-service');
+const feishuNotify = require('../api/feishu-notify'); // v3.2 修复：导入飞书 API
 
 // OpenClaw Gateway 配置
 const GATEWAY_HOST = process.env.GATEWAY_HOST || '127.0.0.1';
@@ -61,26 +62,36 @@ class NotificationService {
   }
 
   /**
-   * 三通道通知
+   * 三通道通知（v3.2 已修复：添加日志）
    */
   async notify(agent, from, type, content, taskId, sessionKey = null) {
     const notification = { agent, from, type, content, taskId, sessionKey };
+    
+    console.log(`[通知] 开始三通道通知：${agent} <- ${from}, 类型：${type}`);
     
     // 1. 主通道：OpenClaw sessions_send（通过 Gateway）
     try {
       const target = sessionKey || `agent-${agent}`;
       await this.sessionsSend(target, content);
-      console.log(`[通知] sessions_send 推送给 ${agent} 成功`);
+      console.log(`[通知] ✅ sessions_send 推送给 ${agent} 成功`);
     } catch (error) {
-      console.log(`[通知] sessions_send 失败，加入重试队列：${error.message}`);
+      console.log(`[通知] ❌ sessions_send 失败，加入重试队列：${error.message}`);
       retryQueue.add(notification);
     }
 
-    // 2. 备用通道：飞书卡片
+    // 2. 备用通道：飞书卡片（v3.2 修复：实际调用飞书 API）
     try {
-      await this.sendFeishuCard(agent, from, type, content, taskId);
+      await feishuNotify.sendTaskNotification({
+        assignee: agent,
+        title: content.split('\n')[0] || '任务通知',
+        action: type,
+        operator: from,
+        comment: content
+      });
+      console.log(`[通知] ✅ 飞书卡片推送给 ${agent} 成功`);
     } catch (error) {
-      console.error(`[通知] 飞书卡片发送失败：${error.message}`);
+      console.error(`[通知] ❌ 飞书卡片发送失败：${error.message}`);
+      // 飞书失败不加入重试队列，因为邮箱已存储
     }
 
     // 3. 可靠通道：文件系统邮箱

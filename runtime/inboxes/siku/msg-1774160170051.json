@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774160170051",
+  "from": "司库",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "4c9a5be9-7e10-4267-bdf5-7211f526a792",
+  "sessionKey": "task:4c9a5be9-7e10-4267-bdf5-7211f526a792",
+  "content": "✅ 司库 已确认接收任务：🚀 北斗智投系统 - 财务知识库",
+  "createdAt": "2026-03-22T06:16:10.051Z",
+  "read": false
+}

@@ -9,7 +9,7 @@ const { logAudit, getAuditLogs } = require('../middleware/audit');
 
 // v3.2 新增导入
 const { validMembers } = require('../config/task-rules');
-const { addTransferHistory, isCircularTransfer } = require('../services/transfer-rules');
+const { addTransferHistory, isCircularTransfer, rejectTask } = require('../services/transfer-rules'); // v3.3 新增 rejectTask
 const notificationService = require('../services/notification-service');
 const mailboxService = require('../services/mailbox-service');
 
@@ -104,6 +104,7 @@ const TASK_STATES = {
   EXECUTING: 'executing',  // 执行中
   REVIEWING: 'reviewing',  // 待验收
   ACCEPTED: 'accepted',    // 已验收
+  COMPLETED: 'completed',  // 已完成（v3.2 新增）
   CANCELLED: 'cancelled'   // 已取消
 };
 
@@ -111,8 +112,9 @@ const STATE_TRANSITIONS = {
   [TASK_STATES.PENDING]: [TASK_STATES.ASSIGNED, TASK_STATES.CANCELLED],
   [TASK_STATES.ASSIGNED]: [TASK_STATES.EXECUTING, TASK_STATES.PENDING, TASK_STATES.CANCELLED],
   [TASK_STATES.EXECUTING]: [TASK_STATES.REVIEWING, TASK_STATES.ASSIGNED, TASK_STATES.CANCELLED],
-  [TASK_STATES.REVIEWING]: [TASK_STATES.ACCEPTED, TASK_STATES.EXECUTING],
-  [TASK_STATES.ACCEPTED]: [],
+  [TASK_STATES.REVIEWING]: [TASK_STATES.ACCEPTED, TASK_STATES.COMPLETED, TASK_STATES.EXECUTING],
+  [TASK_STATES.ACCEPTED]: [TASK_STATES.COMPLETED],
+  [TASK_STATES.COMPLETED]: [],
   [TASK_STATES.CANCELLED]: []
 };
 
@@ -129,7 +131,7 @@ const STATE_TRANSITIONS = {
  *   projectId?: string
  * }
  */
-router.post('/tasks', (req, res) => {
+router.post('/tasks', async (req, res) => {
   try {
     const { title, description, creator, assignee, priority = 'P2', dueDate, projectId } = req.body;
     
@@ -172,9 +174,21 @@ router.post('/tasks', (req, res) => {
     
     console.log(`[BCE 任务] 创建任务：${taskId}, 标题：${title}, 创建人：${creator}`);
     
-    // 如果有负责人，自动发送飞书通知
+    // v3.2 修复：如果有负责人，调用三通道通知
     if (assignee) {
-      sendFeishuNotification(taskId, task, 'created', creator, '新任务已创建，请确认接收');
+      try {
+        await notificationService.notify(
+          assignee,
+          creator,
+          'task_created',
+          `📋 新任务分配：${title}\n优先级：${priority}`,
+          taskId,
+          `task:${taskId}`
+        );
+        console.log(`[任务创建] 三通道通知已发送给 ${assignee}`);
+      } catch (notifyError) {
+        console.error(`[任务创建] 通知发送失败：${notifyError.message}`);
+      }
     }
     
     res.status(201).json({
@@ -235,38 +249,6 @@ router.get('/tasks/search', (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
-/**
- * 发送飞书通知（辅助函数）
- */
-function sendFeishuNotification(taskId, task, action, operator, comment) {
-  const notifyData = {
-    chatId: 'oc_19be54b67684b6597ff335d7534896d4',
-    taskId,
-    taskTitle: task.title,
-    action,
-    operator,
-    assignee: task.assignee,
-    comment
-  };
-  
-  const req = http.request({
-    hostname: 'localhost',
-    port: 3000,
-    path: '/api/feishu-notify/notify/task',
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' }
-  }, (res) => {
-    console.log(`[飞书通知] 发送${action}通知，状态：${res.statusCode}`);
-  });
-  
-  req.on('error', (e) => {
-    console.error('[飞书通知] 发送失败:', e.message);
-  });
-  
-  req.write(JSON.stringify(notifyData));
-  req.end();
-}
 
 /**
  * 获取任务列表
@@ -372,6 +354,9 @@ router.post('/tasks/:id/assign', (req, res) => {
     // 自动发送飞书通知
     sendFeishuNotification(id, task, 'assigned', req.body.operator || 'system', '任务已分配给您');
     
+    // v3.2 修复：保存数据
+    saveData();
+    
     res.json({
       success: true,
       message: '任务分配成功',
@@ -419,6 +404,9 @@ router.post('/tasks/:id/start', (req, res) => {
     
     // 自动发送飞书通知
     sendFeishuNotification(id, task, 'executing', operator || task.assignee, '任务已开始执行');
+    
+    // v3.2 修复：保存数据
+    saveData();
     
     res.json({
       success: true,
@@ -468,6 +456,9 @@ router.post('/tasks/:id/submit', (req, res) => {
     
     // 自动发送飞书通知
     sendFeishuNotification(id, task, 'reviewing', operator || task.assignee, '已提交验收，请审核');
+    
+    // v3.2 修复：保存数据
+    saveData();
     
     res.json({
       success: true,
@@ -574,6 +565,9 @@ router.post('/tasks/:id/cancel', (req, res) => {
     
     // 自动发送飞书通知
     sendFeishuNotification(id, task, 'cancelled', operator || 'system', `任务已取消：${reason}`);
+    
+    // v3.2 修复：保存数据
+    saveData();
     
     res.json({
       success: true,
@@ -799,7 +793,7 @@ router.post('/tasks/:id/confirm', async (req, res) => {
     task.confirmedAt = new Date().toISOString();
     task.confirmedBy = userName;
     task.requireConfirmation = false;
-    task.status = 'in_progress';
+    task.status = TASK_STATES.EXECUTING;  // v3.2 修复：使用枚举值
     task.updatedAt = new Date().toISOString();
     
     saveData();
@@ -972,8 +966,8 @@ router.post('/tasks/:id/complete', async (req, res) => {
       return res.status(404).json({ error: '任务不存在' });
     }
     
-    // 更新任务状态为已完成
-    task.status = 'completed';
+    // 更新任务状态为已完成（v3.2 修复：使用枚举值）
+    task.status = TASK_STATES.COMPLETED;
     task.completedAt = new Date().toISOString();
     task.completedBy = operator || task.assignee;
     task.updatedAt = new Date().toISOString();
@@ -1015,6 +1009,55 @@ router.post('/tasks/:id/complete', async (req, res) => {
     });
   } catch (error) {
     console.error('任务完成失败:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * 驳回任务（审核不通过）v3.3 新增
+ * POST /api/bce/tasks/:id/reject
+ * Body: { operator: string, reason: string }
+ */
+router.post('/tasks/:id/reject', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { operator, reason } = req.body;
+    
+    if (!operator || !reason) {
+      return res.status(400).json({ error: 'operator 和 reason 不能为空' });
+    }
+    
+    const task = tasks.get(id);
+    if (!task) {
+      return res.status(404).json({ error: '任务不存在' });
+    }
+    
+    console.log(`[驳回 API] 收到驳回请求：${id}, 操作人：${operator}, 原因：${reason}`);
+    
+    // 调用驳回服务
+    const result = await rejectTask(id, operator, reason);
+    
+    if (result.success) {
+      saveData(); // 保存数据
+      
+      res.json({
+        success: true,
+        message: `任务已驳回，回退到 ${result.previousExecutor} 重新执行`,
+        data: {
+          taskId: id,
+          previousExecutor: result.previousExecutor,
+          rejectCount: result.rejectCount,
+          rejectedAt: new Date().toISOString()
+        }
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        error: result.error || '驳回失败'
+      });
+    }
+  } catch (error) {
+    console.error('驳回任务失败:', error);
     res.status(500).json({ error: error.message });
   }
 });
