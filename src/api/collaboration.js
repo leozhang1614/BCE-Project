@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const CollaborationService = require('../services/collaborationService');
 
+// 获取所有协作会话
+router.get('/sessions', async (req, res) => {
+  try {
+    const sessions = CollaborationService.getAllSessions();
+    res.json(sessions);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // 创建协作会话
 router.post('/sessions', async (req, res) => {
   try {

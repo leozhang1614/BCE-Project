@@ -20,6 +20,10 @@ class CollaborationService {
     return this.sessions.get(id);
   }
 
+  async getAllSessions() {
+    return Array.from(this.sessions.values());
+  }
+
   async addParticipant(sessionId, participant) {
     const session = this.sessions.get(sessionId);
     if (!session) throw new Error('会话不存在');

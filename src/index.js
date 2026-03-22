@@ -17,6 +17,8 @@ const feishuWebhookApi = require('./api/feishu-webhook');
 const mailboxApi = require('./api/mailbox');  // v3.2 新增
 const occSyncApi = require('./api/occ-sync');  // v3.2 OCC 同步
 const devWorkflowApi = require('./api/development-workflow');  // v3.3 开发工作流
+const boardApi = require('./api/board');  // 任务看板
+const collaborationApi = require('./api/collaboration');  // 协作
 
 // 导入服务模块
 const notificationService = require('./services/notification-service');  // v3.2 三通道
@@ -43,6 +45,8 @@ app.use('/api/feishu/webhook', feishuWebhookApi);
 app.use('/api/mailbox', mailboxApi);  // v3.2 新增
 app.use('/api/occ', occSyncApi);  // v3.2 OCC 同步
 app.use('/api/dev-workflow', devWorkflowApi);  // v3.3 开发工作流
+app.use('/api/board', boardApi);  // 任务看板
+app.use('/api/collaboration', collaborationApi);  // 协作
 
 // 健康检查
 app.get('/health', (req, res) => {
