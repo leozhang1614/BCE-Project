@@ -419,21 +419,21 @@
             const tasks = boardData.tasks || [];
             
             // 更新统计
-            document.getElementById('stat-todo').textContent = tasks.filter(t => t.status === 'todo').length;
-            document.getElementById('stat-in_progress').textContent = tasks.filter(t => t.status === 'in_progress').length;
-            document.getElementById('stat-done').textContent = tasks.filter(t => t.status === 'done').length;
+            document.getElementById('stat-todo').textContent = tasks.filter(t => t.status === 'todo' || t.status === 'pending').length;
+            document.getElementById('stat-in_progress').textContent = tasks.filter(t => t.status === 'in_progress' || t.status === 'executing').length;
+            document.getElementById('stat-done').textContent = tasks.filter(t => t.status === 'done' || t.status === 'completed').length;
             document.getElementById('stat-p0').textContent = tasks.filter(t => t.priority === 'P0').length;
 
-            // 渲染列
+            // 渲染列（支持多种状态映射）
             const columns = [
-                { id: 'todo', title: '待办', color: '#667eea' },
-                { id: 'in_progress', title: '进行中', color: '#f59e0b' },
-                { id: 'done', title: '已完成', color: '#10b981' }
+                { id: 'todo', title: '待办', color: '#667eea', aliases: ['pending'] },
+                { id: 'in_progress', title: '进行中', color: '#f59e0b', aliases: ['executing'] },
+                { id: 'done', title: '已完成', color: '#10b981', aliases: ['completed'] }
             ];
 
             let html = '';
             columns.forEach(col => {
-                const colTasks = tasks.filter(t => t.status === col.id);
+                const colTasks = tasks.filter(t => t.status === col.id || (col.aliases && col.aliases.includes(t.status)));
                 html += `
                     <div class="column">
                         <div class="column-header">

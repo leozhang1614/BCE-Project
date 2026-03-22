@@ -1,10 +1,49 @@
 const express = require('express');
 const router = express.Router();
 const { v4: uuidv4 } = require('uuid');
+const fs = require('fs');
+const path = require('path');
 
-// 内存存储（生产环境使用数据库）
-const boards = new Map();
-const tasks = new Map();
+// 数据文件路径
+const BOARD_DATA_PATH = path.join(__dirname, '../../runtime/board-data.json');
+
+// 从文件加载看板数据
+function loadBoardData() {
+  try {
+    if (fs.existsSync(BOARD_DATA_PATH)) {
+      const content = fs.readFileSync(BOARD_DATA_PATH, 'utf-8');
+      return JSON.parse(content);
+    }
+  } catch (error) {
+    console.error('[任务板] 加载数据失败:', error.message);
+  }
+  // 返回默认看板
+  return {
+    id: 'bce-main-board',
+    name: 'BCE 主任务板',
+    description: '北斗协同引擎 - 统一任务管理看板',
+    members: ['匠心', '司库', '磐石', '执矩', '灵犀', '天策', '天枢'],
+    tasks: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+}
+
+// 保存看板数据
+function saveBoardData(board) {
+  try {
+    board.updatedAt = new Date().toISOString();
+    fs.writeFileSync(BOARD_DATA_PATH, JSON.stringify(board, null, 2), 'utf-8');
+    return true;
+  } catch (error) {
+    console.error('[任务板] 保存数据失败:', error.message);
+    return false;
+  }
+}
+
+// 初始化看板数据
+let boardData = loadBoardData();
+console.log(`[任务板] 加载看板数据成功，任务数：${boardData.tasks?.length || 0}`);
 
 /**
  * 创建任务板
@@ -52,14 +91,17 @@ router.post('/', (req, res) => {
  */
 router.get('/', (req, res) => {
   try {
-    const boardList = Array.from(boards.values()).map(b => ({
-      id: b.id,
-      name: b.name,
-      description: b.description,
-      memberCount: b.members.length,
-      taskCount: b.tasks.length,
-      updatedAt: b.updatedAt
-    }));
+    // 重新加载最新数据
+    boardData = loadBoardData();
+    
+    const boardList = [{
+      id: boardData.id,
+      name: boardData.name,
+      description: boardData.description,
+      memberCount: boardData.members.length,
+      taskCount: boardData.tasks?.length || 0,
+      updatedAt: boardData.updatedAt
+    }];
     
     res.json({
       success: true,
@@ -80,20 +122,18 @@ router.get('/:id', (req, res) => {
   try {
     const { id } = req.params;
     
-    const board = boards.get(id);
-    if (!board) {
+    // 重新加载最新数据
+    boardData = loadBoardData();
+    
+    // 支持通过 ID 查询或使用默认看板
+    let board = boardData;
+    if (id !== 'bce-main-board' && boardData.id !== id) {
       return res.status(404).json({ error: '任务板不存在' });
     }
     
-    // 获取所有任务详情
-    const boardTasks = board.tasks.map(taskId => tasks.get(taskId)).filter(Boolean);
-    
     res.json({
       success: true,
-      data: {
-        ...board,
-        tasks: boardTasks
-      }
+      data: board
     });
   } catch (error) {
     console.error('获取任务板详情失败:', error);
@@ -265,5 +305,5 @@ router.get('/:id/stats', (req, res) => {
 
 // 导出供外部访问
 module.exports = router;
-module.exports.boards = boards;
-module.exports.tasks = tasks;
+module.exports.loadBoardData = loadBoardData;
+module.exports.saveBoardData = saveBoardData;
