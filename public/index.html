@@ -3,112 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCE + Control Center - 统一入口</title>
+    <title>BCE 任务看板 - 北斗智投</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { text-align: center; color: white; margin-bottom: 40px; }
-        .header h1 { font-size: 48px; margin-bottom: 10px; }
-        .header p { font-size: 20px; opacity: 0.9; }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .card h2 { color: #333; margin-bottom: 20px; font-size: 24px; }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            margin: 8px 0;
-            transition: transform 0.2s;
-        }
-        .btn:hover { transform: translateY(-2px); }
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .status { display:inline-block; padding:4px 12px; border-radius:20px; font-size:12px; margin-left:10px; }
-        .status-ok { background:#48bb78; color:white; }
-        .status-warn { background:#f59e0b; color:white; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f5f7fa; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { opacity: 0.9; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .stat-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .stat-card h3 { color: #666; font-size: 14px; margin-bottom: 8px; }
+        .stat-card .number { font-size: 32px; font-weight: bold; color: #333; }
+        .task-list { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .task-item { border-left: 4px solid #f59e0b; background: #f9fafb; padding: 16px; margin-bottom: 16px; border-radius: 4px; }
+        .task-item h3 { font-size: 16px; margin-bottom: 12px; color: #333; }
+        .task-meta { display: flex; gap: 16px; font-size: 13px; color: #666; flex-wrap: wrap; }
+        .task-meta span { display: flex; align-items: center; gap: 4px; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .badge-p0 { background: #fee2e2; color: #dc2626; }
+        .badge-executing { background: #fef3c7; color: #d97706; }
+        .footer { text-align: center; margin-top: 24px; color: #999; font-size: 12px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🚀 BCE + Control Center</h1>
-            <p>北斗协同引擎 + OpenClaw 控制中心 - 统一入口</p>
+    <div class="header">
+        <h1>🚀 北斗智投系统 - 开发进度看板</h1>
+        <p>北斗协同引擎 BCE · 实时更新</p>
+    </div>
+    
+    <div class="stats" id="stats">
+        <div class="stat-card">
+            <h3>总任务</h3>
+            <div class="number" id="stat-total">-</div>
         </div>
-
-        <div class="card">
-            <h2>📊 系统入口</h2>
-            <div class="grid">
-                <div>
-                    <h3>OpenClaw Control Center <span class="status status-ok">运行中</span></h3>
-                    <p style="color:#666;margin:10px 0">系统监控、用量统计、Agent 状态、任务管理</p>
-                    <p style="color:#999;font-size:14px">端口：4310</p>
-                    <a href="http://192.168.31.187:4310/?section=overview&lang=zh" class="btn">进入 Control Center</a>
-                </div>
-                <div>
-                    <h3>BCE 任务看板 <span class="status status-ok">运行中</span></h3>
-                    <p style="color:#666;margin:10px 0">可视化任务板、消息广播、强制确认</p>
-                    <p style="color:#999;font-size:14px">端口：3000</p>
-                    <a href="http://192.168.31.187:3000/board.html" class="btn btn-secondary">进入 BCE 看板</a>
-                </div>
-            </div>
+        <div class="stat-card">
+            <h3>进行中</h3>
+            <div class="number" id="stat-progress">-</div>
         </div>
-
-        <div class="card">
-            <h2>🔧 BCE API 端点</h2>
-            <div style="background:#f5f5f5;padding:15px;border-radius:8px;font-family:monospace;font-size:13px;overflow-x:auto">
-                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/board</code> - 创建任务板</div>
-                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/broadcast</code> - 发送广播消息</div>
-                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/confirmation</code> - 创建确认请求</div>
-                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/memory</code> - 记忆同步</div>
-                <div style="margin-bottom:8px"><span style="color:#667eea;font-weight:bold">POST</span> <code>/api/feishu/webhook</code> - 飞书消息接收</div>
-                <div><span style="color:#667eea;font-weight:bold">GET</span> <code>/health</code> - 健康检查</div>
-            </div>
+        <div class="stat-card">
+            <h3>P0 优先级</h3>
+            <div class="number" id="stat-p0">-</div>
         </div>
-
-        <div class="card">
-            <h2>📖 快速开始</h2>
-            <ol style="line-height:2;color:#666;margin-left:20px">
-                <li><strong>访问 Control Center</strong> - 查看系统状态、用量统计、Agent 状态</li>
-                <li><strong>使用 BCE 看板</strong> - 创建和管理任务，分配负责人</li>
-                <li><strong>发送广播</strong> - 通过 BCE 发送全员通知，支持强制确认</li>
-                <li><strong>配置飞书</strong> - 配置 Webhook 实现飞书消息互通</li>
-            </ol>
-        </div>
-
-        <div class="card">
-            <h2>👥 团队成员</h2>
-            <div style="display:flex;gap:20px;flex-wrap:wrap">
-                <div><strong>天枢</strong> - CEO</div>
-                <div><strong>匠心</strong> - CTO</div>
-                <div><strong>司库</strong> - CFO</div>
-                <div><strong>执矩</strong> - CLO</div>
-                <div><strong>磐石</strong> - SRE</div>
-                <div><strong>灵犀</strong> - Designer</div>
-            </div>
+        <div class="stat-card">
+            <h3>负责人</h3>
+            <div class="number" id="stat-members">-</div>
         </div>
     </div>
+    
+    <div class="task-list" id="taskList">
+        <div style="text-align:center;padding:40px;color:#999">正在加载任务...</div>
+    </div>
+    
+    <div class="footer">
+        最后更新：<span id="updateTime">-</span>
+    </div>
+
+    <script>
+        // 任务数据（手动更新）
+        const tasks = [
+            {
+                title: "🚀 北斗智投系统 - 财务知识库",
+                assignee: "司库",
+                status: "executing",
+                priority: "P0",
+                description: "财务知识库搭建 + 数据接入"
+            },
+            {
+                title: "🚀 北斗智投系统 - 数据感知模块",
+                assignee: "磐石",
+                status: "executing",
+                priority: "P0",
+                description: "数据采集 + 感知模块开发"
+            },
+            {
+                title: "🚀 北斗智投系统 - iMessage 通知",
+                assignee: "磐石",
+                status: "executing",
+                priority: "P0",
+                description: "iMessage 通知集成"
+            },
+            {
+                title: "🚀 北斗智投系统 - 智能决策模块",
+                assignee: "匠心",
+                status: "executing",
+                priority: "P0",
+                description: "三维分析建议（日/周/月维度）"
+            },
+            {
+                title: "🚀 北斗智投系统 - 运维调度",
+                assignee: "磐石",
+                status: "executing",
+                priority: "P0",
+                description: "自动化调度运维"
+            },
+            {
+                title: "🚀 北斗智投系统 - 可视化看板",
+                assignee: "匠心",
+                status: "executing",
+                priority: "P0",
+                description: "Streamlit 看板开发"
+            }
+        ];
+
+        // 渲染统计
+        document.getElementById('stat-total').textContent = tasks.length;
+        document.getElementById('stat-progress').textContent = tasks.filter(t => t.status === 'executing').length;
+        document.getElementById('stat-p0').textContent = tasks.filter(t => t.priority === 'P0').length;
+        document.getElementById('stat-members').textContent = [...new Set(tasks.map(t => t.assignee))].length;
+        document.getElementById('updateTime').textContent = new Date().toLocaleString('zh-CN');
+
+        // 渲染任务
+        const taskListEl = document.getElementById('taskList');
+        let html = '<h2 style="margin-bottom:16px;color:#333">📋 任务列表</h2>';
+        tasks.forEach(task => {
+            html += `
+                <div class="task-item">
+                    <h3>${task.title}</h3>
+                    <div class="task-meta">
+                        <span>👤 ${task.assignee}</span>
+                        <span>📊 <span class="badge badge-${task.status}">${task.status}</span></span>
+                        <span>🏷️ <span class="badge badge-${task.priority.toLowerCase()}">${task.priority}</span></span>
+                    </div>
+                    <div style="margin-top:8px;color:#666;font-size:14px">${task.description}</div>
+                </div>
+            `;
+        });
+        taskListEl.innerHTML = html;
+    </script>
 </body>
 </html>
