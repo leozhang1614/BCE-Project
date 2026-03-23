@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCE 任务看板 - 测试版</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .status { padding: 10px; background: white; border-radius: 8px; margin-bottom: 10px; }
+        .status.success { background: #d1fae5; color: #065f46; }
+        .status.error { background: #fee2e2; color: #991b1b; }
+        .task-list { background: white; border-radius: 12px; padding: 20px; }
+        .task-item {
+            padding: 16px;
+            border-left: 4px solid #667eea;
+            background: #f9fafb;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+        .task-item h3 { font-size: 16px; margin-bottom: 8px; }
+        .task-item .meta { font-size: 12px; color: #666; }
+        .loading { text-align: center; padding: 40px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 BCE 任务看板</h1>
+        <p>北斗协同引擎 - 统一任务管理</p>
+    </div>
+    
+    <div id="status"></div>
+    
+    <div class="task-list" id="taskList">
+        <div class="loading">正在加载任务...</div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        
+        async function loadTasks() {
+            const statusEl = document.getElementById('status');
+            const taskListEl = document.getElementById('taskList');
+            
+            try {
+                statusEl.innerHTML = '<div class="status">🔄 正在连接 API...</div>';
+                
+                // 测试 API 连接
+                const res = await fetch(`${API_BASE}/api/board`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                
+                const data = await res.json();
+                statusEl.innerHTML = `<div class="status success">✅ API 连接成功！看板数：${data.count}</div>`;
+                
+                if (data.data && data.data.length > 0) {
+                    const board = data.data[0];
+                    statusEl.innerHTML += `<div class="status success">📊 看板：${board.name} - ${board.taskCount} 个任务</div>`;
+                    
+                    // 加载看板详情
+                    const boardRes = await fetch(`${API_BASE}/api/board/${board.id}`);
+                    const boardData = await boardRes.json();
+                    
+                    renderTasks(boardData.data);
+                } else {
+                    taskListEl.innerHTML = '<div class="loading">暂无看板</div>';
+                }
+            } catch (error) {
+                statusEl.innerHTML = `<div class="status error">❌ 错误：${error.message}</div>`;
+                taskListEl.innerHTML = `<div class="loading">加载失败<br><small>${error.message}</small></div>`;
+            }
+        }
+        
+        function renderTasks(boardData) {
+            const taskListEl = document.getElementById('taskList');
+            const tasks = boardData.tasks || [];
+            
+            if (tasks.length === 0) {
+                taskListEl.innerHTML = '<div class="loading">暂无任务</div>';
+                return;
+            }
+            
+            let html = '<h2 style="margin-bottom:16px">📋 任务列表</h2>';
+            tasks.forEach(task => {
+                html += `
+                    <div class="task-item">
+                        <h3>${task.title || '未命名任务'}</h3>
+                        <div class="meta">
+                            <span>👤 ${task.assignee || '未分配'}</span> | 
+                            <span>🏷️ ${task.priority || 'P2'}</span> | 
+                            <span>📊 ${task.status || 'todo'}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            taskListEl.innerHTML = html;
+        }
+        
+        // 页面加载
+        document.addEventListener('DOMContentLoaded', loadTasks);
+    </script>
+</body>
+</html>

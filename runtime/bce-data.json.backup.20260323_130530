@@ -24,22 +24,7 @@
       ],
       "confirmedAt": "2026-03-22T05:23:38.402Z",
       "confirmedBy": "匠心",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T05:23:38.402Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T05:53:38.402Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责 Streamlit 看板开发",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "requireConfirmation": false
     },
     {
       "id": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
@@ -65,22 +50,7 @@
       ],
       "confirmedAt": "2026-03-22T06:16:11.094Z",
       "confirmedBy": "磐石",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:11.094Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:11.094Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责自动化调度运维",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "requireConfirmation": false
     },
     {
       "id": "945d3388-2207-482b-a226-296a16015042",
@@ -106,22 +76,7 @@
       ],
       "confirmedAt": "2026-03-22T05:23:37.643Z",
       "confirmedBy": "匠心",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T05:23:37.643Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T05:53:37.643Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责三维分析建议（日/周/月维度）",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "requireConfirmation": false
     },
     {
       "id": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
@@ -147,22 +102,7 @@
       ],
       "confirmedAt": "2026-03-22T06:16:10.597Z",
       "confirmedBy": "磐石",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:10.597Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:10.597Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责分级通知触达",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "requireConfirmation": false
     },
     {
       "id": "69cd6603-85fd-4c12-8f40-d710cc74466c",
@@ -188,22 +128,7 @@
       ],
       "confirmedAt": "2026-03-22T06:16:10.110Z",
       "confirmedBy": "磐石",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:10.110Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:10.110Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责多源数据采集（AkShare、财经新闻、宏观政策）",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "requireConfirmation": false
     },
     {
       "id": "4c9a5be9-7e10-4267-bdf5-7211f526a792",
@@ -229,23 +154,10 @@
       ],
       "confirmedAt": "2026-03-22T06:16:09.367Z",
       "confirmedBy": "司库",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:09.367Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:09.367Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责财务知识库搭建",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "requireConfirmation": false
     }
   ],
-  "savedAt": "2026-03-23T08:57:42.421Z"
+  "subTasks": [],
+  "comments": [],
+  "savedAt": "2026-03-22T06:16:11.094Z"
 }

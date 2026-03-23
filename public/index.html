@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCE 任务看板 - 北斗智投</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f5f7fa; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { opacity: 0.9; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .stat-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .stat-card h3 { color: #666; font-size: 14px; margin-bottom: 8px; }
+        .stat-card .number { font-size: 32px; font-weight: bold; color: #333; }
+        .task-list { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .task-item { border-left: 4px solid #f59e0b; background: #f9fafb; padding: 16px; margin-bottom: 16px; border-radius: 4px; }
+        .task-item h3 { font-size: 16px; margin-bottom: 12px; color: #333; }
+        .task-meta { display: flex; gap: 16px; font-size: 13px; color: #666; flex-wrap: wrap; }
+        .task-meta span { display: flex; align-items: center; gap: 4px; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .badge-p0 { background: #fee2e2; color: #dc2626; }
+        .badge-executing { background: #fef3c7; color: #d97706; }
+        .footer { text-align: center; margin-top: 24px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 北斗智投系统 - 开发进度看板</h1>
+        <p>北斗协同引擎 BCE · 实时更新</p>
+    </div>
+    
+    <div class="stats" id="stats">
+        <div class="stat-card">
+            <h3>总任务</h3>
+            <div class="number" id="stat-total">-</div>
+        </div>
+        <div class="stat-card">
+            <h3>进行中</h3>
+            <div class="number" id="stat-progress">-</div>
+        </div>
+        <div class="stat-card">
+            <h3>P0 优先级</h3>
+            <div class="number" id="stat-p0">-</div>
+        </div>
+        <div class="stat-card">
+            <h3>负责人</h3>
+            <div class="number" id="stat-members">-</div>
+        </div>
+    </div>
+    
+    <div class="task-list" id="taskList">
+        <div style="text-align:center;padding:40px;color:#999">正在加载任务...</div>
+    </div>
+    
+    <div class="footer">
+        最后更新：<span id="updateTime">-</span>
+    </div>
+
+    <script>
+        // 任务数据（手动更新）
+        const tasks = [
+            {
+                title: "🚀 北斗智投系统 - 财务知识库",
+                assignee: "司库",
+                status: "executing",
+                priority: "P0",
+                description: "财务知识库搭建 + 数据接入"
+            },
+            {
+                title: "🚀 北斗智投系统 - 数据感知模块",
+                assignee: "磐石",
+                status: "executing",
+                priority: "P0",
+                description: "数据采集 + 感知模块开发"
+            },
+            {
+                title: "🚀 北斗智投系统 - iMessage 通知",
+                assignee: "磐石",
+                status: "executing",
+                priority: "P0",
+                description: "iMessage 通知集成"
+            },
+            {
+                title: "🚀 北斗智投系统 - 智能决策模块",
+                assignee: "匠心",
+                status: "executing",
+                priority: "P0",
+                description: "三维分析建议（日/周/月维度）"
+            },
+            {
+                title: "🚀 北斗智投系统 - 运维调度",
+                assignee: "磐石",
+                status: "executing",
+                priority: "P0",
+                description: "自动化调度运维"
+            },
+            {
+                title: "🚀 北斗智投系统 - 可视化看板",
+                assignee: "匠心",
+                status: "executing",
+                priority: "P0",
+                description: "Streamlit 看板开发"
+            }
+        ];
+
+        // 渲染统计
+        document.getElementById('stat-total').textContent = tasks.length;
+        document.getElementById('stat-progress').textContent = tasks.filter(t => t.status === 'executing').length;
+        document.getElementById('stat-p0').textContent = tasks.filter(t => t.priority === 'P0').length;
+        document.getElementById('stat-members').textContent = [...new Set(tasks.map(t => t.assignee))].length;
+        document.getElementById('updateTime').textContent = new Date().toLocaleString('zh-CN');
+
+        // 渲染任务
+        const taskListEl = document.getElementById('taskList');
+        let html = '<h2 style="margin-bottom:16px;color:#333">📋 任务列表</h2>';
+        tasks.forEach(task => {
+            html += `
+                <div class="task-item">
+                    <h3>${task.title}</h3>
+                    <div class="task-meta">
+                        <span>👤 ${task.assignee}</span>
+                        <span>📊 <span class="badge badge-${task.status}">${task.status}</span></span>
+                        <span>🏷️ <span class="badge badge-${task.priority.toLowerCase()}">${task.priority}</span></span>
+                    </div>
+                    <div style="margin-top:8px;color:#666;font-size:14px">${task.description}</div>
+                </div>
+            `;
+        });
+        taskListEl.innerHTML = html;
+    </script>
+</body>
+</html>

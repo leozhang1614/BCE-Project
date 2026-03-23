@@ -19,6 +19,8 @@ const occSyncApi = require('./api/occ-sync');  // v3.2 OCC 同步
 const devWorkflowApi = require('./api/development-workflow');  // v3.3 开发工作流
 const boardApi = require('./api/board');  // 任务看板
 const collaborationApi = require('./api/collaboration');  // 协作
+const progressApi = require('./api/bce-progress');  // v3.4 进度管理
+const managerApi = require('./api/bce-manager');  // v3.4 管理者权限
 
 // 导入服务模块
 const notificationService = require('./services/notification-service');  // v3.2 三通道
@@ -39,6 +41,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // API 路由
 app.use('/api/bce', tasksApi);
+app.use('/api/bce', progressApi);  // v3.4 进度管理
+app.use('/api/bce', managerApi);  // v3.4 管理者权限
 app.use('/api/feishu-notify', feishuNotifyApi);
 app.use('/api/feishu/card-callback', feishuCardApi);
 app.use('/api/feishu/webhook', feishuWebhookApi);
@@ -52,13 +56,16 @@ app.use('/api/collaboration', collaborationApi);  // 协作
 app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
-    service: 'BCE v3.2',
-    version: '3.2.0',
+    service: 'BCE v3.4 进度管理增强版',
+    version: '3.4.0',
     features: {
       mailbox: 'enabled',
       rules: 'enabled',
       retry: 'enabled',
-      threeChannels: 'enabled'
+      threeChannels: 'enabled',
+      progressTracking: 'enabled',      // v3.4 新增
+      managerPermissions: 'enabled',    // v3.4 新增
+      performanceSystem: 'enabled'      // v3.4 新增
     },
     retryQueue: retryQueue.getStatus()
   });
@@ -101,7 +108,7 @@ async function start() {
     console.log(`
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
-║   BCE 北斗协同引擎 v3.2 最终版                              ║
+║   BCE 北斗协同引擎 v3.4 进度管理增强版                      ║
 ║                                                           ║
 ║   HTTP: http://localhost:${PORT}                          ║
 ║                                                           ║
@@ -113,6 +120,10 @@ async function start() {
 ║   ✅ 通知重试队列（指数退避）                              ║
 ║   ✅ 幂等性检查                                            ║
 ║   ✅ 转交边界处理                                          ║
+║   ✅ 强制进度反馈（30 分钟）                                ║
+║   ✅ 标准化汇报（1.5 小时）                                 ║
+║   ✅ 管理者权限系统                                        ║
+║   ✅ 绩效绑定系统                                          ║
 ║                                                           ║
 ║   状态：http://localhost:${PORT}/health                   ║
 ║                                                           ║
