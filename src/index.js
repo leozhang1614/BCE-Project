@@ -22,6 +22,14 @@ const collaborationApi = require('./api/collaboration');  // 协作
 const progressApi = require('./api/bce-progress');  // v3.4 进度管理
 const managerApi = require('./api/bce-manager');  // v3.4 管理者权限
 
+// Phase 2 新增模块
+const aiApi = require('./api/bce-ai');  // AI 分析引擎
+const dataApi = require('./api/bce-data');  // 数据源集成
+const evolutionApi = require('./api/bce-evolution');  // 自我进化模块
+const acceptApi = require('./api/bce-accept');  // 任务验收
+const monitoringApi = require('./api/bce-monitoring');  // 运维监控
+const imessageApi = require('./api/bce-imessage');  // iMessage 通知
+
 // 导入服务模块
 const notificationService = require('./services/notification-service');  // v3.2 三通道
 const transferRulesService = require('./services/transfer-rules');  // v3.2 规则引擎
@@ -43,6 +51,9 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/api/bce', tasksApi);
 app.use('/api/bce', progressApi);  // v3.4 进度管理
 app.use('/api/bce', managerApi);  // v3.4 管理者权限
+app.use('/api/bce', acceptApi);  // 任务验收
+app.use('/api/bce/monitoring', monitoringApi);  // 运维监控
+app.use('/api/bce/imessage', imessageApi);  // iMessage 通知
 app.use('/api/feishu-notify', feishuNotifyApi);
 app.use('/api/feishu/card-callback', feishuCardApi);
 app.use('/api/feishu/webhook', feishuWebhookApi);

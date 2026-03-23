@@ -78,6 +78,7 @@
         .task-item.executing { border-left-color: #f59e0b; }
         .task-item.reviewing { border-left-color: #8b5cf6; }
         .task-item.accepted { border-left-color: #10b981; }
+        .task-item.auditing { border-left-color: #f59e0b; }
         .task-item.cancelled { border-left-color: #ef4444; opacity: 0.6; }
         
         .task-header {
@@ -98,6 +99,7 @@
         .status-executing { background: #fef3c7; color: #d97706; }
         .status-reviewing { background: #ede9fe; color: #7c3aed; }
         .status-accepted { background: #d1fae5; color: #059669; }
+        .status-auditing { background: #fef3c7; color: #d97706; }
         .status-cancelled { background: #fee2e2; color: #dc2626; }
         
         .task-meta {
@@ -309,6 +311,10 @@
                         <div class="label">待验收</div>
                     </div>
                     <div class="stat-card">
+                        <div class="number">${stats.auditing || 0}</div>
+                        <div class="label">待审核</div>
+                    </div>
+                    <div class="stat-card">
                         <div class="number">${stats.accepted}</div>
                         <div class="label">已完成</div>
                     </div>
@@ -351,6 +357,7 @@
                 assigned: '已分配',
                 executing: '执行中',
                 reviewing: '待验收',
+                auditing: '待审核',
                 accepted: '已完成',
                 cancelled: '已取消'
             };

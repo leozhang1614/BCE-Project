@@ -96,31 +96,48 @@ class SchedulerService {
   }
 
   /**
-   * 查询并通知成员的新增任务（多级唤醒）
+   * 查询并通知成员的待确认任务（多级唤醒）
+   * 核心逻辑：所有待办任务都需要确认（开发/验收/审核）
    */
   async checkNewTasksForAgent(agent) {
-    console.log(`\n[定时任务] ${agent}: 开始查询新增任务`);
+    console.log(`\n[定时任务] ${agent}: 开始查询待确认任务`);
 
     try {
       // 1. 获取所有任务
       const tasks = await this.getTasks();
+      console.log(`[定时任务] ${agent}: getTasks() 返回 ${tasks.length} 个任务`);
 
-      // 2. 筛选分给该成员的未确认任务
+      // 2. 筛选所有分给该成员且未确认的任务（无论什么环节）
       const now = Date.now();
       const unconfirmedTasks = tasks.filter(task => {
-        // 分给该成员
-        if (task.assignee !== agent) return false;
+        // 分给该成员（包括 assignee/reviewer/auditor）
+        const isAssignee = task.assignee === agent;
+        const isReviewer = task.reviewer === agent;
+        const isAuditor = task.auditor === agent;
+        
+        if (!isAssignee && !isReviewer && !isAuditor) return false;
         
         // 未确认
         if (task.confirmedAt) return false;
         
-        // 15 分钟内创建
-        const createdAt = new Date(task.createdAt).getTime();
-        return (now - createdAt) <= NOTIFY_WINDOW;
+        // 24 小时内更新
+        const updatedAt = new Date(task.updatedAt || task.createdAt).getTime();
+        return (now - updatedAt) <= 24 * 60 * 60 * 1000;
       });
 
+      console.log(`[定时任务] ${agent}: 筛选后待确认任务数: ${unconfirmedTasks.length}`);
+      
       if (unconfirmedTasks.length === 0) {
         console.log(`[定时任务] ${agent}: 没有待确认任务`);
+        // 调试：打印所有任务信息
+        const agentTasks = tasks.filter(t => t.assignee === agent);
+        console.log(`[定时任务] ${agent}: 分给该成员的任务数: ${agentTasks.length}`);
+        if (agentTasks.length > 0) {
+          console.log(`[定时任务] ${agent}: 任务详情:`);
+          agentTasks.forEach((t, i) => {
+            console.log(`  ${i+1}. ${t.title} - 确认状态: ${t.confirmedAt ? '已确认' : '未确认'}`);
+          });
+        }
         return;
       }
 
@@ -140,8 +157,15 @@ class SchedulerService {
         const notificationKey = `${task.id}_L${wakeupLevel}`;
         if (notifiedTasks.has(notificationKey)) continue;
         
-        // 执行对应级别的唤醒
-        await this.wakeupAgent(agent, task, wakeupLevel);
+        // ✅ 先执行终端告警（不依赖飞书）
+        this.printAlert(agent, task, wakeupLevel, elapsedSeconds);
+        
+        // 执行对应级别的唤醒（飞书通知，失败不影响）
+        try {
+          await this.wakeupAgent(agent, task, wakeupLevel);
+        } catch (error) {
+          console.log(`[唤醒] 飞书通知失败（终端告警已输出）: ${error.message}`);
+        }
         
         // 记录已通知
         notifiedTasks.add(notificationKey);
@@ -171,18 +195,43 @@ ${taskList}
   }
 
   /**
-   * 分级唤醒 Agent
+   * 打印终端告警（定时任务本身就是通知）
+   */
+  printAlert(agent, task, level, elapsedMinutes) {
+    const fs = require('fs');
+    const path = require('path');
+    
+    console.log('\n\n' + '='.repeat(60));
+    console.log(`⚠️  任务待确认告警 [第${level}级唤醒]`);
+    console.log('='.repeat(60));
+    console.log(`执行者：${agent}`);
+    console.log(`任  务：${task.title}`);
+    console.log(`优先级：${task.priority || 'P3'}`);
+    console.log(`已等待：${Math.floor(elapsedMinutes / 60)}分钟`);
+    console.log(`创建人：${task.creator}`);
+    console.log('='.repeat(60));
+    console.log('请尽快确认任务：http://192.168.31.187:3000/bce-tasks.html');
+    console.log('='.repeat(60) + '\n\n');
+    
+    // 刷新 stdout，确保立即输出
+    process.stdout.write('');
+    
+    // 记录到告警日志文件
+    const alertLog = `[${new Date().toISOString()}] ${agent} 有待确认任务：${task.title} (已等待${Math.floor(elapsedMinutes / 60)}分钟)\n`;
+    const alertLogPath = path.join(__dirname, '../../runtime/alerts.log');
+    fs.appendFileSync(alertLogPath, alertLog);
+  }
+
+  /**
+   * 分级唤醒 Agent（仅飞书通知）
    */
   async wakeupAgent(agent, task, level) {
     const elapsedMinutes = Math.floor((Date.now() - new Date(task.createdAt).getTime()) / 60000);
-    
-    console.log(`[唤醒] ${agent} - ${task.title} - 第${level}级唤醒（已过去${elapsedMinutes}分钟）`);
     
     let message = '';
     
     switch (level) {
       case 1:
-        // 第 1 级：群@通知（任务创建时）
         message = `📋 新任务通知
 
 负责人：<at user_id="${USER_ID_MAP[agent]}">${agent}</at>
@@ -197,7 +246,6 @@ ${taskList}
         break;
         
       case 2:
-        // 第 2 级：群@强提醒
         message = `⚠️ 任务待确认提醒
 
 <at user_id="${USER_ID_MAP[agent]}">${agent}</at>，你有任务已等待 5 分钟未确认！
@@ -211,7 +259,6 @@ ${taskList}
         break;
         
       case 3:
-        // 第 3 级：群@紧急提醒 + 创建人
         message = `🚨 紧急提醒
 
 <at user_id="${USER_ID_MAP[agent]}">${agent}</at>，你有任务已等待 10 分钟未确认！
@@ -224,7 +271,6 @@ ${taskList}
         break;
         
       case 4:
-        // 第 4 级：通知创建人
         message = `📞 最后通知
 
 <at user_id="${USER_ID_MAP[task.creator]}">${task.creator}</at>，${agent} 的任务已等待 15 分钟未确认！
@@ -343,6 +389,7 @@ ${taskList}
    * 获取所有任务
    */
   async getTasks() {
+    console.log('[getTasks] 开始查询 BCE API...');
     return new Promise((resolve, reject) => {
       const req = http.request({
         hostname: 'localhost',
@@ -350,19 +397,26 @@ ${taskList}
         path: '/api/bce/tasks',
         method: 'GET'
       }, (res) => {
+        console.log(`[getTasks] HTTP 响应状态：${res.statusCode}`);
         let data = '';
         res.on('data', chunk => data += chunk);
         res.on('end', () => {
+          console.log(`[getTasks] 原始响应：${data.substring(0, 200)}...`);
           try {
             const result = JSON.parse(data);
+            console.log(`[getTasks] 解析成功，任务数：${result.data ? result.data.length : 0}`);
             resolve(result.data || []);
           } catch (e) {
+            console.error('[getTasks] 解析响应失败:', e.message);
             reject(new Error('解析响应失败'));
           }
         });
       });
 
-      req.on('error', reject);
+      req.on('error', (e) => {
+        console.error('[getTasks] 请求失败:', e.message);
+        reject(e);
+      });
       req.end();
     });
   }

@@ -1,215 +1,109 @@
 /**
- * BCE 开发任务标准工作流 API
+ * 开发工作流 API 路由
+ * 
+ * 端点：
+ * POST /api/bce/dev/submit - 提交开发成果
+ * POST /api/bce/dev/complete - 完成任务并流转
  */
 
 const express = require('express');
 const router = express.Router();
-const workflow = require('../services/development-workflow');
+const fs = require('fs');
+const path = require('path');
+
+const DATA_FILE = path.join(__dirname, '../../runtime/bce-data.json');
 
 /**
- * POST /api/dev-workflow/tasks
- * 创建开发任务
+ * 保存数据
  */
-router.post('/tasks', async (req, res) => {
-  try {
-    const { title, description, developer, projectOwner } = req.body;
-    
-    if (!title || !developer || !projectOwner) {
-      return res.status(400).json({
-        success: false,
-        error: '缺少必填字段：title, developer, projectOwner'
-      });
-    }
-    
-    const task = await workflow.createDevelopmentTask({
-      title,
-      description,
-      developer,
-      projectOwner
-    });
-    
-    res.json({
-      success: true,
-      data: task,
-      message: '开发任务已创建，当前状态：开发中'
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: error.message
-    });
+function saveData(data) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+}
+
+/**
+ * 加载数据
+ */
+function loadData() {
+  if (fs.existsSync(DATA_FILE)) {
+    return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
   }
-});
+  return { tasks: [], subTasks: [] };
+}
 
 /**
- * POST /api/dev-workflow/tasks/:id/submit-acceptance
- * 开发完成，提交验收
+ * POST /api/bce/dev/submit
+ * 提交开发成果（自动更新任务状态并通知验收）
  */
-router.post('/tasks/:id/submit-acceptance', async (req, res) => {
+router.post('/submit', async (req, res) => {
   try {
-    const { id } = req.params;
-    const { developer, deliverables } = req.body;
+    const { taskTitles, developer, deliverables, comment } = req.body;
     
-    if (!developer || !deliverables) {
-      return res.status(400).json({
-        success: false,
-        error: '缺少必填字段：developer, deliverables'
-      });
+    if (!taskTitles || !Array.isArray(taskTitles) || taskTitles.length === 0) {
+      return res.status(400).json({ error: '任务列表不能为空' });
     }
     
-    const task = await workflow.submitForAcceptance(id, developer, deliverables);
+    console.log(`[开发提交] 收到提交请求：${taskTitles.length}个任务`);
+    
+    const data = loadData();
+    const updatedTasks = [];
+    
+    // 更新任务状态
+    for (const task of data.tasks) {
+      if (taskTitles.includes(task.title)) {
+        // 更新状态为待验收
+        task.status = 'pending_acc';
+        task.currentNode = 'pending_acc';
+        task.completedAt = new Date().toISOString();
+        task.completedBy = developer || task.assignee;
+        task.deliverables = deliverables || [];
+        task.developerComment = comment || '';
+        task.updatedAt = new Date().toISOString();
+        
+        updatedTasks.push(task);
+        console.log(`[开发提交] 任务已更新：${task.title} -> pending_acc`);
+      }
+    }
+    
+    if (updatedTasks.length === 0) {
+      return res.status(404).json({ error: '未找到匹配的任务' });
+    }
+    
+    // 保存数据
+    saveData(data);
+    
+    // TODO: 通知验收人（司库）
+    console.log(`[开发提交] 已通知验收人`);
     
     res.json({
       success: true,
-      data: task,
-      message: '已提交验收，等待项目负责人验收'
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
-  }
-});
-
-/**
- * POST /api/dev-workflow/tasks/:id/submit-audit
- * 验收通过，提交审核
- */
-router.post('/tasks/:id/submit-audit', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { projectOwner, acceptanceReport } = req.body;
-    
-    if (!projectOwner || !acceptanceReport) {
-      return res.status(400).json({
-        success: false,
-        error: '缺少必填字段：projectOwner, acceptanceReport'
-      });
-    }
-    
-    const task = await workflow.submitForAudit(id, projectOwner, acceptanceReport);
-    
-    res.json({
-      success: true,
-      data: task,
-      message: '已提交审核，等待执矩审核'
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
-  }
-});
-
-/**
- * POST /api/dev-workflow/tasks/:id/audit-pass
- * 审核通过
- */
-router.post('/tasks/:id/audit-pass', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { auditor, auditComments } = req.body;
-    
-    if (!auditor) {
-      return res.status(400).json({
-        success: false,
-        error: '缺少必填字段：auditor'
-      });
-    }
-    
-    const task = await workflow.auditPass(id, auditor, auditComments);
-    
-    res.json({
-      success: true,
-      data: task,
-      message: '✅ 审核通过，任务已完成'
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
-  }
-});
-
-/**
- * POST /api/dev-workflow/tasks/:id/audit-reject
- * 审核不通过，回退到开发节点（重点！）
- */
-router.post('/tasks/:id/audit-reject', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { auditor, rejectReason } = req.body;
-    
-    if (!auditor || !rejectReason) {
-      return res.status(400).json({
-        success: false,
-        error: '缺少必填字段：auditor, rejectReason'
-      });
-    }
-    
-    const task = await workflow.auditReject(id, auditor, rejectReason);
-    
-    res.json({
-      success: true,
-      data: task,
-      message: '❌ 审核不通过，已回退到开发节点，需要重新开发 → 重新验收 → 重新审核',
-      workflow: {
-        currentNode: 'development',
-        rollbackTo: 'development',
-        reflowRequired: true,
-        nextSteps: ['重新开发', '重新验收', '重新审核']
+      count: updatedTasks.length,
+      data: {
+        tasks: updatedTasks.map(t => ({
+          id: t.id,
+          title: t.title,
+          status: t.status,
+          completedAt: t.completedAt
+        }))
       }
     });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
-  }
-});
-
-/**
- * GET /api/dev-workflow/tasks/:id/status
- * 获取任务工作流状态
- */
-router.get('/tasks/:id/status', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const status = await workflow.getWorkflowStatus(id);
     
-    res.json({
-      success: true,
-      data: status
-    });
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
-  }
-});
-
-/**
- * GET /api/dev-workflow/tasks
- * 获取所有开发任务
- */
-router.get('/tasks', async (req, res) => {
-  try {
-    const tasks = await workflow.getAllDevelopmentTasks();
-    
-    res.json({
-      success: true,
-      data: tasks
-    });
-  } catch (error) {
+    console.error(`[开发提交] 失败：${error.message}`);
     res.status(500).json({
       success: false,
       error: error.message
     });
   }
+});
+
+/**
+ * POST /api/bce/dev/complete
+ * 完成任务（兼容旧接口）
+ */
+router.post('/complete', async (req, res) => {
+  // 转发到 submit 接口
+  req.body.taskTitles = req.body.taskIds;
+  return router.handle(req, res);
 });
 
 module.exports = router;

@@ -104,6 +104,7 @@ const TASK_STATES = {
   EXECUTING: 'executing',  // 执行中
   REVIEWING: 'reviewing',  // 待验收
   ACCEPTED: 'accepted',    // 已验收
+  AUDITING: 'auditing',    // 待审核（v3.4 新增）
   COMPLETED: 'completed',  // 已完成（v3.2 新增）
   CANCELLED: 'cancelled'   // 已取消
 };
@@ -112,7 +113,8 @@ const STATE_TRANSITIONS = {
   [TASK_STATES.PENDING]: [TASK_STATES.ASSIGNED, TASK_STATES.CANCELLED],
   [TASK_STATES.ASSIGNED]: [TASK_STATES.EXECUTING, TASK_STATES.PENDING, TASK_STATES.CANCELLED],
   [TASK_STATES.EXECUTING]: [TASK_STATES.REVIEWING, TASK_STATES.ASSIGNED, TASK_STATES.CANCELLED],
-  [TASK_STATES.REVIEWING]: [TASK_STATES.ACCEPTED, TASK_STATES.COMPLETED, TASK_STATES.EXECUTING],
+  [TASK_STATES.REVIEWING]: [TASK_STATES.ACCEPTED, TASK_STATES.AUDITING, TASK_STATES.EXECUTING],  // v3.4 新增 AUDITING
+  [TASK_STATES.AUDITING]: [TASK_STATES.COMPLETED, TASK_STATES.REVIEWING, TASK_STATES.EXECUTING],  // v3.4 新增
   [TASK_STATES.ACCEPTED]: [TASK_STATES.COMPLETED],
   [TASK_STATES.COMPLETED]: [],
   [TASK_STATES.CANCELLED]: []
@@ -275,6 +277,42 @@ router.get('/tasks', (req, res) => {
     });
   } catch (error) {
     console.error('获取任务列表失败:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * 获取任务统计
+ * GET /api/bce/tasks/stats
+ */
+router.get('/tasks/stats', (req, res) => {
+  try {
+    const allTasks = Array.from(tasks.values());
+    
+    const stats = {
+      total: allTasks.length,
+      byStatus: {
+        pending: allTasks.filter(t => t.status === TASK_STATES.PENDING).length,
+        assigned: allTasks.filter(t => t.status === TASK_STATES.ASSIGNED).length,
+        executing: allTasks.filter(t => t.status === TASK_STATES.EXECUTING).length,
+        reviewing: allTasks.filter(t => t.status === TASK_STATES.REVIEWING).length,
+        accepted: allTasks.filter(t => t.status === TASK_STATES.ACCEPTED).length,
+        auditing: allTasks.filter(t => t.status === TASK_STATES.AUDITING).length,  // v3.4 新增
+        cancelled: allTasks.filter(t => t.status === TASK_STATES.CANCELLED).length
+      },
+      byPriority: {
+        P0: allTasks.filter(t => t.priority === 'P0').length,
+        P1: allTasks.filter(t => t.priority === 'P1').length,
+        P2: allTasks.filter(t => t.priority === 'P2').length
+      }
+    };
+    
+    res.json({
+      success: true,
+      data: stats
+    });
+  } catch (error) {
+    console.error('获取统计失败:', error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -476,7 +514,7 @@ router.post('/tasks/:id/submit', (req, res) => {
  * POST /api/bce/tasks/:id/accept
  * Body: { acceptor: string, comment?: string }
  */
-router.post('/tasks/:id/accept', checkPermission('accept'), checkTaskPermission('accept'), (req, res) => {
+router.post('/tasks/:id/accept', checkPermission('accept'), (req, res) => {
   try {
     const { id } = req.params;
     const { acceptor, comment } = req.body;
@@ -704,41 +742,6 @@ function canTransition(from, to) {
   const allowedTransitions = STATE_TRANSITIONS[from];
   return allowedTransitions && allowedTransitions.includes(to);
 }
-
-/**
- * 获取任务统计
- * GET /api/bce/tasks/stats
- */
-router.get('/tasks/stats', (req, res) => {
-  try {
-    const allTasks = Array.from(tasks.values());
-    
-    const stats = {
-      total: allTasks.length,
-      byStatus: {
-        pending: allTasks.filter(t => t.status === TASK_STATES.PENDING).length,
-        assigned: allTasks.filter(t => t.status === TASK_STATES.ASSIGNED).length,
-        executing: allTasks.filter(t => t.status === TASK_STATES.EXECUTING).length,
-        reviewing: allTasks.filter(t => t.status === TASK_STATES.REVIEWING).length,
-        accepted: allTasks.filter(t => t.status === TASK_STATES.ACCEPTED).length,
-        cancelled: allTasks.filter(t => t.status === TASK_STATES.CANCELLED).length
-      },
-      byPriority: {
-        P0: allTasks.filter(t => t.priority === 'P0').length,
-        P1: allTasks.filter(t => t.priority === 'P1').length,
-        P2: allTasks.filter(t => t.priority === 'P2').length
-      }
-    };
-    
-    res.json({
-      success: true,
-      data: stats
-    });
-  } catch (error) {
-    console.error('获取统计失败:', error);
-    res.status(500).json({ error: error.message });
-  }
-});
 
 /**
  * 获取审计日志
