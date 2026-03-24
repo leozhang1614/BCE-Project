@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774321345739",
+  "from": "执矩",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "f2f91a44-a653-4d8d-ae47-ab2eaf98a23a",
+  "sessionKey": "task:f2f91a44-a653-4d8d-ae47-ab2eaf98a23a",
+  "content": "✅ 执矩 已确认接收任务：北斗智投 Phase 2 - iMessage 通知",
+  "createdAt": "2026-03-24T03:02:25.739Z",
+  "read": false
+}

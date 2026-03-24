@@ -1,251 +1,368 @@
 {
   "tasks": [
     {
-      "id": "b931a6f1-05d8-4772-8b86-8144edd9d507",
-      "title": "🚀 北斗智投系统 - 可视化看板",
-      "description": "负责 Streamlit 看板开发",
-      "creator": "司库",
-      "assignee": "匠心",
-      "priority": "P0",
-      "status": "executing",
-      "dueDate": "2026-03-22T17:00:00Z",
-      "projectId": null,
-      "subTasks": [],
-      "createdAt": "2026-03-22T05:10:49.090Z",
-      "updatedAt": "2026-03-22T05:23:38.402Z",
-      "stateHistory": [
-        {
-          "from": null,
-          "to": "pending",
-          "operator": "司库",
-          "timestamp": "2026-03-22T05:10:49.090Z",
-          "comment": "任务创建"
-        }
-      ],
-      "confirmedAt": "2026-03-22T05:23:38.402Z",
-      "confirmedBy": "匠心",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T05:23:38.402Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T05:53:38.402Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责 Streamlit 看板开发",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
-    },
-    {
-      "id": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
-      "title": "🚀 北斗智投系统 - 运维调度",
-      "description": "负责自动化调度运维",
-      "creator": "司库",
-      "assignee": "磐石",
-      "priority": "P0",
-      "status": "executing",
-      "dueDate": "2026-03-22T17:00:00Z",
-      "projectId": null,
-      "subTasks": [],
-      "createdAt": "2026-03-22T05:10:49.094Z",
-      "updatedAt": "2026-03-22T06:16:11.094Z",
-      "stateHistory": [
-        {
-          "from": null,
-          "to": "pending",
-          "operator": "司库",
-          "timestamp": "2026-03-22T05:10:49.094Z",
-          "comment": "任务创建"
-        }
-      ],
-      "confirmedAt": "2026-03-22T06:16:11.094Z",
-      "confirmedBy": "磐石",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:11.094Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:11.094Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责自动化调度运维",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
-    },
-    {
-      "id": "945d3388-2207-482b-a226-296a16015042",
-      "title": "🚀 北斗智投系统 - 智能决策模块",
-      "description": "负责三维分析建议（日/周/月维度）",
-      "creator": "司库",
-      "assignee": "匠心",
-      "priority": "P0",
-      "status": "executing",
-      "dueDate": "2026-03-22T17:00:00Z",
-      "projectId": null,
-      "subTasks": [],
-      "createdAt": "2026-03-22T05:10:49.095Z",
-      "updatedAt": "2026-03-22T05:23:37.643Z",
-      "stateHistory": [
-        {
-          "from": null,
-          "to": "pending",
-          "operator": "司库",
-          "timestamp": "2026-03-22T05:10:49.095Z",
-          "comment": "任务创建"
-        }
-      ],
-      "confirmedAt": "2026-03-22T05:23:37.643Z",
-      "confirmedBy": "匠心",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T05:23:37.643Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T05:53:37.643Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责三维分析建议（日/周/月维度）",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
-    },
-    {
-      "id": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
-      "title": "🚀 北斗智投系统 - iMessage 通知",
-      "description": "负责分级通知触达",
-      "creator": "司库",
-      "assignee": "磐石",
-      "priority": "P0",
-      "status": "executing",
-      "dueDate": "2026-03-22T17:00:00Z",
-      "projectId": null,
-      "subTasks": [],
-      "createdAt": "2026-03-22T05:10:49.097Z",
-      "updatedAt": "2026-03-22T06:16:10.597Z",
-      "stateHistory": [
-        {
-          "from": null,
-          "to": "pending",
-          "operator": "司库",
-          "timestamp": "2026-03-22T05:10:49.097Z",
-          "comment": "任务创建"
-        }
-      ],
-      "confirmedAt": "2026-03-22T06:16:10.597Z",
-      "confirmedBy": "磐石",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:10.597Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:10.597Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责分级通知触达",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
-    },
-    {
-      "id": "69cd6603-85fd-4c12-8f40-d710cc74466c",
-      "title": "🚀 北斗智投系统 - 数据感知模块",
-      "description": "负责多源数据采集（AkShare、财经新闻、宏观政策）",
-      "creator": "司库",
-      "assignee": "磐石",
-      "priority": "P0",
-      "status": "executing",
-      "dueDate": "2026-03-22T17:00:00Z",
-      "projectId": null,
-      "subTasks": [],
-      "createdAt": "2026-03-22T05:10:49.100Z",
-      "updatedAt": "2026-03-22T06:16:10.110Z",
-      "stateHistory": [
-        {
-          "from": null,
-          "to": "pending",
-          "operator": "司库",
-          "timestamp": "2026-03-22T05:10:49.100Z",
-          "comment": "任务创建"
-        }
-      ],
-      "confirmedAt": "2026-03-22T06:16:10.110Z",
-      "confirmedBy": "磐石",
-      "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:10.110Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:10.110Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责多源数据采集（AkShare、财经新闻、宏观政策）",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
-    },
-    {
-      "id": "4c9a5be9-7e10-4267-bdf5-7211f526a792",
-      "title": "🚀 北斗智投系统 - 财务知识库",
-      "description": "负责财务知识库搭建",
+      "id": "ad81c383-920f-4be3-8412-7d958244eb84",
+      "title": "北斗智投 Phase 2 - AI 分析引擎",
+      "description": "Qwen3.5-Plus 三维分析建议",
       "creator": "司库",
       "assignee": "司库",
       "priority": "P0",
-      "status": "executing",
-      "dueDate": "2026-03-22T17:00:00Z",
+      "status": "completed",
+      "dueDate": null,
       "projectId": null,
       "subTasks": [],
-      "createdAt": "2026-03-22T05:10:49.102Z",
-      "updatedAt": "2026-03-22T06:16:09.367Z",
+      "createdAt": "2026-03-23T13:04:40.645Z",
+      "updatedAt": "2026-03-24T04:44:48.808Z",
       "stateHistory": [
         {
           "from": null,
           "to": "pending",
           "operator": "司库",
-          "timestamp": "2026-03-22T05:10:49.102Z",
+          "timestamp": "2026-03-23T13:04:40.645Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:10:15.774Z",
+          "comment": "自动验收通过"
+        }
+      ],
+      "confirmedAt": "2026-03-24T04:44:48.808Z",
+      "confirmedBy": "执矩",
+      "requireConfirmation": false,
+      "currentNode": "completed",
+      "completedAt": "2026-03-23T21:40:00.000Z",
+      "completedBy": "匠心",
+      "previousAssignee": "匠心",
+      "acceptor": "司库",
+      "acceptedAt": "2026-03-23T14:10:15.774Z",
+      "auditor": "执矩"
+    },
+    {
+      "id": "222e51bb-a955-4136-a06b-ec310a0388e1",
+      "title": "北斗智投 Phase 2 - Streamlit 看板",
+      "description": "可视化看板 + 进化日志展示",
+      "creator": "司库",
+      "assignee": "司库",
+      "priority": "P1",
+      "status": "completed",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-23T13:04:40.657Z",
+      "updatedAt": "2026-03-24T04:44:59.630Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-23T13:04:40.657Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:10:15.773Z",
+          "comment": "自动验收通过"
+        }
+      ],
+      "confirmedAt": "2026-03-24T04:44:59.630Z",
+      "confirmedBy": "执矩",
+      "requireConfirmation": false,
+      "currentNode": "completed",
+      "completedAt": "2026-03-23T22:10:00.000Z",
+      "completedBy": "匠心",
+      "previousAssignee": "匠心",
+      "acceptor": "司库",
+      "acceptedAt": "2026-03-23T14:10:15.773Z",
+      "auditor": "执矩"
+    },
+    {
+      "id": "e07e4aa0-b3d2-4e14-acdc-1374df4a8dc7",
+      "title": "北斗智投 Phase 2 - 自我进化模块",
+      "description": "复盘评估器+CRO 归因分析",
+      "creator": "司库",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "completed",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-23T13:04:40.658Z",
+      "updatedAt": "2026-03-24T04:44:58.398Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-23T13:04:40.658Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:10:15.773Z",
+          "comment": "自动验收通过"
+        }
+      ],
+      "confirmedAt": "2026-03-24T04:44:58.398Z",
+      "confirmedBy": "执矩",
+      "requireConfirmation": false,
+      "currentNode": "completed",
+      "completedAt": "2026-03-23T21:40:00.000Z",
+      "completedBy": "匠心",
+      "previousAssignee": "匠心",
+      "acceptor": "司库",
+      "acceptedAt": "2026-03-23T14:10:15.773Z",
+      "auditor": "执矩"
+    },
+    {
+      "id": "8a7b9723-c320-4b8b-b967-11adc91f0b2f",
+      "title": "北斗智投 Phase 2 - 运维监控",
+      "description": "健康监控 + 异常告警 + 自动化",
+      "creator": "司库",
+      "assignee": "司库",
+      "priority": "P1",
+      "status": "completed",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-23T13:04:40.660Z",
+      "updatedAt": "2026-03-24T04:45:00.707Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-23T13:04:40.660Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:10:15.771Z",
+          "comment": "自动验收通过"
+        }
+      ],
+      "confirmedAt": "2026-03-24T04:45:00.707Z",
+      "confirmedBy": "执矩",
+      "requireConfirmation": false,
+      "currentNode": "completed",
+      "completedAt": "2026-03-23T22:10:00.000Z",
+      "completedBy": "匠心",
+      "previousAssignee": "匠心",
+      "acceptor": "司库",
+      "acceptedAt": "2026-03-23T14:10:15.771Z",
+      "auditor": "执矩"
+    },
+    {
+      "id": "47f8e14d-05fb-4759-9fac-f6c91fe2150f",
+      "title": "北斗智投 Phase 2 - 多数据源集成",
+      "description": "AkShare 行情数据 + 财经新闻爬虫",
+      "creator": "司库",
+      "assignee": "司库",
+      "priority": "P0",
+      "status": "completed",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-23T13:04:40.661Z",
+      "updatedAt": "2026-03-24T04:44:59.082Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-23T13:04:40.661Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:10:15.760Z",
+          "comment": "自动验收通过"
+        }
+      ],
+      "confirmedAt": "2026-03-24T04:44:59.082Z",
+      "confirmedBy": "执矩",
+      "requireConfirmation": false,
+      "currentNode": "completed",
+      "completedAt": "2026-03-23T21:40:00.000Z",
+      "completedBy": "匠心",
+      "previousAssignee": "匠心",
+      "acceptor": "司库",
+      "acceptedAt": "2026-03-23T14:10:15.760Z",
+      "auditor": "执矩"
+    },
+    {
+      "id": "f2f91a44-a653-4d8d-ae47-ab2eaf98a23a",
+      "title": "北斗智投 Phase 2 - iMessage 通知",
+      "description": "分级通知 + 定时调度",
+      "creator": "司库",
+      "assignee": "司库",
+      "priority": "P1",
+      "status": "completed",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-23T13:04:40.662Z",
+      "updatedAt": "2026-03-24T04:45:00.119Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-23T13:04:40.662Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "executing",
+          "to": "reviewing",
+          "operator": "匠心",
+          "timestamp": "2026-03-23T13:59:26.670Z",
+          "comment": "开发完成，提交验收"
+        },
+        {
+          "from": "reviewing",
+          "to": "accepted",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:10:15.759Z",
+          "comment": "自动验收通过"
+        }
+      ],
+      "confirmedAt": "2026-03-24T04:45:00.119Z",
+      "confirmedBy": "执矩",
+      "requireConfirmation": false,
+      "deliverables": [],
+      "currentNode": "completed",
+      "completedAt": "2026-03-23T22:10:00.000Z",
+      "completedBy": "匠心",
+      "previousAssignee": "匠心",
+      "acceptor": "司库",
+      "acceptedAt": "2026-03-23T14:10:15.759Z",
+      "auditor": "执矩"
+    },
+    {
+      "id": "3f1b27a0-bc23-4afe-b290-7d5cd2671ac9",
+      "title": "测试任务 - 审核流程验证",
+      "description": "验证验收后自动流转到审核环节",
+      "creator": "司库",
+      "assignee": "匠心",
+      "priority": "P1",
+      "status": "executing",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-23T14:32:18.328Z",
+      "updatedAt": "2026-03-23T14:35:15.762Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-23T14:32:18.328Z",
           "comment": "任务创建"
         }
       ],
-      "confirmedAt": "2026-03-22T06:16:09.367Z",
-      "confirmedBy": "司库",
+      "confirmedAt": "2026-03-23T14:35:15.762Z",
+      "confirmedBy": "匠心",
+      "requireConfirmation": false
+    },
+    {
+      "id": "672f84bb-5d62-43ee-a8f9-f56790eca607",
+      "title": "全链路测试 - 验收驳回流程",
+      "description": "测试验收环节驳回功能",
+      "creator": "司库",
+      "assignee": "匠心",
+      "priority": "P1",
+      "status": "completed",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-24T05:11:27.627Z",
+      "updatedAt": "2026-03-24T05:15:05.714Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-24T05:11:27.627Z",
+          "comment": "任务创建"
+        },
+        {
+          "from": "executing",
+          "to": "reviewing",
+          "operator": "匠心",
+          "timestamp": "2026-03-24T05:12:02.189Z",
+          "comment": "开发完成，申请验收"
+        },
+        {
+          "from": "executing",
+          "to": "reviewing",
+          "operator": "匠心",
+          "timestamp": "2026-03-24T05:14:12.767Z",
+          "comment": "已修复错误处理逻辑"
+        }
+      ],
+      "confirmedAt": "2026-03-24T05:15:05.714Z",
+      "confirmedBy": "执矩",
       "requireConfirmation": false,
-      "progressPercent": 0,
-      "progressUpdatedAt": "2026-03-22T06:16:09.367Z",
-      "missedUpdates": 0,
-      "progressAlerted": false,
-      "confirmStatus": "confirmed",
-      "confirmDueAt": "2026-03-22T06:46:09.367Z",
-      "autoExtensions": {
-        "meeting": 0,
-        "deepWork": 0,
-        "later": 0
-      },
-      "completedWork": "",
-      "remainingWork": "负责财务知识库搭建",
-      "estimatedComplete": "2026-03-22T17:00:00Z",
-      "blockers": []
+      "currentNode": "completed",
+      "deliverables": [],
+      "rejectedAt": "2026-03-24T05:13:53.946Z",
+      "rejectedBy": "司库",
+      "rejectComment": "功能不完整",
+      "rejectReason": "缺少错误处理逻辑",
+      "rejectHistory": [
+        {
+          "reason": "缺少错误处理逻辑",
+          "rejectedBy": "司库",
+          "rejectedAt": "2026-03-24T05:13:53.946Z",
+          "fromNode": "reviewing",
+          "toNode": "executing"
+        }
+      ],
+      "acceptedAt": "2026-03-24T05:14:33.950Z",
+      "acceptedBy": "司库",
+      "acceptComment": "验收通过",
+      "auditor": "执矩",
+      "syncStatus": "pending"
+    },
+    {
+      "id": "7423e266-ff7f-41f1-9f6e-89ad93bd0bfc",
+      "title": "全链路测试 - 审核驳回流程",
+      "description": "测试审核环节驳回功能",
+      "creator": "司库",
+      "assignee": "匠心",
+      "priority": "P1",
+      "status": "executing",
+      "dueDate": null,
+      "projectId": null,
+      "subTasks": [],
+      "createdAt": "2026-03-24T05:11:29.710Z",
+      "updatedAt": "2026-03-24T05:12:23.968Z",
+      "stateHistory": [
+        {
+          "from": null,
+          "to": "pending",
+          "operator": "司库",
+          "timestamp": "2026-03-24T05:11:29.710Z",
+          "comment": "任务创建"
+        }
+      ],
+      "confirmedAt": "2026-03-24T05:12:23.968Z",
+      "confirmedBy": "匠心",
+      "requireConfirmation": false,
+      "currentNode": "executing"
     }
   ],
-  "savedAt": "2026-03-23T08:57:42.421Z"
+  "subTasks": [],
+  "comments": [],
+  "savedAt": "2026-03-24T05:15:05.714Z"
 }

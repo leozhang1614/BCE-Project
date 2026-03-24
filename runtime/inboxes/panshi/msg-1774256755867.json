@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256755867",
+  "from": "系统",
+  "to": "磐石",
+  "type": "task_reassigned_from",
+  "taskId": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
+  "sessionKey": "task:77fd5bf8-9036-41d4-b286-8cadbdda7104",
+  "content": "📋 任务重新分配通知\n\n任务：🚀 北斗智投系统 - iMessage 通知\n原因：北斗智投项目统一由匠心开发\n工作交接：无需交接\n\n绩效影响：-15 分",
+  "createdAt": "2026-03-23T09:05:55.867Z",
+  "read": false
+}

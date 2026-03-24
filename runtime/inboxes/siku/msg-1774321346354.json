@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774321346354",
+  "from": "执矩",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "47f8e14d-05fb-4759-9fac-f6c91fe2150f",
+  "sessionKey": "task:47f8e14d-05fb-4759-9fac-f6c91fe2150f",
+  "content": "✅ 执矩 已确认接收任务：北斗智投 Phase 2 - 多数据源集成",
+  "createdAt": "2026-03-24T03:02:26.354Z",
+  "read": false
+}

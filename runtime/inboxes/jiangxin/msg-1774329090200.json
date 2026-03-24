@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774329090200",
+  "from": "司库",
+  "to": "匠心",
+  "type": "task_created",
+  "taskId": "7423e266-ff7f-41f1-9f6e-89ad93bd0bfc",
+  "sessionKey": "task:7423e266-ff7f-41f1-9f6e-89ad93bd0bfc",
+  "content": "📋 新任务分配：全链路测试 - 审核驳回流程\n优先级：P1",
+  "createdAt": "2026-03-24T05:11:30.200Z",
+  "read": false
+}

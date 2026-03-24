@@ -1,0 +1,9 @@
+[2026-03-23T14:07:22.192Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/imessage/stats","duration":2,"timestamp":"2026-03-23T14:07:22.192Z"}
+[2026-03-23T14:07:27.278Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/monitoring/health","duration":1,"timestamp":"2026-03-23T14:07:27.278Z"}
+[2026-03-23T14:07:34.740Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/monitoring/health","duration":1,"timestamp":"2026-03-23T14:07:34.740Z"}
+[2026-03-23T14:07:34.741Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/imessage/stats","duration":1,"timestamp":"2026-03-23T14:07:34.741Z"}
+[2026-03-23T14:07:48.461Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/monitoring/health","duration":2,"timestamp":"2026-03-23T14:07:48.461Z"}
+[2026-03-23T14:08:05.685Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/monitoring/health","duration":1,"timestamp":"2026-03-23T14:08:05.685Z"}
+[2026-03-23T14:08:39.213Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/monitoring/health","duration":2,"timestamp":"2026-03-23T14:08:39.213Z"}
+[2026-03-23T14:08:50.689Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/monitoring/health","duration":1,"timestamp":"2026-03-23T14:08:50.689Z"}
+[2026-03-23T14:08:50.700Z] API_FAILURE: {"type":"API_FAILURE","endpoint":"/api/bce/imessage/stats","duration":1,"timestamp":"2026-03-23T14:08:50.700Z"}

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774276516268",
+  "from": "匠心",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "3f1b27a0-bc23-4afe-b290-7d5cd2671ac9",
+  "sessionKey": "task:3f1b27a0-bc23-4afe-b290-7d5cd2671ac9",
+  "content": "✅ 匠心 已确认接收任务：测试任务 - 审核流程验证",
+  "createdAt": "2026-03-23T14:35:16.268Z",
+  "read": false
+}

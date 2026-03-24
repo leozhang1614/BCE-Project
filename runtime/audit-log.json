@@ -3021,5 +3021,481 @@
       "assignee": "司库",
       "priority": "P0"
     }
+  },
+  {
+    "id": 217,
+    "timestamp": "2026-03-23T09:05:49.663Z",
+    "action": "REASSIGN_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+    "details": {
+      "from": "匠心",
+      "to": "匠心",
+      "reason": "北斗智投项目统一由匠心开发，提高效率和代码质量"
+    }
+  },
+  {
+    "id": 218,
+    "timestamp": "2026-03-23T09:05:56.889Z",
+    "action": "REASSIGN_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
+    "details": {
+      "from": "匠心",
+      "to": "匠心",
+      "reason": "北斗智投项目统一由匠心开发"
+    }
+  },
+  {
+    "id": 219,
+    "timestamp": "2026-03-23T09:06:18.281Z",
+    "action": "REASSIGN_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "69cd6603-85fd-4c12-8f40-d710cc74466c",
+    "details": {
+      "from": "匠心",
+      "to": "匠心",
+      "reason": "北斗智投项目统一由匠心开发"
+    }
+  },
+  {
+    "id": 220,
+    "timestamp": "2026-03-23T09:06:24.511Z",
+    "action": "REASSIGN_TASK",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "4c9a5be9-7e10-4267-bdf5-7211f526a792",
+    "details": {
+      "from": "匠心",
+      "to": "匠心",
+      "reason": "北斗智投项目统一由匠心开发"
+    }
+  },
+  {
+    "id": 221,
+    "timestamp": "2026-03-23T09:06:31.169Z",
+    "action": "ADJUST_DEADLINE",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "b931a6f1-05d8-4772-8b86-8144edd9d507",
+    "details": {
+      "from": "2026-03-22T17:00:00Z",
+      "to": "2026-03-28T17:00:00Z",
+      "reason": "任务重新分配，调整截止时间"
+    }
+  },
+  {
+    "id": 222,
+    "timestamp": "2026-03-23T09:06:31.759Z",
+    "action": "ADJUST_DEADLINE",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+    "details": {
+      "from": "2026-03-22T17:00:00Z",
+      "to": "2026-03-28T17:00:00Z",
+      "reason": "任务重新分配，调整截止时间"
+    }
+  },
+  {
+    "id": 223,
+    "timestamp": "2026-03-23T09:06:32.315Z",
+    "action": "ADJUST_DEADLINE",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "945d3388-2207-482b-a226-296a16015042",
+    "details": {
+      "from": "2026-03-22T17:00:00Z",
+      "to": "2026-03-28T17:00:00Z",
+      "reason": "任务重新分配，调整截止时间"
+    }
+  },
+  {
+    "id": 224,
+    "timestamp": "2026-03-23T09:06:32.845Z",
+    "action": "ADJUST_DEADLINE",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
+    "details": {
+      "from": "2026-03-22T17:00:00Z",
+      "to": "2026-03-28T17:00:00Z",
+      "reason": "任务重新分配，调整截止时间"
+    }
+  },
+  {
+    "id": 225,
+    "timestamp": "2026-03-23T09:06:33.364Z",
+    "action": "ADJUST_DEADLINE",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "69cd6603-85fd-4c12-8f40-d710cc74466c",
+    "details": {
+      "from": "2026-03-22T17:00:00Z",
+      "to": "2026-03-28T17:00:00Z",
+      "reason": "任务重新分配，调整截止时间"
+    }
+  },
+  {
+    "id": 226,
+    "timestamp": "2026-03-23T09:06:33.971Z",
+    "action": "ADJUST_DEADLINE",
+    "userId": "天枢",
+    "userName": "天枢",
+    "resourceType": "task",
+    "resourceId": "4c9a5be9-7e10-4267-bdf5-7211f526a792",
+    "details": {
+      "from": "2026-03-22T17:00:00Z",
+      "to": "2026-03-28T17:00:00Z",
+      "reason": "任务重新分配，调整截止时间"
+    }
+  },
+  {
+    "id": 227,
+    "timestamp": "2026-03-23T10:41:01.753Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "c7fb2b11-a2a1-48a9-99df-6469c776ab6c",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - 多数据源集成",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 228,
+    "timestamp": "2026-03-23T10:41:01.766Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "46864bf7-319e-4372-a536-d93eb0ca9f2e",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - 多数据源集成",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 229,
+    "timestamp": "2026-03-23T10:41:28.891Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "b894eb9d-83b7-403e-ab64-6483094b69da",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - iMessage 通知系统",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 230,
+    "timestamp": "2026-03-23T10:41:28.892Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "664e3636-d83f-4ab4-a866-690f0757adfb",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - 自我进化模块",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 231,
+    "timestamp": "2026-03-23T10:41:28.894Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "0c4d6113-033e-479e-b4c7-8620c9b84261",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - 运维监控与自动化",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 232,
+    "timestamp": "2026-03-23T10:41:28.895Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "651b72d2-22d9-49fc-877f-6928f09c9c38",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - Streamlit 看板优化",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 233,
+    "timestamp": "2026-03-23T10:41:28.897Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "92a1c8d7-b661-493a-a4e7-4f3951db768c",
+    "details": {
+      "title": "北斗智投系统 Phase 2 - AI 分析引擎",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 234,
+    "timestamp": "2026-03-23T11:47:47.437Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "263cf820-f485-4abc-8122-34d5b6ce068d",
+    "details": {
+      "title": "测试任务 - 验证心跳机制",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 235,
+    "timestamp": "2026-03-23T12:04:39.746Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "0b3d4148-6e39-4ae7-8296-9f3d86f17d2b",
+    "details": {
+      "title": "北斗智投 Phase 2 - 多数据源集成",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 236,
+    "timestamp": "2026-03-23T12:04:39.748Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "e481f21b-35b6-4770-9fa2-78a5eb9d87e7",
+    "details": {
+      "title": "北斗智投 Phase 2 - 运维监控",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 237,
+    "timestamp": "2026-03-23T12:04:39.759Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "8414b7fe-2ea0-4909-a20e-140aff158c5d",
+    "details": {
+      "title": "北斗智投 Phase 2 - AI 分析引擎",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 238,
+    "timestamp": "2026-03-23T12:04:39.760Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "fc6ff331-95d2-4182-9aa8-c5bb00364484",
+    "details": {
+      "title": "北斗智投 Phase 2 - 自我进化模块",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 239,
+    "timestamp": "2026-03-23T12:04:39.761Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "86608f03-d444-49f1-97eb-8de44229059c",
+    "details": {
+      "title": "北斗智投 Phase 2 - iMessage 通知",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 240,
+    "timestamp": "2026-03-23T12:04:39.762Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "0168e02c-5dd3-4470-9117-ac172299b289",
+    "details": {
+      "title": "北斗智投 Phase 2 - Streamlit 看板",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 241,
+    "timestamp": "2026-03-23T12:42:19.857Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "0d25ea23-d579-493b-be9d-0fcc83244eaf",
+    "details": {
+      "title": "测试任务 - 验证终端告警",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 242,
+    "timestamp": "2026-03-23T13:04:40.646Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "ad81c383-920f-4be3-8412-7d958244eb84",
+    "details": {
+      "title": "北斗智投 Phase 2 - AI 分析引擎",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 243,
+    "timestamp": "2026-03-23T13:04:40.658Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "222e51bb-a955-4136-a06b-ec310a0388e1",
+    "details": {
+      "title": "北斗智投 Phase 2 - Streamlit 看板",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 244,
+    "timestamp": "2026-03-23T13:04:40.659Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "e07e4aa0-b3d2-4e14-acdc-1374df4a8dc7",
+    "details": {
+      "title": "北斗智投 Phase 2 - 自我进化模块",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 245,
+    "timestamp": "2026-03-23T13:04:40.660Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "8a7b9723-c320-4b8b-b967-11adc91f0b2f",
+    "details": {
+      "title": "北斗智投 Phase 2 - 运维监控",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 246,
+    "timestamp": "2026-03-23T13:04:40.661Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "47f8e14d-05fb-4759-9fac-f6c91fe2150f",
+    "details": {
+      "title": "北斗智投 Phase 2 - 多数据源集成",
+      "assignee": "匠心",
+      "priority": "P0"
+    }
+  },
+  {
+    "id": 247,
+    "timestamp": "2026-03-23T13:04:40.663Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "f2f91a44-a653-4d8d-ae47-ab2eaf98a23a",
+    "details": {
+      "title": "北斗智投 Phase 2 - iMessage 通知",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 248,
+    "timestamp": "2026-03-23T14:32:18.331Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "3f1b27a0-bc23-4afe-b290-7d5cd2671ac9",
+    "details": {
+      "title": "测试任务 - 审核流程验证",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 249,
+    "timestamp": "2026-03-24T05:11:27.629Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "672f84bb-5d62-43ee-a8f9-f56790eca607",
+    "details": {
+      "title": "全链路测试 - 验收驳回流程",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
+  },
+  {
+    "id": 250,
+    "timestamp": "2026-03-24T05:11:29.711Z",
+    "action": "CREATE_TASK",
+    "userId": "司库",
+    "userName": "司库",
+    "resourceType": "task",
+    "resourceId": "7423e266-ff7f-41f1-9f6e-89ad93bd0bfc",
+    "details": {
+      "title": "全链路测试 - 审核驳回流程",
+      "assignee": "匠心",
+      "priority": "P1"
+    }
   }
 ]

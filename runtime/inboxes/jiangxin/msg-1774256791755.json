@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256791755",
+  "from": "天枢",
+  "to": "匠心",
+  "type": "deadline_changed",
+  "taskId": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "sessionKey": "task:ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "content": "📅 任务截止时间调整\n\n任务：🚀 北斗智投系统 - 运维调度\n原截止时间：2026-03-22T17:00:00Z\n新截止时间：2026-03-28T17:00:00Z\n原因：任务重新分配，调整截止时间\n\n请调整工作计划！",
+  "createdAt": "2026-03-23T09:06:31.755Z",
+  "read": false
+}

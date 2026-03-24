@@ -190,3 +190,9 @@ module.exports.updateOccTask = updateOccTask;
 module.exports.confirmOccTask = confirmOccTask;
 module.exports.rejectOccTask = rejectOccTask;
 module.exports.getOccActionQueue = getOccActionQueue;
+
+// v3.4 修复：添加别名兼容旧代码
+module.exports.getTask = getOccTask;
+module.exports.updateTask = updateOccTask;
+module.exports.confirmTask = confirmOccTask;
+module.exports.rejectTask = rejectOccTask;

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256749128",
+  "from": "系统",
+  "to": "匠心",
+  "type": "task_reassigned_to",
+  "taskId": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "sessionKey": "task:ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "content": "📋 新任务分配\n\n任务：🚀 北斗智投系统 - 运维调度\n描述：负责自动化调度运维\n优先级：P0\n截止时间：2026-03-22T17:00:00Z\n\n工作交接：无需交接，直接开始开发\n\n请立即确认并开始执行！",
+  "createdAt": "2026-03-23T09:05:49.128Z",
+  "read": false
+}

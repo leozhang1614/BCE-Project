@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256756421",
+  "from": "系统",
+  "to": "匠心",
+  "type": "task_reassigned_to",
+  "taskId": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
+  "sessionKey": "task:77fd5bf8-9036-41d4-b286-8cadbdda7104",
+  "content": "📋 新任务分配\n\n任务：🚀 北斗智投系统 - iMessage 通知\n描述：负责分级通知触达\n优先级：P0\n截止时间：2026-03-22T17:00:00Z\n\n工作交接：无需交接\n\n请立即确认并开始执行！",
+  "createdAt": "2026-03-23T09:05:56.421Z",
+  "read": false
+}

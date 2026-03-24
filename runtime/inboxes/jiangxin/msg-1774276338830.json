@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774276338830",
+  "from": "司库",
+  "to": "匠心",
+  "type": "task_created",
+  "taskId": "3f1b27a0-bc23-4afe-b290-7d5cd2671ac9",
+  "sessionKey": "task:3f1b27a0-bc23-4afe-b290-7d5cd2671ac9",
+  "content": "📋 新任务分配：测试任务 - 审核流程验证\n优先级：P1",
+  "createdAt": "2026-03-23T14:32:18.830Z",
+  "read": false
+}

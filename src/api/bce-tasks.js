@@ -254,16 +254,30 @@ router.get('/tasks/search', (req, res) => {
 
 /**
  * 获取任务列表
- * GET /api/bce/tasks?status=pending&assignee=匠心&projectId=xxx
+ * GET /api/bce/tasks?status=pending&assignee=匠心&projectId=xxx&auditor=执矩
  */
 router.get('/tasks', (req, res) => {
   try {
-    const { status, assignee, projectId, creator } = req.query;
+    const { status, assignee, auditor, projectId, creator } = req.query;
     
     let results = Array.from(tasks.values());
     
     if (status) results = results.filter(t => t.status === status);
     if (assignee) results = results.filter(t => t.assignee === assignee);
+    if (auditor) {
+      // v3.4 新增：支持按审核人查询，只返回未确认的任务
+      console.log(`[DEBUG] auditor 查询：auditor=${auditor}, type=${typeof auditor}`);
+      const beforeCount = results.length;
+      results = results.filter(t => {
+        const match = t.auditor === auditor;
+        const unconfirmed = !t.confirmedAt;
+        if (t.auditor === '执矩') {
+          console.log(`[DEBUG] task ${t.title.substring(0,20)}: auditor=${t.auditor}, match=${match}, confirmedAt=${t.confirmedAt}`);
+        }
+        return match && unconfirmed;
+      });
+      console.log(`[DEBUG] 过滤后：${beforeCount} -> ${results.length}`);
+    }
     if (projectId) results = results.filter(t => t.projectId === projectId);
     if (creator) results = results.filter(t => t.creator === creator);
     
@@ -796,18 +810,44 @@ router.post('/tasks/:id/confirm', async (req, res) => {
     task.confirmedAt = new Date().toISOString();
     task.confirmedBy = userName;
     task.requireConfirmation = false;
-    task.status = TASK_STATES.EXECUTING;  // v3.2 修复：使用枚举值
     task.updatedAt = new Date().toISOString();
+    
+    // v3.4 修复：根据当前节点决定状态流转
+    if (task.currentNode === 'auditing') {
+      // 审核环节确认 → 流转到已完成
+      task.status = TASK_STATES.COMPLETED;
+      task.currentNode = 'completed';
+      console.log(`[审核确认] 任务 ${id} 审核通过，流转到 completed`);
+    } else if (task.status === 'assigned' || task.status === 'pending') {
+      // 待确认环节 → 流转到执行中
+      task.status = TASK_STATES.EXECUTING;
+      task.currentNode = 'executing';
+      console.log(`[任务确认] 任务 ${id} 已确认，流转到 executing`);
+    } else {
+      // 其他情况保持原状态
+      task.status = task.status || TASK_STATES.EXECUTING;
+      console.log(`[任务确认] 任务 ${id} 已确认，保持状态 ${task.status}`);
+    }
     
     saveData();
     
+    // 同步到 OCC（v3.4 新增）
+    try {
+      const occSync = require('./occ-sync');
+      await occSync.updateTask(id, task);
+      console.log(`[确认同步] 已同步到 OCC`);
+    } catch (occError) {
+      console.error('[确认同步] OCC 同步失败:', occError.message);
+    }
+    
     // 通知上一节点（动态计算）✅ v3.2
+    // v3.4 修复：使用正确的 action 类型
     try {
       const previousHandler = notificationService.getPreviousHandler(task);
       await notificationService.notify(
         previousHandler,
         userName,
-        'task_confirmed',
+        'confirmed',  // v3.4 修复：使用正确的 action
         `✅ ${userName} 已确认接收任务：${task.title}`,
         id,
         `task:${id}`
@@ -817,7 +857,7 @@ router.post('/tasks/:id/confirm', async (req, res) => {
       console.error('[确认反馈] 通知失败:', notifyError.message);
     }
     
-    console.log(`[BCE 任务] 任务确认：${id}, 确认人：${userName}`);
+    console.log(`[BCE 任务] 任务确认：${id}, 确认人：${userName}, 状态：${task.status}, 节点：${task.currentNode}`);
     
     res.json({
       success: true,
@@ -825,6 +865,8 @@ router.post('/tasks/:id/confirm', async (req, res) => {
       data: {
         confirmedAt: task.confirmedAt,
         confirmedBy: task.confirmedBy,
+        status: task.status,
+        currentNode: task.currentNode,
         notifiedPreviousHandler: true
       }
     });
@@ -1043,6 +1085,9 @@ router.post('/tasks/:id/reject', async (req, res) => {
     if (result.success) {
       saveData(); // 保存数据
       
+      // 获取任务详情（包含驳回历史）
+      const task = tasks.get(id);
+      
       res.json({
         success: true,
         message: `任务已驳回，回退到 ${result.previousExecutor} 重新执行`,
@@ -1050,7 +1095,12 @@ router.post('/tasks/:id/reject', async (req, res) => {
           taskId: id,
           previousExecutor: result.previousExecutor,
           rejectCount: result.rejectCount,
-          rejectedAt: new Date().toISOString()
+          rejectedAt: task.rejectedAt,
+          rejectedBy: task.rejectedBy,
+          rejectReason: task.rejectReason,  // v3.4 新增：驳回原因
+          rejectHistory: task.rejectHistory || [],  // v3.4 新增：驳回历史
+          currentNode: task.currentNode,
+          status: task.status
         }
       });
     } else {
@@ -1069,3 +1119,5 @@ module.exports = router;
 module.exports.tasks = tasks;
 module.exports.subTasks = subTasks;
 module.exports.comments = comments;
+module.exports.saveData = saveData;  // v3.4 新增：导出 saveData
+module.exports.TASK_STATES = TASK_STATES;  // v3.4 新增：导出状态枚举

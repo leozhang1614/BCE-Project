@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774329154575",
+  "from": "匠心",
+  "to": "司库",
+  "type": "confirmed",
+  "taskId": "7423e266-ff7f-41f1-9f6e-89ad93bd0bfc",
+  "sessionKey": "task:7423e266-ff7f-41f1-9f6e-89ad93bd0bfc",
+  "content": "✅ 匠心 已确认接收任务：全链路测试 - 审核驳回流程",
+  "createdAt": "2026-03-24T05:12:34.575Z",
+  "read": false
+}

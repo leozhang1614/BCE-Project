@@ -10,13 +10,18 @@ const ROLE_PERMISSIONS = {
   viewer: ['read']  // 只读用户
 };
 
-// 用户角色映射
+// 用户角色映射（v3.4.2 修复：补充所有成员 open_id）
 const USER_ROLES = {
   'ou_107ee407edb8e6053adf9b019451071d': 'admin',  // 磊哥
   'ou_c22dcb4ed8911acfca2f0e2ad865b0ce': 'admin',  // 天枢
+  'ou_82e24fd5850f184e395ecaa7d11a1ddc': 'admin',  // 天枢（备用）
   'ou_998d07ddc86ad7ba9d4dd12dddc55cc6': 'manager', // 司库（验收权限）
   'ou_b3b3b6abaa38da2c4066010a02abf544': 'member', // 匠心
-  'ou_143256262f3459429ed5bb057f7a3436': 'member', // 磐石
+  'ou_aaeb25dcae8616029a9d36906892bd05': 'member', // 执矩（v3.4.2 新增）
+  'ou_dba586c77d92f652e427370d3f54cc54': 'member', // 磐石（v3.4.2 修正）
+  'ou_afd48fe16ccb4d2ba8a56235eb29d784': 'member', // 灵犀（v3.4.2 新增）
+  'ou_3a2c50c8eb0338734362a741c934da8f': 'member', // 天策（v3.4.2 新增）
+  'ou_de94b16d442425be15d96344fdd271f8': 'admin',  // 磊哥（备用）
 };
 
 // 用户名到 role 的映射

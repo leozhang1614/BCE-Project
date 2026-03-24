@@ -1,0 +1,743 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║   BCE v3.2 定时任务调度服务启动                            ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+[定时任务] 启动每个 Agent 的定时抓取服务
+[定时任务] 配置：检查间隔=300秒，通知窗口=86400秒
+[定时任务] 成员列表：天枢, 匠心, 司库, 执矩, 磐石, 灵犀, 天策
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 天枢 的定时任务已启动（每300秒）
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 匠心 的定时任务已启动（每300秒）
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 司库 的定时任务已启动（每300秒）
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 执矩 的定时任务已启动（每300秒）
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 磐石 的定时任务已启动（每300秒）
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 灵犀 的定时任务已启动（每300秒）
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[定时任务] 天策 的定时任务已启动（每300秒）
+[定时任务] 所有成员的定时任务已启动
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 天枢: getTasks() 返回 7 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 匠心: getTasks() 返回 7 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 7
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - AI 分析引擎 - 第4级唤醒（已过去65分钟）
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 执矩: getTasks() 返回 7 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 司库: getTasks() 返回 7 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 灵犀: getTasks() 返回 7 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 磐石: getTasks() 返回 7 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":7,"data":[{"id":"92a1c8d7-b661-493a-a4e7-4f3951db768c","title":"北斗智投系统 Phase 2 - AI 分析引擎","description":"Qwen3.5-Plus API 集成，实现三维分析建议生成","creator":"司库","assignee":"匠心","priorit...
+[getTasks] 解析成功，任务数：7
+[定时任务] 天策: getTasks() 返回 7 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+[定时任务] 飞书消息发送成功：om_x100b5326caecc4acc44517f33913539
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - Streamlit 看板优化 - 第4级唤醒（已过去65分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326cae594b0c4c08715aa34dda
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - 运维监控与自动化 - 第4级唤醒（已过去65分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326cafd313cc363e7ee8c37006
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - 自我进化模块 - 第4级唤醒（已过去65分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326caf538acc380f054e74c7a2
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - iMessage 通知系统 - 第4级唤醒（已过去65分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ca8df8a4c360de25632e9f1
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - 多数据源集成 - 第4级唤醒（已过去66分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ca8a34a0c2dbc0d75d267e7
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投系统 Phase 2 - 多数据源集成 - 第4级唤醒（已过去66分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ca8364a0c33d12209d8ab1d
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[定时任务] 匠心: 唤醒检查完成
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 天枢: getTasks() 返回 1 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 匠心: getTasks() 返回 1 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 1
+[唤醒] 匠心 - 测试任务 - 验证心跳机制 - 第1级唤醒（已过去4分钟）
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 司库: getTasks() 返回 1 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 执矩: getTasks() 返回 1 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 磐石: getTasks() 返回 1 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 灵犀: getTasks() 返回 1 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":1,"data":[{"id":"263cf820-f485-4abc-8122-34d5b6ce068d","title":"测试任务 - 验证心跳机制","description":"测试执行者主动查询功能","creator":"司库","assignee":"匠心","priority":"P0","status":"pending","du...
+[getTasks] 解析成功，任务数：1
+[定时任务] 天策: getTasks() 返回 1 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+[定时任务] 飞书消息发送成功：om_x100b5326d813c8a0c42a53d294bfb10
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[定时任务] 匠心: 唤醒检查完成
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 天枢: getTasks() 返回 0 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 匠心: getTasks() 返回 0 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 0
+[定时任务] 匠心: 没有待确认任务
+[定时任务] 匠心: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 司库: getTasks() 返回 0 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 执矩: getTasks() 返回 0 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 磐石: getTasks() 返回 0 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 灵犀: getTasks() 返回 0 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 天策: getTasks() 返回 0 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 天枢: getTasks() 返回 0 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 匠心: getTasks() 返回 0 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 0
+[定时任务] 匠心: 没有待确认任务
+[定时任务] 匠心: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 司库: getTasks() 返回 0 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 执矩: getTasks() 返回 0 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 磐石: getTasks() 返回 0 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 灵犀: getTasks() 返回 0 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":0,"data":[]}...
+[getTasks] 解析成功，任务数：0
+[定时任务] 天策: getTasks() 返回 0 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天枢: getTasks() 返回 6 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 匠心: getTasks() 返回 6 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 6
+[唤醒] 匠心 - 北斗智投 Phase 2 - Streamlit 看板 - 第1级唤醒（已过去2分钟）
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 司库: getTasks() 返回 6 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 执矩: getTasks() 返回 6 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 磐石: getTasks() 返回 6 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 灵犀: getTasks() 返回 6 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天策: getTasks() 返回 6 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+[定时任务] 飞书消息发送成功：om_x100b532681d318e0c3126172b2907fc
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - iMessage 通知 - 第1级唤醒（已过去2分钟）
+[定时任务] 飞书消息发送成功：om_x100b532681ea7474c4428cfe672f7b8
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 自我进化模块 - 第1级唤醒（已过去2分钟）
+[定时任务] 飞书消息发送成功：om_x100b532681fd28b4c3ab0ca8cc6d39e
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - AI 分析引擎 - 第1级唤醒（已过去2分钟）
+[定时任务] 飞书消息发送成功：om_x100b532681f54cb8c11b0fe95b02f36
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 运维监控 - 第1级唤醒（已过去2分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326818c90b8c31f9b0a2a97ff3
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 多数据源集成 - 第1级唤醒（已过去2分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326818404a0c34c7c411c47634
+[唤醒] 匠心: 第 1 级唤醒（群@通知）已发送
+[定时任务] 匠心: 唤醒检查完成
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天枢: getTasks() 返回 6 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 匠心: getTasks() 返回 6 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 6
+[唤醒] 匠心 - 北斗智投 Phase 2 - Streamlit 看板 - 第2级唤醒（已过去7分钟）
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 司库: getTasks() 返回 6 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 执矩: getTasks() 返回 6 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 磐石: getTasks() 返回 6 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 灵犀: getTasks() 返回 6 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天策: getTasks() 返回 6 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+[定时任务] 飞书消息发送成功：om_x100b5326af2d8cb4c3ea3436d030e91
+[唤醒] 匠心: 第 2 级唤醒（群@强提醒）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - iMessage 通知 - 第2级唤醒（已过去7分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326af2594b8c2236a9d3346da3
+[唤醒] 匠心: 第 2 级唤醒（群@强提醒）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 自我进化模块 - 第2级唤醒（已过去7分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326af2368b0c295daf5261e755
+[唤醒] 匠心: 第 2 级唤醒（群@强提醒）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - AI 分析引擎 - 第2级唤醒（已过去7分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326af3b64b4c499111393c8905
+[唤醒] 匠心: 第 2 级唤醒（群@强提醒）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 运维监控 - 第2级唤醒（已过去7分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326af331ca4c455d9dd57bff3c
+[唤醒] 匠心: 第 2 级唤醒（群@强提醒）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 多数据源集成 - 第2级唤醒（已过去7分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326accbf0b0c45543045766f59
+[唤醒] 匠心: 第 2 级唤醒（群@强提醒）已发送
+[定时任务] 匠心: 唤醒检查完成
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天枢: getTasks() 返回 6 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 匠心: getTasks() 返回 6 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 6
+[唤醒] 匠心 - 北斗智投 Phase 2 - Streamlit 看板 - 第3级唤醒（已过去12分钟）
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 司库: getTasks() 返回 6 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 执矩: getTasks() 返回 6 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 磐石: getTasks() 返回 6 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 灵犀: getTasks() 返回 6 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天策: getTasks() 返回 6 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+[定时任务] 飞书消息发送成功：om_x100b5326ba52c4a8c45b928012bcefd
+[唤醒] 匠心: 第 3 级唤醒（群@紧急）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - iMessage 通知 - 第3级唤醒（已过去12分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ba6ab8a0c3ada1ac04c18e0
+[唤醒] 匠心: 第 3 级唤醒（群@紧急）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 自我进化模块 - 第3级唤醒（已过去12分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ba606ca8c3762dfdc0a456d
+[唤醒] 匠心: 第 3 级唤醒（群@紧急）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - AI 分析引擎 - 第3级唤醒（已过去12分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ba78acacc221224048f2e84
+[唤醒] 匠心: 第 3 级唤醒（群@紧急）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 运维监控 - 第3级唤醒（已过去12分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ba718ca0c2defd2f50791e0
+[唤醒] 匠心: 第 3 级唤醒（群@紧急）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 多数据源集成 - 第3级唤醒（已过去12分钟）
+[定时任务] 飞书消息发送成功：om_x100b5326ba09b8b0c3b8838b67b9f46
+[唤醒] 匠心: 第 3 级唤醒（群@紧急）已发送
+[定时任务] 匠心: 唤醒检查完成
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天枢: getTasks() 返回 6 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 匠心: getTasks() 返回 6 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 6
+[唤醒] 匠心 - 北斗智投 Phase 2 - Streamlit 看板 - 第4级唤醒（已过去17分钟）
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 司库: getTasks() 返回 6 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 执矩: getTasks() 返回 6 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 磐石: getTasks() 返回 6 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 灵犀: getTasks() 返回 6 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天策: getTasks() 返回 6 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0
+[定时任务] 飞书消息发送成功：om_x100b532749931ca0c4cfb3e1d0d207b
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - iMessage 通知 - 第4级唤醒（已过去17分钟）
+[定时任务] 飞书消息发送成功：om_x100b532749ab80a8c4f9f131b44eb8e
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 自我进化模块 - 第4级唤醒（已过去17分钟）
+[定时任务] 飞书消息发送成功：om_x100b532749a0b4a8c4a4958d19b0150
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - AI 分析引擎 - 第4级唤醒（已过去17分钟）
+[定时任务] 飞书消息发送成功：om_x100b532749b98904c49f5aca17fa8d8
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 运维监控 - 第4级唤醒（已过去17分钟）
+[定时任务] 飞书消息发送成功：om_x100b532749b688a0c2c16309368c8ac
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[唤醒] 匠心 - 北斗智投 Phase 2 - 多数据源集成 - 第4级唤醒（已过去17分钟）
+[定时任务] 飞书消息发送成功：om_x100b5327494fe0acc2e69a3e3978d4b
+[唤醒] 匠心: 第 4 级唤醒（通知创建人）已发送
+[定时任务] 匠心: 唤醒检查完成
+
+[定时任务] 天枢: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 匠心: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 司库: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 执矩: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 磐石: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 灵犀: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+
+[定时任务] 天策: 开始查询新增任务
+[getTasks] 开始查询 BCE API...
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天枢: getTasks() 返回 6 个任务
+[定时任务] 天枢: 筛选后待确认任务数: 0
+[定时任务] 天枢: 没有待确认任务
+[定时任务] 天枢: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 匠心: getTasks() 返回 6 个任务
+[定时任务] 匠心: 筛选后待确认任务数: 0
+[定时任务] 匠心: 没有待确认任务
+[定时任务] 匠心: 分给该成员的任务数: 6
+[定时任务] 匠心: 任务详情:
+  1. 北斗智投 Phase 2 - Streamlit 看板 - 确认状态: 已确认
+  2. 北斗智投 Phase 2 - iMessage 通知 - 确认状态: 已确认
+  3. 北斗智投 Phase 2 - 自我进化模块 - 确认状态: 已确认
+  4. 北斗智投 Phase 2 - AI 分析引擎 - 确认状态: 已确认
+  5. 北斗智投 Phase 2 - 运维监控 - 确认状态: 已确认
+  6. 北斗智投 Phase 2 - 多数据源集成 - 确认状态: 已确认
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 司库: getTasks() 返回 6 个任务
+[定时任务] 司库: 筛选后待确认任务数: 0
+[定时任务] 司库: 没有待确认任务
+[定时任务] 司库: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 执矩: getTasks() 返回 6 个任务
+[定时任务] 执矩: 筛选后待确认任务数: 0
+[定时任务] 执矩: 没有待确认任务
+[定时任务] 执矩: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 磐石: getTasks() 返回 6 个任务
+[定时任务] 磐石: 筛选后待确认任务数: 0
+[定时任务] 磐石: 没有待确认任务
+[定时任务] 磐石: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 灵犀: getTasks() 返回 6 个任务
+[定时任务] 灵犀: 筛选后待确认任务数: 0
+[定时任务] 灵犀: 没有待确认任务
+[定时任务] 灵犀: 分给该成员的任务数: 0
+[getTasks] HTTP 响应状态：200
+[getTasks] 原始响应：{"success":true,"count":6,"data":[{"id":"0168e02c-5dd3-4470-9117-ac172299b289","title":"北斗智投 Phase 2 - Streamlit 看板","description":"可视化看板 + 进化日志展示","creator":"司库","assignee":"匠心","priority":"P1","stat...
+[getTasks] 解析成功，任务数：6
+[定时任务] 天策: getTasks() 返回 6 个任务
+[定时任务] 天策: 筛选后待确认任务数: 0
+[定时任务] 天策: 没有待确认任务
+[定时任务] 天策: 分给该成员的任务数: 0

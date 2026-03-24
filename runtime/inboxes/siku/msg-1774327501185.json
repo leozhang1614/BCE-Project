@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774327501185",
+  "from": "执矩",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "8a7b9723-c320-4b8b-b967-11adc91f0b2f",
+  "sessionKey": "task:8a7b9723-c320-4b8b-b967-11adc91f0b2f",
+  "content": "✅ 执矩 已确认接收任务：北斗智投 Phase 2 - 运维监控",
+  "createdAt": "2026-03-24T04:45:01.185Z",
+  "read": false
+}

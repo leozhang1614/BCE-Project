@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256778278",
+  "from": "系统",
+  "to": "天枢",
+  "type": "task_reassigned",
+  "taskId": "69cd6603-85fd-4c12-8f40-d710cc74466c",
+  "sessionKey": "task:69cd6603-85fd-4c12-8f40-d710cc74466c",
+  "content": "📋 任务重新分配\n\n任务：🚀 北斗智投系统 - 数据感知模块\n从：磐石\n到：匠心\n原因：北斗智投项目统一由匠心开发",
+  "createdAt": "2026-03-23T09:06:18.278Z",
+  "read": false
+}

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256748574",
+  "from": "系统",
+  "to": "磐石",
+  "type": "task_reassigned_from",
+  "taskId": "ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "sessionKey": "task:ff4d8a39-8701-4a30-ad81-e3fedb4d7cec",
+  "content": "📋 任务重新分配通知\n\n任务：🚀 北斗智投系统 - 运维调度\n原因：北斗智投项目统一由匠心开发，提高效率和代码质量\n工作交接：无需交接，直接开始开发\n\n绩效影响：-15 分",
+  "createdAt": "2026-03-23T09:05:48.574Z",
+  "read": false
+}

@@ -149,7 +149,9 @@ async function sendTaskNotification(task, action, operator, comment) {
     executing: '🚀 任务执行中',
     reviewing: '✅ 待验收',
     accepted: '🎉 任务已完成',
-    cancelled: '❌ 任务已取消'
+    cancelled: '❌ 任务已取消',
+    auditing: '🔍 待审核',      // v3.4 新增
+    confirmed: '✅ 已确认接收'  // v3.4 新增
   };
   
   // 详细调试日志
@@ -175,15 +177,49 @@ async function sendTaskNotification(task, action, operator, comment) {
     ? '\n⚠️ 要求收到回复：请在 20 秒内确认收到任务！'
     : '';
   
+  // v3.4 修复：根据任务状态正确显示确认状态
+  let confirmedStatus = '❌ 待确认';
+  if (task.confirmedBy) {
+    confirmedStatus = `✅ 已确认 (${task.confirmedBy})`;
+  } else if (task.status === 'completed' || task.status === 'accepted' || task.status === 'auditing') {
+    confirmedStatus = '✅ 已确认 (系统自动)';
+  } else if (task.status === 'executing' || task.status === 'reviewing') {
+    confirmedStatus = '✅ 执行中';
+  }
+  
+  // v3.4 修复：计划完成时间显示优化
+  const dueDateDisplay = task.dueDate 
+    ? new Date(task.dueDate).toLocaleString('zh-CN')
+    : (task.status === 'completed' ? '已完成' : '未设置');
+  
   // 构建通知文本
   let text = `${actionTexts[action] || '任务状态更新'}
 任务：${task.title}
 负责人：${assigneeText}
-负责人是否已接收：${task.confirmedBy ? '✅ 已确认 (' + task.confirmedBy + ')' : '❌ 待确认'}
+负责人是否已接收：${confirmedStatus}
 操作人：${operator}
-计划完成时间：${dueDateText}
+计划完成时间：${dueDateDisplay}
 ${comment ? '备注：' + comment : ''}${confirmText}
 查看详情：http://192.168.31.187:3000/bce-tasks.html`;
+  
+  // v3.4 新增：审核环节特殊处理
+  if (action === 'auditing') {
+    text = `${actionTexts.auditing}
+任务：${task.title}
+审核人：${assigneeText}
+审核状态：${task.confirmedBy ? '✅ 已确认 (' + task.confirmedBy + ')' : '❌ 待审核'}
+提交人：${operator}
+查看详情：http://192.168.31.187:3000/bce-tasks.html`;
+  }
+  
+  // v3.4 新增：确认接收环节特殊处理
+  if (action === 'confirmed') {
+    text = `${actionTexts.confirmed}
+任务：${task.title}
+确认人：${operator}
+原负责人：${assigneeText}
+查看详情：http://192.168.31.187:3000/bce-tasks.html`;
+  }
   
   // 收集要@的 user_id
   const atUserIds = userId ? [userId] : [];

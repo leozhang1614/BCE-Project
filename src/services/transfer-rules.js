@@ -237,7 +237,7 @@ async function rejectTask(taskId, operator, reason) {
   const previousExecutor = findPreviousExecutor(task);
   console.log(`[驳回] 回退到上一个执行节点：${previousExecutor}`);
   
-  // 记录驳回历史
+  // 记录驳回历史（v3.4 增强：详细记录驳回原因）
   addTransferHistory(task, task.assignee, previousExecutor, `驳回：${reason}`);
   
   // 更新任务状态
@@ -245,7 +245,22 @@ async function rejectTask(taskId, operator, reason) {
   task.assignee = previousExecutor;
   task.rejectedAt = new Date().toISOString();
   task.rejectedBy = operator;
+  task.rejectReason = reason;  // v3.4 新增：记录驳回原因
+  task.rejectComment = reason; // v3.4 新增：兼容验收环节的字段名
   task.updatedAt = new Date().toISOString();
+  
+  // 初始化驳回历史数组（v3.4 新增）
+  if (!task.rejectHistory) {
+    task.rejectHistory = [];
+  }
+  // 记录详细驳回历史
+  task.rejectHistory.push({
+    reason: reason,
+    rejectedBy: operator,
+    rejectedAt: task.rejectedAt,
+    fromNode: task.currentNode || 'auditing',
+    toNode: 'executing'
+  });
   
   // 获取驳回次数
   const rejectCount = getRejectCount(task);

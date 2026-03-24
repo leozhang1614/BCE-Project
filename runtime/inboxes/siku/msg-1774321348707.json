@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774321348707",
+  "from": "执矩",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "ad81c383-920f-4be3-8412-7d958244eb84",
+  "sessionKey": "task:ad81c383-920f-4be3-8412-7d958244eb84",
+  "content": "✅ 执矩 已确认接收任务：北斗智投 Phase 2 - AI 分析引擎",
+  "createdAt": "2026-03-24T03:02:28.707Z",
+  "read": false
+}

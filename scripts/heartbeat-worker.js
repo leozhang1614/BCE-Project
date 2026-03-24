@@ -16,20 +16,21 @@ const BCE_PORT = 3000;
 
 // 执行者列表（不同角色查询不同状态）
 const WORKERS = [
-  { name: '匠心', userId: 'ou_b3b3b6abaa38da2c4066010a02abf544', queryStatus: 'pending' },
-  { name: '磐石', userId: 'ou_dba586c77d92f652e427370d3f54cc54', queryStatus: 'pending' },
-  { name: '司库', userId: 'ou_998d07ddc86ad7ba9d4dd12dddc55cc6', queryStatus: 'reviewing' }  // 司库查询待验收任务
+  { name: '匠心', userId: 'ou_b3b3b6abaa38da2c4066010a02abf544', queryStatus: 'pending', queryBy: 'assignee' },
+  { name: '磐石', userId: 'ou_dba586c77d92f652e427370d3f54cc54', queryStatus: 'pending', queryBy: 'assignee' },
+  { name: '司库', userId: 'ou_998d07ddc86ad7ba9d4dd12dddc55cc6', queryStatus: 'reviewing', queryBy: 'assignee' },  // 司库查询待验收任务
+  { name: '执矩', userId: 'ou_aaeb25dcae8616029a9d36906892bd05', queryStatus: 'auditing', queryBy: 'auditor' }   // 执矩查询待审核任务（v3.4 修复）
 ];
 
 /**
  * 查询待办任务
  */
-async function queryPendingTasks(assignee, status = 'pending') {
+async function queryPendingTasks(workerName, status = 'pending', queryBy = 'assignee') {
   return new Promise((resolve, reject) => {
     const req = http.request({
       hostname: BCE_HOST,
       port: BCE_PORT,
-      path: `/api/bce/tasks?assignee=${encodeURIComponent(assignee)}&status=${status}`,
+      path: `/api/bce/tasks?${queryBy}=${encodeURIComponent(workerName)}&status=${status}`,
       method: 'GET'
     }, (res) => {
       let data = '';
@@ -116,9 +117,10 @@ async function acceptTask(taskId, workerName, comment = '') {
 async function workerHeartbeat(worker) {
   try {
     const status = worker.queryStatus || 'pending';
-    console.log(`❤️ [${worker.name} 心跳] 开始查询待办任务 (status=${status})...`);
+    const queryBy = worker.queryBy || 'assignee';
+    console.log(`❤️ [${worker.name} 心跳] 开始查询待办任务 (status=${status}, queryBy=${queryBy})...`);
     
-    const tasks = await queryPendingTasks(worker.name, status);
+    const tasks = await queryPendingTasks(worker.name, status, queryBy);
     
     if (tasks.length > 0) {
       console.log(`❤️ [${worker.name} 心跳] 发现${tasks.length}个待办任务！`);
@@ -142,6 +144,14 @@ async function workerHeartbeat(worker) {
             console.log(`    ✅ 已自动验收`);
           } else {
             console.log(`    ❌ 验收失败：${result.error}`);
+          }
+        } else if (status === 'auditing') {
+          // 待审核任务 - 自动确认（执矩）
+          const result = await confirmTask(task.id, worker.name);
+          if (result.success) {
+            console.log(`    ✅ 已自动确认（审核接收）`);
+          } else {
+            console.log(`    ❌ 确认失败：${result.error}`);
           }
         }
       }

@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774327499052",
+  "from": "执矩",
+  "to": "司库",
+  "type": "task_confirmed",
+  "taskId": "e07e4aa0-b3d2-4e14-acdc-1374df4a8dc7",
+  "sessionKey": "task:e07e4aa0-b3d2-4e14-acdc-1374df4a8dc7",
+  "content": "✅ 执矩 已确认接收任务：北斗智投 Phase 2 - 自我进化模块",
+  "createdAt": "2026-03-24T04:44:59.052Z",
+  "read": false
+}

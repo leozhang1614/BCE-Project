@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256756885",
+  "from": "系统",
+  "to": "天枢",
+  "type": "task_reassigned",
+  "taskId": "77fd5bf8-9036-41d4-b286-8cadbdda7104",
+  "sessionKey": "task:77fd5bf8-9036-41d4-b286-8cadbdda7104",
+  "content": "📋 任务重新分配\n\n任务：🚀 北斗智投系统 - iMessage 通知\n从：磐石\n到：匠心\n原因：北斗智投项目统一由匠心开发",
+  "createdAt": "2026-03-23T09:05:56.885Z",
+  "read": false
+}

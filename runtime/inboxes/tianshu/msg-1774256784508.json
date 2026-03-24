@@ -1,0 +1,11 @@
+{
+  "id": "msg-1774256784508",
+  "from": "系统",
+  "to": "天枢",
+  "type": "task_reassigned",
+  "taskId": "4c9a5be9-7e10-4267-bdf5-7211f526a792",
+  "sessionKey": "task:4c9a5be9-7e10-4267-bdf5-7211f526a792",
+  "content": "📋 任务重新分配\n\n任务：🚀 北斗智投系统 - 财务知识库\n从：司库\n到：匠心\n原因：北斗智投项目统一由匠心开发",
+  "createdAt": "2026-03-23T09:06:24.508Z",
+  "read": false
+}
